@@ -1,0 +1,3015 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programas y Servicios de Español · Jonathan Mendoza</title>
+  <meta name="description" content="Clases de español individuales online con Jonathan Mendoza, Lic. en Educación. Programas de A1 a C1, materiales interactivos propios y tarifa transparente de R$ 60 por sesión. Sin matrícula, sin libros, sin costos ocultos.">
+  <meta name="author" content="Jonathan Mendoza">
+  <meta name="theme-color" content="#1E5B4F">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Programas de Español · Jonathan Mendoza">
+  <meta property="og:description" content="Aprende español con método: 4 programas de A1 a C1, clases 1 a 1 y tarifa transparente. Sin matrícula, sin libros, sin costos ocultos.">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Karla:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #F5EFE1;
+  --paper-2: #FBF7EE;
+  --card: #FCF9F2;
+  --ink: #1B1917;
+  --ink-soft: #4A453D;
+  --muted: #8C8577;
+  --line: #DFD6C2;
+  --line-soft: #EBE3D3;
+  --green: #1E5B4F;
+  --green-dark: #164439;
+  --terra: #C4552C;
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Karla', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ---------- RESET & BASE ---------- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+::selection {
+  background: var(--green);
+  color: #fff;
+}
+
+/* ---------- PROGRESO ---------- */
+#progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--terra);
+  z-index: 200;
+  transition: width 0.1s linear;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  position: fixed;
+  top: 12px;
+  left: 16px;
+  right: 16px;
+  z-index: 150;
+  background: rgba(245, 239, 225, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(27, 25, 23, 0.07);
+}
+.head-in {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+.logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--terra);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(196, 85, 44, 0.2);
+}
+.brand b {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 700;
+  display: block;
+  line-height: 1.1;
+}
+.brand small {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+nav a {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding: 5px 8px;
+  border-radius: 6px;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+nav a:hover {
+  color: var(--green);
+  background: rgba(30, 91, 79, 0.06);
+}
+nav a.on {
+  color: var(--green);
+  font-weight: 700;
+  background: rgba(30, 91, 79, 0.04);
+}
+.actions-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.social-link {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: var(--transition);
+}
+.social-link:hover {
+  color: var(--terra);
+}
+.lang-select-wrap select {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 6px 12px;
+  background: var(--paper-2);
+  color: var(--ink);
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition);
+}
+.lang-select-wrap select:hover {
+  border-color: var(--muted);
+}
+.chip {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 6px 12px;
+  color: var(--ink-soft);
+}
+.btn-nav-action {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+.btn-nav-action:hover {
+  background: var(--green-dark);
+}
+.burger {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 11px;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+/* ---------- LAYOUT ---------- */
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+section {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--line-soft);
+  position: relative;
+}
+section.alt {
+  background: var(--paper-2);
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  padding: 160px 0 80px;
+  border-bottom: 1px solid var(--line-soft);
+}
+.kicker {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.kicker::after {
+  content: "";
+  flex: 0 0 48px;
+  height: 1px;
+  background: var(--line);
+}
+.kicker .num {
+  color: var(--green);
+}
+h1 {
+  font-family: var(--serif);
+  font-weight: 900;
+  line-height: 1.1;
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+}
+h1 em {
+  font-style: italic;
+  color: var(--green);
+  font-weight: 700;
+}
+.lead {
+  margin-top: 24px;
+  max-width: 62ch;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+.hero-cta-group {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--ink);
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 14px 24px;
+  border-radius: 40px;
+  border: 1px solid var(--line);
+  transition: var(--transition);
+  font-weight: 500;
+}
+.btn-secondary:hover {
+  border-color: var(--green);
+  color: var(--green);
+  background: rgba(30, 91, 79, 0.04);
+}
+.hero-meta {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 48px;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.meta-i {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.meta-i b {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  letter-spacing: 0;
+  color: var(--ink);
+  text-transform: none;
+  font-weight: 700;
+  margin-top: 4px;
+}
+.ghost {
+  position: absolute;
+  right: 32px;
+  top: 60px;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(100px, 14vw, 190px);
+  line-height: 0.8;
+  color: transparent;
+  -webkit-text-stroke: 1.2px var(--line);
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+/* ---------- CABECERA DE SECCIÓN ---------- */
+.sec-head {
+  position: relative;
+  padding-bottom: 40px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--line);
+}
+.sec-head h2 {
+  font-family: var(--serif);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.15;
+  max-width: 20ch;
+}
+.sec-head h2 em {
+  font-style: italic;
+  color: var(--green);
+  font-weight: 700;
+}
+.sec-head .lead {
+  margin-top: 16px;
+}
+
+/* ---------- FILA 2 COLUMNAS ---------- */
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.row:last-child {
+  margin-bottom: 0;
+}
+.row-align-center {
+  align-items: center;
+  margin-bottom: 0;
+}
+.idx {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.idx-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.tag {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 4px 12px;
+  color: var(--ink-soft);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--paper-2);
+}
+.tag::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--green);
+}
+.tag.plain::before {
+  display: none;
+}
+h3 {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--green);
+  font-size: 1rem;
+  margin: 6px 0 14px;
+}
+.col-left p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  max-width: 44ch;
+}
+.formula {
+  margin-top: 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper-2);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.formula .lbl {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.formula .box {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  border: 1px dashed var(--line);
+  border-radius: 6px;
+  padding: 4px 10px;
+  background: #fff;
+  color: var(--ink);
+}
+.formula .lo {
+  background: var(--green);
+  color: #fff;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 2px 10px;
+  font-size: 0.9rem;
+}
+.formula i {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* ---------- DEMO MULTIMEDIA / SHOWCASE ---------- */
+.multimedia-preview {
+  margin-top: 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  padding: 16px;
+  box-shadow: 0 4px 14px rgba(27, 25, 23, 0.02);
+}
+.preview-tag {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--terra);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.preview-tag::before {
+  content: "●";
+  font-size: 0.5rem;
+}
+.preview-card-interactive {
+  background: var(--paper-2);
+  border: 1px solid var(--line-soft);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.preview-title {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+.preview-badge {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  background: var(--green);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.preview-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.preview-chip-item {
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.preview-chip-item strong {
+  color: var(--green);
+  display: block;
+  font-size: 0.8rem;
+}
+
+/* ---------- TARJETAS DE CONTENIDO ---------- */
+.col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px 24px;
+  transition: var(--transition);
+}
+.card:not(.invest):hover {
+  border-color: #CDBFA4;
+  box-shadow: 0 10px 24px rgba(27, 25, 23, 0.04);
+  transform: translateY(-1px);
+}
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.card-q {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.pills {
+  display: flex;
+  flex-shrink: 0;
+}
+.pill {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--muted);
+}
+.pill:first-child {
+  border-radius: 6px 0 0 6px;
+}
+.pill:last-child {
+  border-radius: 0 6px 6px 0;
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+.pill.solo {
+  border-radius: 6px;
+}
+.card-main {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  line-height: 1.35;
+  font-weight: 500;
+}
+.card-main .hl {
+  background: var(--green);
+  color: #fff;
+  font-style: italic;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 0px 8px;
+  display: inline-block;
+}
+.card-note {
+  margin-top: 14px;
+  padding-top: 11px;
+  border-top: 1px solid var(--line-soft);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+  line-height: 1.5;
+  display: flex;
+  gap: 8px;
+}
+.card-note::before {
+  content: "⇄";
+  color: var(--green);
+  flex-shrink: 0;
+}
+
+/* LISTAS */
+.incl {
+  list-style: none;
+  margin-top: 16px;
+  border-top: 1px solid var(--line-soft);
+}
+.incl li {
+  padding: 12px 0 12px 30px;
+  border-bottom: 1px solid var(--line-soft);
+  position: relative;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+.incl li::before {
+  content: attr(data-n);
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--green);
+  letter-spacing: 0.05em;
+}
+
+/* ---------- TARJETAS DE INVERSIÓN ---------- */
+.invest {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+.invest:hover {
+  box-shadow: 0 12px 30px rgba(30, 91, 79, 0.18);
+}
+.invest .card-q {
+  color: rgba(255, 255, 255, 0.65);
+}
+.invest .pill {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+.invest .pill:last-child {
+  background: #fff;
+  color: var(--green);
+  border-color: #fff;
+}
+.price {
+  font-family: var(--serif);
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.price small {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  opacity: 0.75;
+  display: block;
+  margin-top: 8px;
+}
+.pay {
+  list-style: none;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.pay li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 8px 0;
+  font-size: 0.88rem;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.12);
+}
+.pay li:last-child {
+  border: none;
+}
+.pay .k {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.pay .v {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+.pay .v.off::after {
+  content: "−10%";
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 2px 6px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.card-cta-btn {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px 18px;
+  border-radius: 30px;
+  background: #fff;
+  color: var(--green);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.card-cta-btn:hover {
+  background: var(--paper-2);
+  transform: translateY(-1px);
+}
+
+/* ---------- TESTIMONIOS ---------- */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.testimonial-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.quote-text {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--line-soft);
+  padding-top: 14px;
+}
+.author-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--terra);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.author-details b {
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  display: block;
+  line-height: 1.1;
+}
+.author-details small {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* ---------- TABLA ---------- */
+.table-x {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+thead th {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: left;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--line);
+  font-weight: 500;
+}
+tbody td {
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--line-soft);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  vertical-align: middle;
+}
+tbody tr:last-child td {
+  border-bottom: none;
+}
+tbody tr:hover {
+  background: var(--paper-2);
+}
+td.name {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+td.name span {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  color: var(--green);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+td.tot {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--green);
+  white-space: nowrap;
+}
+td.ses {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink);
+}
+
+/* ---------- CONDICIONES ---------- */
+.cond {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.cond .card {
+  padding: 24px;
+}
+.cond .n {
+  font-family: var(--serif);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--line);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.cond h4 {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.cond p {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.cond b {
+  color: var(--green);
+}
+
+/* ---------- CIERRE & FOOTER ---------- */
+.closing {
+  text-align: center;
+  padding: 80px 0;
+}
+.closing h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  line-height: 1.15;
+  max-width: 22ch;
+  margin: 0 auto;
+}
+.closing h2 em {
+  font-style: italic;
+  color: var(--green);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border-radius: 40px;
+  transition: var(--transition);
+  box-shadow: 0 8px 24px rgba(30, 91, 79, 0.2);
+  font-weight: 500;
+}
+.btn:hover {
+  background: var(--green-dark);
+  transform: translateY(-2px);
+}
+footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+footer a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition);
+}
+footer a:hover {
+  color: var(--green);
+}
+
+/* ---------- SECCIONES E IMÁGENES ---------- */
+.teacher-media-container {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 4/5;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: 0 12px 28px rgba(27, 25, 23, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.teacher-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.photo-fallback {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  color: var(--muted);
+  z-index: 2;
+}
+.fallback-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--terra);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.fallback-title {
+  font-family: var(--serif);
+  font-size: 1rem;
+  color: var(--ink);
+}
+.fallback-desc {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  margin-top: 4px;
+}
+.teacher-social-group {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---------- SECCIÓN ECONOMÍA / AHORRO (INICIO) ---------- */
+.savings-impact {
+  background: var(--green);
+  color: #fff;
+  border-radius: 22px;
+  padding: 56px 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 18px 44px rgba(30, 91, 79, 0.24);
+  text-align: center;
+}
+.savings-impact .si-ghost {
+  position: absolute;
+  right: -14px;
+  bottom: -70px;
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(190px, 27vw, 330px);
+  line-height: 0.8;
+  color: rgba(255, 255, 255, 0.06);
+  user-select: none;
+  pointer-events: none;
+}
+.si-kicker {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  opacity: 0.82;
+  margin-bottom: 18px;
+  position: relative;
+}
+.si-title {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  position: relative;
+  max-width: 16ch;
+  margin: 0 auto;
+}
+.si-title em {
+  font-style: italic;
+  color: #F2C7AE;
+}
+.price-box {
+  margin: 30px auto 0;
+  max-width: 480px;
+  position: relative;
+  text-align: left;
+}
+.pb-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+}
+.pb-lbl {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.78;
+}
+.pb-val {
+  font-family: var(--serif);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  line-height: 1;
+}
+.pb-strike {
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: line-through;
+  text-decoration-color: var(--terra);
+  text-decoration-thickness: clamp(3px, 0.06em, 6px);
+  text-decoration-skip-ink: none;
+}
+.pb-minus {
+  margin-top: 6px;
+  text-align: right;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  opacity: 0.8;
+}
+.pb-minus small {
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.82;
+  margin-left: 3px;
+}
+.pb-divider {
+  margin: 16px 0;
+  border-top: 1px dashed rgba(255, 255, 255, 0.28);
+}
+.pb-final {
+  font-size: clamp(2.8rem, 7.5vw, 4.4rem);
+  color: #fff;
+}
+.pb-badge {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: var(--terra);
+  color: #fff;
+  padding: 5px 13px;
+  border-radius: 20px;
+  align-self: center;
+  white-space: nowrap;
+}
+.si-tagline {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  opacity: 0.88;
+  position: relative;
+  line-height: 1.7;
+}
+.savings-detail {
+  margin-top: 40px;
+}
+.savings-detail .lead {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  max-width: 68ch;
+  margin: 0 auto 30px;
+  text-align: center;
+  line-height: 1.7;
+}
+.hidden-costs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.hidden-cost-item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  position: relative;
+  transition: var(--transition);
+}
+.hidden-cost-item:hover {
+  border-color: #CDBFA4;
+  box-shadow: 0 8px 20px rgba(27, 25, 23, 0.04);
+}
+.hc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+}
+.hc-label {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+.hc-check {
+  color: var(--green);
+  font-size: 1rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.hc-val {
+  font-family: var(--mono);
+  font-size: 0.92rem;
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--terra);
+  text-decoration-thickness: 2px;
+  margin-top: 6px;
+  display: block;
+}
+.hc-free {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--green);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-top: 2px;
+}
+.savings-compare {
+  margin-top: 36px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+  padding: 6px 24px;
+}
+.compare-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) 78px minmax(0, 2fr);
+  gap: 18px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+.compare-row:last-child { border-bottom: none; }
+.compare-name {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+.compare-name small {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.56rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 3px;
+  font-weight: 400;
+}
+.compare-pct {
+  font-family: var(--serif);
+  font-weight: 900;
+  color: var(--terra);
+  font-size: 1.2rem;
+  text-align: right;
+  white-space: nowrap;
+}
+.compare-bar {
+  height: 9px;
+  background: var(--line-soft);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.compare-bar i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--green), var(--terra));
+  border-radius: 20px;
+}
+/* Sello de ahorro en tarjetas invest */
+.savings-stamp {
+  margin-top: 14px;
+  padding-top: 13px;
+  border-top: 1px dashed rgba(255,255,255,0.25);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.ss-val {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  background: var(--terra);
+  padding: 3px 11px;
+  border-radius: 7px;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+.ss-txt {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.5;
+}
+/* Hook de ahorro en hero */
+.meta-i .hl-save {
+  color: var(--terra);
+}
+
+/* ---------- NIVELES MCER ---------- */
+.levels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.level-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+.level-card:hover {
+  border-color: #CDBFA4;
+  box-shadow: 0 10px 24px rgba(27, 25, 23, 0.05);
+  transform: translateY(-2px);
+}
+.level-bar {
+  height: 5px;
+  background: var(--green);
+}
+.level-card[data-group="basico"] .level-bar,
+.level-card[data-group="basico"] .level-points li::before { background: var(--green); }
+.level-card[data-group="basico"] .level-code { color: var(--green); }
+.level-card[data-group="intermedio"] .level-bar { background: #9C7B3B; }
+.level-card[data-group="intermedio"] .level-code { color: #9C7B3B; }
+.level-card[data-group="intermedio"] .level-points li::before { background: #9C7B3B; }
+.level-card[data-group="avanzado"] .level-bar { background: var(--terra); }
+.level-card[data-group="avanzado"] .level-code { color: var(--terra); }
+.level-card[data-group="avanzado"] .level-points li::before { background: var(--terra); }
+.level-body {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.level-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.level-code {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.level-group {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 3px 9px;
+  white-space: nowrap;
+}
+.level-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin: 6px 0 12px;
+}
+.level-can {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+.level-points {
+  list-style: none;
+  border-top: 1px solid var(--line-soft);
+  padding-top: 12px;
+  margin-top: auto;
+}
+.level-points li {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  padding: 4px 0 4px 18px;
+  position: relative;
+  line-height: 1.45;
+}
+.level-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+}
+.level-prog {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-soft);
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.level-prog b {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--green);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.84rem;
+}
+/* Franja de cobertura MCER */
+.coverage-bar {
+  margin-top: 36px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper-2);
+  padding: 20px 24px;
+}
+.coverage-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.coverage-label {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.coverage-range b {
+  font-family: var(--serif);
+  font-weight: 700;
+  color: var(--green);
+}
+.coverage-track {
+  margin-top: 14px;
+  position: relative;
+  height: 10px;
+  background: var(--line-soft);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.coverage-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 83%;
+  background: linear-gradient(90deg, var(--green), var(--terra));
+  border-radius: 20px;
+}
+.coverage-marks {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+/* ---------- ANIMACIÓN REVEAL ---------- */
+.rv {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.rv.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- DISPOSITIVOS MÓVILES / RESPONSIVE ---------- */
+@media(max-width: 1080px) {
+  .row {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .cond, .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .levels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ghost {
+    top: 40px;
+    opacity: 0.6;
+  }
+  nav {
+    position: fixed;
+    top: 72px;
+    left: 16px;
+    right: 16px;
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(27, 25, 23, 0.08);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px 16px 16px;
+    display: none;
+  }
+  nav.open {
+    display: flex;
+  }
+  nav a {
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--line-soft);
+    border-radius: 0;
+  }
+  nav a.on {
+    background: transparent;
+  }
+  .burger {
+    display: block;
+  }
+  .chip,
+  .social-link {
+    display: none;
+  }
+}
+@media(max-width: 860px) {
+  .wrap, .head-in {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero {
+    padding-top: 120px;
+  }
+  section {
+    padding: 56px 0;
+  }
+  .price {
+    font-size: 2.3rem;
+  }
+  .compare-row {
+    grid-template-columns: 1fr auto;
+    gap: 6px 14px;
+  }
+  .compare-row .compare-bar {
+    grid-column: 1 / -1;
+    margin-top: 4px;
+  }
+  .levels-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="head-in">
+    <a href="#inicio" class="brand">
+      <div class="logo">es</div>
+      <div>
+        <b>Programas de Español</b>
+        <small>Propuesta v5 · Jonathan Mendoza</small>
+      </div>
+    </a>
+    <nav id="nav">
+      <a href="#docente">Profesor</a>
+      <a href="#niveles">Niveles</a>
+      <a href="#p1">Desde cero</a>
+      <a href="#p2">Fluidez</a>
+      <a href="#p3">Conversación</a>
+      <a href="#p4">Diagnóstico</a>
+      <a href="#ahorro">Ahorro</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#cuadro">Cuadro</a>
+      <a href="#condiciones">Condiciones</a>
+    </nav>
+    <div class="actions-wrap">
+      <a class="social-link" href="https://www.instagram.com/idiomaswebespanol/" target="_blank" rel="noopener" title="Instagram @idiomaswebespanol">◎</a>
+      <a class="social-link" href="https://www.youtube.com/@idiomasweb" target="_blank" rel="noopener" title="YouTube @idiomasweb">▶</a>
+      
+      <!-- Selector de Idiomas -->
+      <div class="lang-select-wrap">
+        <select id="langSelect" onchange="changeLanguage(this.value)">
+          <option value="es">🇪🇸 ES</option>
+          <option value="pt">🇧🇷 PT</option>
+          <option value="en">🇺🇸 EN</option>
+          <option value="fr">🇫🇷 FR</option>
+        </select>
+      </div>
+
+      <span class="chip">A1 — C1</span>
+      <a class="btn-nav-action" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20me%20gustar%C3%ADa%20consultar%20por%20tus%20clases%20de%20espa%C3%B1ol" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="burger" id="burger" aria-label="Menú">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero" id="inicio">
+  <div class="wrap" style="position:relative">
+    <div class="ghost" style="top:-10px">v5</div>
+    <div class="kicker"><span class="num">§ 00</span> Propuesta de programas y servicios</div>
+    <h1 id="hero-title">Aprender español <em>con método</em>, no con suerte.</h1>
+    <p class="lead" id="hero-lead">
+      Cuatro programas pedagógicos adaptados a tu punto de partida, construidos sobre una
+      tarifa base transparente de <strong id="hero-lead-rate">R$&nbsp;60 por sesión</strong>. Clases individuales,
+      materiales interactivos propios y acompañamiento real entre clase y clase.
+    </p>
+    <div class="hero-cta-group">
+      <a class="btn" id="btn-reserve" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20reservar%20mi%20cupo%20para%20empezar%20clases%20de%20espa%C3%B1ol" target="_blank" rel="noopener">Reservar mi cupo →</a>
+      <a class="btn-secondary" id="btn-diag-hero" href="#p4">¿No sabes tu nivel? Haz un diagnóstico primero</a>
+    </div>
+    <div class="hero-meta">
+      <div class="meta-i">Docente<b>Jonathan Mendoza</b></div>
+      <div class="meta-i">Formación<b>Lic. en Educación</b></div>
+      <div class="meta-i">Especialidad<b>Contenido Pedagógico Multimedia</b></div>
+      <div class="meta-i"><span id="hero-meta-base-lbl">Tarifa base</span><b id="hero-meta-base-val">R$ 60 / sesión</b></div>
+      <div class="meta-i"><span id="hero-meta-save-lbl">Costos ocultos evitados</span><b id="hero-meta-save-val" class="hl-save">hasta R$ 600</b></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ECONOMÍA / AHORRO (INICIO) ================= -->
+<section id="ahorro">
+  <div class="wrap">
+    <div class="savings-impact rv">
+      <span class="si-ghost">50%</span>
+      <div class="si-kicker" id="savings-kicker">Costos ocultos del mercado</div>
+      <h2 class="si-title" id="savings-title">Esto es todo <em>lo que NO pagas</em></h2>
+      <div class="price-box">
+        <div class="pb-row">
+          <span class="pb-lbl" id="save-cost-total-lbl">Costo total en academia</span>
+          <span class="pb-val pb-strike" id="save-cost-total">R$ 1.200</span>
+        </div>
+        <div class="pb-minus">- <span id="save-hidden-amount">R$ 600</span> <small id="save-hidden-lbl">costos ocultos</small></div>
+        <div class="pb-divider"></div>
+        <div class="pb-row">
+          <span class="pb-lbl" id="save-pay-lbl">Hoy pagas</span>
+          <span class="pb-val pb-final" id="save-pay-val">R$ 599</span>
+          <span class="pb-badge" id="save-discount">-50%</span>
+        </div>
+      </div>
+      <div class="si-tagline" id="save-tagline">Sin matrícula &middot; Sin material &middot; Sin libros &middot; Sin mantenimiento</div>
+    </div>
+
+    <div class="savings-detail rv">
+      <p class="lead" id="savings-lead">En una academia común, a la mensualidad se le suman matrícula, material, libros y taxa de manutenção &mdash; costos que aparecen <strong>después</strong> de comprometerte. Con Jonathan no: la tarifa de <strong>R$ 60 por sesión</strong> lo incluye todo. Esto es lo que <strong>no pagas</strong>, calculado sobre los precios del mercado brasileño de escuelas de idiomas (2025-2026).</p>
+      <div class="hidden-costs-grid">
+        <div class="hidden-cost-item">
+          <div class="hc-top">
+            <span class="hc-label" id="cost-mat-label">Inscripción / Matrícula</span>
+            <span class="hc-check">&#10003;</span>
+          </div>
+          <span class="hc-val" id="cost-mat-val">R$ 150</span>
+          <span class="hc-free" id="cost-mat-free">Incluida &middot; R$ 0</span>
+        </div>
+        <div class="hidden-cost-item">
+          <div class="hc-top">
+            <span class="hc-label" id="cost-mat2-label">Material didáctico</span>
+            <span class="hc-check">&#10003;</span>
+          </div>
+          <span class="hc-val" id="cost-mat2-val">R$ 200</span>
+          <span class="hc-free" id="cost-mat2-free">Interactivo propio &middot; R$ 0</span>
+        </div>
+        <div class="hidden-cost-item">
+          <div class="hc-top">
+            <span class="hc-label" id="cost-lib-label">Libros de texto</span>
+            <span class="hc-check">&#10003;</span>
+          </div>
+          <span class="hc-val" id="cost-lib-val">R$ 180</span>
+          <span class="hc-free" id="cost-lib-free">No necesitas comprar &middot; R$ 0</span>
+        </div>
+        <div class="hidden-cost-item">
+          <div class="hc-top">
+            <span class="hc-label" id="cost-mnt-label">Mantenimiento / Plataforma</span>
+            <span class="hc-check">&#10003;</span>
+          </div>
+          <span class="hc-val" id="cost-mnt-val">R$ 70</span>
+          <span class="hc-free" id="cost-mnt-free">Sin taxa mensual &middot; R$ 0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="savings-compare rv">
+      <div class="compare-row">
+        <div class="compare-name"><span id="cmp-p1-name">Primeros Pasos (A1)</span><small>R$ 600</small></div>
+        <div class="compare-pct" id="cmp-p1-pct">100%</div>
+        <div class="compare-bar"><i style="width:40%"></i></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-name"><span id="cmp-p2-name">Del Portuñol a la Fluidez</span><small>R$ 480</small></div>
+        <div class="compare-pct" id="cmp-p2-pct">125%</div>
+        <div class="compare-bar"><i style="width:50%"></i></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-name"><span id="cmp-p3-name">Conversación con Propósito</span><small>R$ 240 / mes</small></div>
+        <div class="compare-pct" id="cmp-p3-pct">250%</div>
+        <div class="compare-bar"><i style="width:100%"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOCENTE ================= -->
+<section id="docente" class="alt">
+  <div class="wrap">
+    <div class="row row-align-center rv">
+      <div class="col-left">
+        <div class="idx-line"><span class="tag">Tu Profesor · Lic. en Educación</span></div>
+        <h3 id="teacher-title">Jonathan Mendoza</h3>
+        <p class="sub" id="teacher-sub">Especialista en Contenido Pedagógico Multimedia</p>
+        <p>Aprender un idioma no tiene por qué ser aburrido ni basarse en listas infinitas de reglas. Mi metodología combina el rigor pedagógico con herramientas interactivas y recursos visuales diseñados a medida para que avances con claridad, ritmo y confianza.</p>
+        <p style="margin-top:12px">Acompaño a profesionales y estudiantes a perder el miedo a hablar, superar la interferencia del portugués y dominar el español de uso real.</p>
+        
+        <div class="teacher-social-group">
+          <a class="btn-secondary" href="https://www.youtube.com/@idiomasweb" target="_blank" rel="noopener" style="padding:10px 18px;font-size:.65rem">
+            ▶ Canal de YouTube: @idiomasweb
+          </a>
+          <a class="btn-secondary" href="https://www.instagram.com/idiomaswebespanol/" target="_blank" rel="noopener" style="padding:10px 18px;font-size:.65rem">
+            ◎ Instagram: @idiomaswebespanol
+          </a>
+        </div>
+      </div>
+      
+      <div class="col-right" style="align-items:center">
+        <div class="teacher-media-container">
+          <!-- Foto del profesor -->
+          <img src="foto-jonathan.jpg" alt="Jonathan Mendoza" class="teacher-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="photo-fallback">
+            <div class="fallback-avatar">JM</div>
+            <b class="fallback-title">Tu Foto Aquí</b>
+            <small class="fallback-desc">Reemplaza 'foto-jonathan.jpg'<br>con la ruta de tu imagen</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NIVELES MCER ================= -->
+<section id="niveles">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker"><span class="num">MCER</span> <span id="levels-kicker">Marco Común Europeo de Referencia</span></div>
+      <h2 id="levels-title">Los 6 niveles <em>del español internacional</em></h2>
+      <p class="lead" id="levels-lead">
+        El MCER es el estándar internacional que mide tu dominio del idioma, de <strong>A1</strong> (principiante) a
+        <strong>C2</strong> (maestría). Así siempre sabes dónde estás y hacia dónde vas. Jonathan te acompaña
+        principalmente de <strong>A1 a C1</strong>, con mantenimiento avanzado hacia C2.
+      </p>
+    </div>
+
+    <div class="levels-grid rv">
+      <div class="level-card" data-group="basico">
+        <div class="level-bar"></div>
+        <div class="level-body">
+          <div class="level-top">
+            <span class="level-code">A1</span>
+            <span class="level-group" id="lvl-grp-0">Básico</span>
+          </div>
+          <div class="level-name" id="lvl-name-0">Acceso</div>
+          <p class="level-can" id="lvl-can-0">Te presentas y describes cosas con expresiones muy sencillas de uso inmediato.</p>
+          <ul class="level-points" id="lvl-pts-0"></ul>
+          <div class="level-prog" id="lvl-prog-0">→ <b>Programa 01</b></div>
+        </div>
+      </div>
+
+      <div class="level-card" data-group="basico">
+        <div class="level-bar"></div>
+        <div class="level-body">
+          <div class="level-top">
+            <span class="level-code">A2</span>
+            <span class="level-group" id="lvl-grp-1">Básico</span>
+          </div>
+          <div class="level-name" id="lvl-name-1">Plataforma</div>
+          <p class="level-can" id="lvl-can-1">Comunicas en tareas cotidianas y rutinarias con intercambios breves.</p>
+          <ul class="level-points" id="lvl-pts-1"></ul>
+          <div class="level-prog" id="lvl-prog-1">→ <b>Programa 01</b> · continuación</div>
+        </div>
+      </div>
+
+      <div class="level-card" data-group="intermedio">
+        <div class="level-bar"></div>
+        <div class="level-body">
+          <div class="level-top">
+            <span class="level-code">B1</span>
+            <span class="level-group" id="lvl-grp-2">Intermedio</span>
+          </div>
+          <div class="level-name" id="lvl-name-2">Umbral</div>
+          <p class="level-can" id="lvl-can-2">Te desenvuelves en viajes y justificas brevemente tus opiniones.</p>
+          <ul class="level-points" id="lvl-pts-2"></ul>
+          <div class="level-prog" id="lvl-prog-2">→ <b>Programa 02</b></div>
+        </div>
+      </div>
+
+      <div class="level-card" data-group="intermedio">
+        <div class="level-bar"></div>
+        <div class="level-body">
+          <div class="level-top">
+            <span class="level-code">B2</span>
+            <span class="level-group" id="lvl-grp-3">Intermedio</span>
+          </div>
+          <div class="level-name" id="lvl-name-3">Independiente</div>
+          <p class="level-can" id="lvl-can-3">Te relacionas con fluidez y defiendes tus puntos de vista con detalle.</p>
+          <ul class="level-points" id="lvl-pts-3"></ul>
+          <div class="level-prog" id="lvl-prog-3">→ <b>Programa 02 / 03</b></div>
+        </div>
+      </div>
+
+      <div class="level-card" data-group="avanzado">
+        <div class="level-bar"></div>
+        <div class="level-body">
+          <div class="level-top">
+            <span class="level-code">C1</span>
+            <span class="level-group" id="lvl-grp-4">Avanzado</span>
+          </div>
+          <div class="level-name" id="lvl-name-4">Dominio operativo</div>
+          <p class="level-can" id="lvl-can-4">Te expresas con fluidez espontánea y flexibilidad para fines profesionales.</p>
+          <ul class="level-points" id="lvl-pts-4"></ul>
+          <div class="level-prog" id="lvl-prog-4">→ <b>Programa 03</b></div>
+        </div>
+      </div>
+
+      <div class="level-card" data-group="avanzado">
+        <div class="level-bar"></div>
+        <div class="level-body">
+          <div class="level-top">
+            <span class="level-code">C2</span>
+            <span class="level-group" id="lvl-grp-5">Avanzado</span>
+          </div>
+          <div class="level-name" id="lvl-name-5">Maestría</div>
+          <p class="level-can" id="lvl-can-5">Comprendes todo y te expresas con precisión y naturalidad totales.</p>
+          <ul class="level-points" id="lvl-pts-5"></ul>
+          <div class="level-prog" id="lvl-prog-5">→ <b>Programa 03</b> · meta</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="coverage-bar rv">
+      <div class="coverage-top">
+        <span class="coverage-label" id="cov-label">Cobertura de los programas</span>
+        <span class="coverage-range" id="cov-range">Jonathan cubre <b>A1 → C1</b> · mantenimiento hacia C2</span>
+      </div>
+      <div class="coverage-track"><div class="coverage-fill"></div></div>
+      <div class="coverage-marks">
+        <span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span><span>C2</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAMA 01 ================= -->
+<section id="p1">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="ghost">01</div>
+      <div class="kicker"><span class="num">§ 01</span> Programa principiantes · desde cero</div>
+      <h2>Primeros pasos <em>en español</em></h2>
+      <p class="lead">
+        <strong>Perfil del alumno.</strong> Diseñado para personas sin conocimientos previos de español
+        que desean aprender las bases del idioma de forma estructurada, visual y sin la frustración
+        de memorizar reglas complejas.
+      </p>
+    </div>
+
+    <div class="row rv">
+      <div class="col-left">
+        <div class="idx-line"><span class="idx">1.A</span><span class="tag">Nivel A1 · 10 semanas</span></div>
+        <h3>Lo que vas a lograr</h3>
+        <p class="sub">De cero absoluto a tus primeras conversaciones reales.</p>
+        <p>El recorrido está pensado en bloques cortos y visuales: cada sesión suma una estructura
+           nueva y la pone inmediatamente en uso, para que hables desde la primera semana.</p>
+        
+        <!-- Muestra Multimedia Visual 1 -->
+        <div class="multimedia-preview">
+          <div class="preview-tag">Vista previa de tu material multimedia</div>
+          <div class="preview-card-interactive">
+            <div class="preview-header">
+              <span class="preview-title">Infografía interactiva: Presente y Rutinas</span>
+              <span class="preview-badge">A1 Visual</span>
+            </div>
+            <div class="preview-content-grid">
+              <div class="preview-chip-item"><strong>Verbos de estado</strong>ser / estar / tener</div>
+              <div class="preview-chip-item"><strong>Fórmula 'Gustar'</strong>a mí me gusta...</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="formula">
+          <span class="lbl">Formato</span>
+          <span class="box">10 sesiones · 60 min</span>
+          <span style="color:var(--muted)">→</span>
+          <span class="lo">1 a 1</span>
+          <i>online</i>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="card">
+          <div class="card-top">
+            <span class="card-q">Gramática esencial…</span>
+            <span class="pills"><span class="pill">Meta</span><span class="pill">01</span></span>
+          </div>
+          <div class="card-main">Dominar las estructuras <span class="hl">en presente</span>: verbos de estado, <em>gustar</em> y pronombres.</div>
+          <div class="card-note">Explicadas con infografías interactivas, no con listas de memorización.</div>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <span class="card-q">Hablar de ti…</span>
+            <span class="pills"><span class="pill">Meta</span><span class="pill">02</span></span>
+          </div>
+          <div class="card-main">Presentarte, hablar de tu <span class="hl">profesión</span>, gustos, rutinas y necesidades cotidianas.</div>
+          <div class="card-note">Vocabulario funcional aplicado a tu contexto real (viaje / trabajo).</div>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <span class="card-q">Primeras conversaciones…</span>
+            <span class="pills"><span class="pill">Meta</span><span class="pill">03</span></span>
+          </div>
+          <div class="card-main">Mantener diálogos sencillos con <span class="hl">recursos visuales</span> e interactivos.</div>
+          <div class="card-note">Práctica guiada con soporte gráfico para reducir el bloqueo inicial.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row rv">
+      <div class="col-left">
+        <div class="idx-line"><span class="idx">1.B</span><span class="tag plain">La experiencia</span></div>
+        <h3>Qué incluye</h3>
+        <p class="sub">Todo lo necesario para avanzar también fuera de la clase.</p>
+        <ul class="incl">
+          <li data-n="01">10 sesiones individuales 1 a 1 de 60 minutos de duración.</li>
+          <li data-n="02">Guías e infografías interactivas A1 adaptadas a tu ritmo de aprendizaje.</li>
+          <li data-n="03">Ejercicios prácticos entre clases con revisión por WhatsApp.</li>
+        </ul>
+      </div>
+      <div class="col-right">
+        <div class="card invest">
+          <div class="card-top">
+            <span class="card-q">Desglose de inversión</span>
+            <span class="pills"><span class="pill" id="p1-pill-rate">R$ 60</span><span class="pill">/ sesión</span></span>
+          </div>
+          <div class="price" id="p1-price">R$ 600<small>Programa completo · 10 sesiones · 10 semanas</small></div>
+          <ul class="pay">
+            <li><span class="k" id="p1-pay-single-lbl">Pago único (PIX / Wise)</span><span class="v off" id="p1-pay-single-val">R$ 540</span></li>
+            <li><span class="k" id="p1-pay-installments-lbl">En cuotas</span><span class="v" id="p1-pay-installments-val">2 × R$ 300</span></li>
+            <li><span class="k" id="p1-pay-session-lbl">Valor por sesión</span><span class="v" id="p1-pay-session-val">R$ 60</span></li>
+          </ul>
+          <div class="savings-stamp">
+            <span class="ss-val" id="p1-save-val">R$ 600</span>
+            <span class="ss-txt" id="p1-save-txt">en costos que no pagas<br>sem matrícula · sem material · sem livros</span>
+          </div>
+          <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20me%20interesa%20inscribirme%20en%20el%20Programa%2001:%20Primeros%20pasos%20(A1)" target="_blank" rel="noopener">Elegir Programa 01 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAMA 02 ================= -->
+<section id="p2" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="ghost">02</div>
+      <div class="kicker"><span class="num">§ 02</span> Programa intensivo intermedio</div>
+      <h2>Del portuñol <em>a la fluidez real</em></h2>
+      <p class="lead">
+        <strong>Perfil del alumno.</strong> Para estudiantes con conocimientos previos que entienden
+        la mayor parte del español pero se traban al hablar o cometen errores recurrentes de
+        interferencia entre el portugués y el español.
+      </p>
+    </div>
+
+    <div class="row rv">
+      <div class="col-left">
+        <div class="idx-line"><span class="idx">2.A</span><span class="tag">Intermedio · 8 semanas</span></div>
+        <h3>Lo que vas a lograr</h3>
+        <p class="sub">Desactivar la interferencia y soltar la lengua.</p>
+        <p>Partimos de un diagnóstico de tus errores reales y trabajamos sobre ellos: nada de
+           contenidos genéricos, sino corrección dirigida a lo que te frena hoy.</p>
+        
+        <!-- Muestra Multimedia Visual 2 -->
+        <div class="multimedia-preview">
+          <div class="preview-tag">Matriz de Corrección PT → ES</div>
+          <div class="preview-card-interactive">
+            <div class="preview-header">
+              <span class="preview-title">Falsos Amigos & Preposiciones</span>
+              <span class="preview-badge">B1/B2 Pro</span>
+            </div>
+            <div class="preview-content-grid">
+              <div class="preview-chip-item"><strong>Muy vs. Mucho</strong>regla aplicada directa</div>
+              <div class="preview-chip-item"><strong>Portuñol Killer</strong>tarjetas de corrección</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="formula">
+          <span class="lbl">Formato</span>
+          <span class="box">8 sesiones · 60 min</span>
+          <span style="color:var(--muted)">→</span>
+          <span class="lo">1 a 1</span>
+          <i>online</i>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="card">
+          <div class="card-top">
+            <span class="card-q">Soltura al hablar…</span>
+            <span class="pills"><span class="pill">Meta</span><span class="pill">01</span></span>
+          </div>
+          <div class="card-main">Ganar <span class="hl">espontaneidad</span> en situaciones reales o profesionales.</div>
+          <div class="card-note">Simulaciones de reuniones, interviews y conversación cotidiana.</div>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <span class="card-q">Errores recurrentes…</span>
+            <span class="pills"><span class="pill">Meta</span><span class="pill">02</span></span>
+          </div>
+          <div class="card-main">Eliminar falsos amigos, <span class="hl">muy vs. mucho</span> y el uso de preposiciones.</div>
+          <div class="card-note">Corrección sistemática de interferencias PT → ES.</div>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <span class="card-q">Entender la lógica…</span>
+            <span class="pills"><span class="pill">Meta</span><span class="pill">03</span></span>
+          </div>
+          <div class="card-main">Comprender la estructura del idioma con <span class="hl">materiales dinámicos</span> personalizados.</div>
+          <div class="card-note">Recursos creados a medida a partir de tu diagnóstico inicial.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row rv">
+      <div class="col-left">
+        <div class="idx-line"><span class="idx">2.B</span><span class="tag plain">La experiencia</span></div>
+        <h3>Qué incluye</h3>
+        <p class="sub">Diagnóstico, materiales propios y seguimiento semanal.</p>
+        <ul class="incl">
+          <li data-n="01">8 sesiones individuales 1 a 1 de 60 minutos de duración.</li>
+          <li data-n="02">Evaluación inicial de nivel y diagnóstico de interferencias lingüísticas.</li>
+          <li data-n="03">Acceso a guías interactivas y recursos pedagógicos propios creados a tu medida.</li>
+          <li data-n="04">Acompañamiento semanal vía WhatsApp: dudas rápidas y corrección de audios.</li>
+        </ul>
+      </div>
+      <div class="col-right">
+        <div class="card invest">
+          <div class="card-top">
+            <span class="card-q">Desglose de inversión</span>
+            <span class="pills"><span class="pill" id="p2-pill-rate">R$ 60</span><span class="pill">/ sesión</span></span>
+          </div>
+          <div class="price" id="p2-price">R$ 480<small>Programa completo · 8 sesiones · 8 semanas</small></div>
+          <ul class="pay">
+            <li><span class="k" id="p2-pay-single-lbl">Pago único (PIX / Wise)</span><span class="v off" id="p2-pay-single-val">R$ 432</span></li>
+            <li><span class="k" id="p2-pay-installments-lbl">En cuotas</span><span class="v" id="p2-pay-installments-val">2 × R$ 240</span></li>
+            <li><span class="k" id="p2-pay-session-lbl">Valor por sesión</span><span class="v" id="p2-pay-session-val">R$ 60</span></li>
+          </ul>
+          <div class="savings-stamp">
+            <span class="ss-val" id="p2-save-val">R$ 600</span>
+            <span class="ss-txt" id="p2-save-txt">en costos que no pagas<br>sem matrícula · sem material · sem livros</span>
+          </div>
+          <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20me%20interesa%20inscribirme%20en%20el%20Programa%2002:%20Del%20portu%C3%B1ol%20a%20la%20fluidez" target="_blank" rel="noopener">Elegir Programa 02 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAMA 03 ================= -->
+<section id="p3">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="ghost">03</div>
+      <div class="kicker"><span class="num">§ 03</span> Mantenimiento y conversación guiada</div>
+      <h2>Conversación <em>con propósito</em></h2>
+      <p class="lead">
+        <strong>Perfil del alumno.</strong> Orientado a profesionales o estudiantes de nivel
+        intermedio-avanzado que necesitan mantener su fluidez, ampliar vocabulario y ganar
+        seguridad en debates o reuniones.
+      </p>
+    </div>
+
+    <div class="row rv">
+      <div class="col-left">
+        <div class="idx-line"><span class="idx">3.A</span><span class="tag">Plan mensual · B2–C1</span></div>
+        <h3>Lo que vas a lograr</h3>
+        <p class="sub">Que el idioma no se oxide y siga creciendo.</p>
+        <p>Cada mes elegimos ejes temáticos según tu interés profesional o personal, con material
+           auténtico y feedback puntual sobre lo que dices y cómo lo dices.</p>
+        <div class="formula">
+          <span class="lbl">Formato</span>
+          <span class="box">4 sesiones / mes · 60 min</span>
+          <span style="color:var(--muted)">→</span>
+          <span class="lo">1 × semana</span>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="card">
+          <div class="card-top">
+            <span class="card-q">Agilidad mental…</span>
+            <span class="pills"><span class="pill">Meta</span><span class="pill">01</span></span>
+          </div>
+          <div class="card-main">Hablar con fluidez sobre <span class="hl">tus temas</span>: trabajo, cultura y actualidad.</div>
+          <div class="card-note">Temarios elegidos contigo, renovados cada mes.</div>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <span class="card-q">Riqueza léxica…</span>
+            <span class="pills"><span class="pill">Meta</span><span class="pill">02</span></span>
+          </div>
+          <div class="card-main">Incorporar <span class="hl">vocabulario especializado</span> y giros idiomáticos naturales.</div>
+          <div class="card-note">Expresiones de uso real, no de manual.</div>
+        </div>
+        <div class="card">
+          <div class="card-top">
+            <span class="card-q">Corrección fina…</span>
+            <span class="pills"><span class="pill">Meta</span><span class="pill">03</span></span>
+          </div>
+          <div class="card-main">Retroalimentación inmediata sobre <span class="hl">pronunciación</span>, coherencia y gramática.</div>
+          <div class="card-note">Informe de puntos clave al cierre de cada sesión.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row rv">
+      <div class="col-left">
+        <div class="idx-line"><span class="idx">3.B</span><span class="tag plain">La experiencia</span></div>
+        <h3>Qué incluye</h3>
+        <p class="sub">Conversación estructurada, nunca improvisada.</p>
+        <ul class="incl">
+          <li data-n="01">4 sesiones mensuales de 60 minutos (1 clase por semana).</li>
+          <li data-n="02">Temarios personalizados basados en artículos, videos y material multimedia interactivo.</li>
+          <li data-n="03">Feedback detallado al finalizar cada sesión con puntos clave a mejorar.</li>
+        </ul>
+      </div>
+      <div class="col-right">
+        <div class="card invest">
+          <div class="card-top">
+            <span class="card-q">Desglose de inversión</span>
+            <span class="pills"><span class="pill" id="p3-pill-rate">R$ 60</span><span class="pill">/ sesión</span></span>
+          </div>
+          <div class="price" id="p3-price">R$ 240<small>Plan mensual de mantenimiento · 4 sesiones</small></div>
+          <ul class="pay">
+            <li><span class="k" id="p3-pay-rec-lbl">Suscripción recurrente</span><span class="v" id="p3-pay-rec-val">R$ 220 / mes</span></li>
+            <li><span class="k" id="p3-pay-session-lbl">Valor por sesión</span><span class="v" id="p3-pay-session-val">R$ 60</span></li>
+          </ul>
+          <div class="savings-stamp">
+            <span class="ss-val" id="p3-save-val">R$ 600</span>
+            <span class="ss-txt" id="p3-save-txt">en costos que no pagas<br>sem matrícula · sem material · sem livros</span>
+          </div>
+          <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20sumarme%20al%20Programa%2003:%20Conversaci%C3%B3n%20con%20prop%C3%B3sito" target="_blank" rel="noopener">Elegir Programa 03 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAMA 04 ================= -->
+<section id="p4" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="ghost">04</div>
+      <div class="kicker"><span class="num">§ 04</span> Sesión de diagnóstico y plan personalizado</div>
+      <h2>Evaluación 1 a 1 <em>+ hoja de ruta</em></h2>
+      <p class="lead">
+        <strong>Perfil del alumno.</strong> Personas que no están seguras de su nivel exacto y desean
+        una evaluación pedagógica profesional antes de comprometerse con un programa completo.
+      </p>
+    </div>
+
+    <div class="row rv">
+      <div class="col-left">
+        <div class="idx-line"><span class="idx">4.A</span><span class="tag">Puntual · 45 minutos</span></div>
+        <h3>Qué incluye la sesión</h3>
+        <p class="sub">Saber exactamente dónde estás antes de invertir.</p>
+        <ul class="incl">
+          <li data-n="01">1 sesión individual de 45 minutos.</li>
+          <li data-n="02">Diagnóstico preciso de tus fortalezas y bloqueos principales en la conversación.</li>
+          <li data-n="03">Plan de estudio recomendado según tus objetivos de tiempo y aprendizaje.</li>
+        </ul>
+        <div class="formula">
+          <span class="lbl">Formato</span>
+          <span class="box">1 sesión · 45 min</span>
+          <span style="color:var(--muted)">→</span>
+          <span class="lo">informe</span>
+          <i>+ hoja de ruta</i>
+        </div>
+      </div>
+      <div class="col-right">
+        <div class="card invest">
+          <div class="card-top">
+            <span class="card-q">Inversión</span>
+            <span class="pills"><span class="pill solo">Sin compromiso</span></span>
+          </div>
+          <div class="price" id="p4-price">R$ 50<small>Sesión puntual de evaluación pedagógica</small></div>
+          <ul class="pay">
+            <li><span class="k" id="p4-pay-refund-lbl">Reembolso</span><span class="v" id="p4-pay-refund-val">100 %</span></li>
+            <li><span class="k" id="p4-pay-apply-lbl">Abonable a un programa</span><span class="v" id="p4-pay-apply-val">7 días</span></li>
+          </ul>
+          <div class="card-note" id="p4-note" style="border-color:rgba(255,255,255,.18);color:rgba(255,255,255,.72)">
+            Monto 100 % reembolsable o abonable si contratas un programa completo dentro de los siguientes 7 días.
+          </div>
+          <div class="savings-stamp">
+            <span class="ss-val" id="p4-save-val">R$ 600</span>
+            <span class="ss-txt" id="p4-save-txt">en costos que no pagas<br>sem matrícula · sem material · sem livros</span>
+          </div>
+          <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20agendar%20una%20Sesi%C3%B3n%20de%20Diagn%C3%B3stico" target="_blank" rel="noopener">Agendar Diagnóstico →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIOS ================= -->
+<section id="testimonios">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="ghost">06</div>
+      <div class="kicker"><span class="num">§ 06</span> Experiencias de alumnos</div>
+      <h2>Resultados reales <em>de portuñol a fluidez</em></h2>
+      <p class="lead">Lo que dicen profesionales y estudiantes que ya transformaron su confianza al hablar en español.</p>
+    </div>
+    <div class="testimonials-grid rv">
+      <div class="testimonial-card">
+        <p class="quote-text">"Entendía casi todo en español pero me daba pánico hablar en reuniones de trabajo. Con las infografías de Jonathan entendí las estructuras de inmediato y dejé de mezclar portugués."</p>
+        <div class="author-info">
+          <div class="author-avatar">MB</div>
+          <div class="author-details">
+            <b>Mariana B.</b>
+            <small>Gerente de Marketing · Brasil</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="quote-text">"El enfoque visual es increíble. No pierdes tiempo en explicaciones teóricas aburridas: ves el recurso interactivo, entiendes la lógica y lo usas directo en la conversación."</p>
+        <div class="author-info">
+          <div class="author-avatar">RF</div>
+          <div class="author-details">
+            <b>Rodrigo F.</b>
+            <small>Ingeniero de Software</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="quote-text">"La sesión de diagnóstico fue el mejor punto de partida. Supo decirme exactamente dónde estaba cometiendo errores por interferencia del portugués y trazamos un plan a mi medida."</p>
+        <div class="author-info">
+          <div class="author-avatar">CL</div>
+          <div class="author-details">
+            <b>Camila L.</b>
+            <small>Estudiante de Programa Intermedio</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CUADRO ================= -->
+<section id="cuadro" class="alt">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="ghost">07</div>
+      <div class="kicker"><span class="num">§ 07</span> Comparativa</div>
+      <h2>Cuadro de programas <em>y valores</em></h2>
+      <p class="lead">Todos los programas comparten la misma tarifa base por sesión. La diferencia
+        está en la profundidad del recorrido y en el tipo de acompañamiento.</p>
+    </div>
+    <div class="table-x rv">
+      <table>
+        <thead>
+          <tr><th>Programa</th><th>Duración</th><th>Formato</th><th>Inversión total</th><th>Valor por sesión</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name"><span>§ 01</span>Primeros Pasos<br><em style="font-family:var(--sans);font-size:.82rem;font-weight:400;color:var(--muted)">Desde cero · A1</em></td>
+            <td>10 semanas</td><td>10 sesiones de 60 min</td>
+            <td class="tot" id="table-p1-tot">R$ 600</td><td class="ses" id="table-p1-ses">R$ 60</td>
+          </tr>
+          <tr>
+            <td class="name"><span>§ 02</span>Del Portuñol a la Fluidez</td>
+            <td>8 semanas</td><td>8 sesiones de 60 min</td>
+            <td class="tot" id="table-p2-tot">R$ 480</td><td class="ses" id="table-p2-ses">R$ 60</td>
+          </tr>
+          <tr>
+            <td class="name"><span>§ 03</span>Conversación con Propósito</td>
+            <td>Mensual</td><td>4 sesiones/mes de 60 min</td>
+            <td class="tot" id="table-p3-tot">R$ 240 <span style="font-size:.85rem;font-weight:400">/mes</span></td><td class="ses" id="table-p3-ses">R$ 60</td>
+          </tr>
+          <tr>
+            <td class="name"><span>§ 04</span>Sesión de Diagnóstico</td>
+            <td>Puntual</td><td>1 sesión de 45 min</td>
+            <td class="tot" id="table-p4-tot">R$ 50</td><td class="ses" id="table-p4-ses">R$ 50 (tarifa única)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONDICIONES ================= -->
+<section id="condiciones">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="ghost">08</div>
+      <div class="kicker"><span class="num">§ 08</span> Condiciones generales del servicio</div>
+      <h2>Reglas claras, <em>trabajo tranquilo</em></h2>
+    </div>
+    <div class="cond rv">
+      <div class="card">
+        <div class="n">01</div>
+        <h4>Puntualidad y reprogramación</h4>
+        <p>Se requiere aviso previo de al menos <b>24 horas</b> para reprogramar una clase sin costo adicional.</p>
+      </div>
+      <div class="card">
+        <div class="n">02</div>
+        <h4>Vigencia de paquetes</h4>
+        <p>El paquete de 10 semanas tiene un plazo máximo de utilización de <b>12 semanas</b> a partir de la primera sesión.</p>
+      </div>
+      <div class="card">
+        <div class="n">03</div>
+        <h4>Reserva de cupo</h4>
+        <p>El cupo en la agenda se confirma una vez abonada la <b>primera cuota</b> o la totalidad del programa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CIERRE ================= -->
+<div class="closing wrap">
+  <div class="kicker" style="justify-content:center"><span class="num">§ 09</span> Siguiente paso</div>
+  <h2 id="close-title">Elige tu programa <em>y empezamos esta misma semana.</em></h2>
+  <a class="btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20reservar%20mi%20cupo%20para%20empezar%20esta%20semana" target="_blank" rel="noopener">Reservar mi cupo por WhatsApp →</a>
+  <footer>
+    <span>Jonathan Mendoza · Lic. en Educación</span>
+    <span><a href="https://www.instagram.com/idiomaswebespanol/" target="_blank" rel="noopener">Instagram: @idiomaswebespanol</a></span>
+    <span><a href="https://www.youtube.com/@idiomasweb" target="_blank" rel="noopener">YouTube: @idiomasweb</a></span>
+    <span id="footer-rate">Propuesta v5 · Tarifa base R$ 60 / sesión</span>
+  </footer>
+</div>
+
+<script>
+/* ================= EVENTOS DE SCROLL OPTIMIZADOS ================= */
+const bar = document.getElementById('progress');
+const secs = [...document.querySelectorAll('section[id]')];
+const nav = document.getElementById('nav');
+const links = [...nav.querySelectorAll('a')];
+
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const scrollTop = h.scrollTop;
+  const scrollHeight = h.scrollHeight;
+  const clientHeight = h.clientHeight;
+  
+  bar.style.width = (scrollTop / (scrollHeight - clientHeight) * 100) + '%';
+  
+  let cur = null;
+  secs.forEach(s => {
+    if (scrollTop >= s.offsetTop - 140) {
+      cur = s.id;
+    }
+  });
+  links.forEach(l => l.classList.toggle('on', l.getAttribute('href') === '#' + cur));
+}, { passive: true });
+
+/* ================= MENÚ MÓVIL ================= */
+document.getElementById('burger').onclick = () => nav.classList.toggle('open');
+nav.querySelectorAll('a').forEach(a => a.onclick = () => nav.classList.remove('open'));
+
+/* ================= REVEAL (INTERSECTION OBSERVER) ================= */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(x => {
+    if (x.isIntersecting) {
+      x.target.classList.add('in');
+      io.unobserve(x.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* ================= TRADUCCIONES Y MONEDAS MULTILINGÜE ================= */
+const translations = {
+  es: {
+    heroTitle: "Aprender español <em>con método</em>, no con suerte.",
+    heroLead: "Cuatro programas pedagógicos adaptados a tu punto de partida, construidos sobre una tarifa base transparente de <strong id=\"hero-lead-rate\">R$&nbsp;60 por sesión</strong>. Clases individuales, materiales interactivos propios y acompañamiento real entre clase y clase.",
+    btnReserve: "Reservar mi cupo →",
+    btnDiagHero: "¿No sabes tu nivel? Haz un diagnóstico primero",
+    navProf: "Profesor",
+    navNiveles: "Niveles",
+    navCero: "Desde cero",
+    navFluidez: "Fluidez",
+    navConv: "Conversación",
+    navDiag: "Diagnóstico",
+    navSave: "Ahorro",
+    navTest: "Testimonios",
+    navCuadro: "Cuadro",
+    navCond: "Condiciones",
+    teacherTitle: "Jonathan Mendoza",
+    teacherSub: "Especialista en Contenido Pedagógico Multimedia",
+    teacherBio: "Aprender un idioma no tiene por qué ser aburrido ni basarse en listas infinitas de reglas. Mi metodología combina el rigor pedagógico con herramientas interactivas y recursos visuales diseñados a medida para que avances con claridad, ritmo y confianza.",
+    teacherBio2: "Acompaño a profesionales y estudiantes a perder el miedo a hablar, superar la interferencia del portugués y dominar el español de uso real.",
+    closeTitle: "Elige tu programa <em>y empezamos esta misma semana.</em>",
+    
+    heroMetaBaseLbl: "Tarifa base",
+    currencyBase: "R$ 60 / sesión",
+    paySingleLabel: "Pago único (PIX / Wise)",
+    payInstallmentsLabel: "En cuotas",
+    paySessionLabel: "Valor por sesión",
+    subscriptionLabel: "Suscripción recurrente",
+    refundLabel: "Reembolso",
+    applyLabel: "Abonable a un programa",
+    
+    p1Price: "R$ 600",
+    p1Subprice: "Programa completo · 10 sesiones · 10 semanas",
+    p1Single: "R$ 540",
+    p1Installments: "2 × R$ 300",
+    p1Session: "R$ 60",
+    
+    p2Price: "R$ 480",
+    p2Subprice: "Programa completo · 8 sesiones · 8 semanas",
+    p2Single: "R$ 432",
+    p2Installments: "2 × R$ 240",
+    p2Session: "R$ 60",
+    
+    p3Price: "R$ 240",
+    p3Subprice: "Plan mensual de mantenimiento · 4 sesiones",
+    p3Recurrent: "R$ 220 / mes",
+    p3Session: "R$ 60",
+    
+    p4Price: "R$ 50",
+    p4Subprice: "Sesión puntual de evaluación pedagógica",
+    p4Refund: "100 %",
+    p4Apply: "7 días",
+    p4Note: "Monto 100 % reembolsable o abonable si contratas un programa completo dentro de los siguientes 7 días.",
+    
+    tableP1Tot: "R$ 600", tableP1Ses: "R$ 60",
+    tableP2Tot: "R$ 480", tableP2Ses: "R$ 60",
+    tableP3Tot: "R$ 240 <span style=\"font-size:.85rem;font-weight:400\">/mes</span>", tableP3Ses: "R$ 60",
+    tableP4Tot: "R$ 50", tableP4Ses: "R$ 50 (tarifa única)",
+
+    heroMetaSaveLbl: "Costos ocultos evitados",
+    heroMetaSaveVal: "hasta R$ 600",
+    savingsKicker: "Costos ocultos del mercado",
+    savingsTitle: "Esto es todo <em>lo que NO pagas</em>",
+    savingsLead: "En una academia común, a la mensualidad se le suman matrícula, material, libros y taxa de manutenção — costos que aparecen <strong>después</strong> de comprometerte. Con Jonathan no: la tarifa de <strong>R$ 60 por sesión</strong> lo incluye todo. Esto es lo que <strong>no pagas</strong>, calculado sobre los precios del mercado brasileño de escuelas de idiomas (2025-2026).",
+    saveTagline: "Sin matrícula · Sin material · Sin libros · Sin mantenimiento",
+    costMatLabel: "Inscripción / Matrícula",
+    costMatVal: "R$ 150",
+    costMatFree: "Incluida · R$ 0",
+    costMat2Label: "Material didáctico",
+    costMat2Val: "R$ 200",
+    costMat2Free: "Interactivo propio · R$ 0",
+    costLibLabel: "Libros de texto",
+    costLibVal: "R$ 180",
+    costLibFree: "No necesitas comprar · R$ 0",
+    costMntLabel: "Mantenimiento / Plataforma",
+    costMntVal: "R$ 70",
+    costMntFree: "Sin taxa mensual · R$ 0",
+    cmpP1Name: "Primeros Pasos (A1)",
+    cmpP1Pct: "100%",
+    cmpP2Name: "Del Portuñol a la Fluidez",
+    cmpP2Pct: "125%",
+    cmpP3Name: "Conversación con Propósito",
+    cmpP3Pct: "250%",
+    saveVal: "R$ 600",
+    saveTxt: "en costos que no pagas<br>sem matrícula · sem material · sem livros",
+    saveCostTotalLbl: "Costo total en academia",
+    saveCostTotal: "R$ 1.200",
+    saveHiddenAmount: "R$ 600",
+    saveHiddenLbl: "costos ocultos",
+    savePayLbl: "Hoy pagas",
+    savePayVal: "R$ 599",
+    saveDiscount: "-50%",
+
+    levelsKicker: "Marco Común Europeo de Referencia",
+    levelsTitle: "Los 6 niveles <em>del español internacional</em>",
+    levelsLead: "El MCER es el estándar internacional que mide tu dominio del idioma, de <strong>A1</strong> (principiante) a <strong>C2</strong> (maestría). Así siempre sabes dónde estás y hacia dónde vas. Jonathan te acompaña principalmente de <strong>A1 a C1</strong>, con mantenimiento avanzado hacia C2.",
+    covLabel: "Cobertura de los programas",
+    covRange: "Jonathan cubre <b>A1 → C1</b> · mantenimiento hacia C2",
+    levels: [
+      { group:"Básico", name:"Acceso", can:"Te presentas y describes cosas con expresiones muy sencillas de uso inmediato.", points:"<li>Presentarte, tu rutina, gustos y profesión</li><li>Estructuras en presente: ser, estar, tener, gustar</li><li>Primeras conversaciones sencillas y guiadas</li>", prog:"→ <b>Programa 01</b>" },
+      { group:"Básico", name:"Plataforma", can:"Comunicas en tareas cotidianas y rutinarias con intercambios breves.", points:"<li>Narrar experiencias del pasado (pretérito, imperfecto)</li><li>Describir tu entorno, planes y compras del día a día</li><li>Intercambios breves sobre temas familiares</li>", prog:"→ <b>Programa 01</b> · continuación" },
+      { group:"Intermedio", name:"Umbral", can:"Te desenvuelves en viajes y justificas brevemente tus opiniones.", points:"<li>Enlazar frases para describir experiencias y deseos</li><li>Desenvolverte en la mayoría de situaciones de viaje</li><li>Expresar y justificar opiniones de forma sencilla</li>", prog:"→ <b>Programa 02</b>" },
+      { group:"Intermedio", name:"Independiente", can:"Te relacionas con fluidez y defiendes tus puntos de vista con detalle.", points:"<li>Entender las ideas principales de textos complejos</li><li>Hablar con fluidez y naturalidad con hablantes nativos</li><li>Defender posturas con argumentos claros y detallados</li>", prog:"→ <b>Programa 02 / 03</b>" },
+      { group:"Avanzado", name:"Dominio operativo", can:"Te expresas con fluidez espontánea y flexibilidad para fines profesionales.", points:"<li>Usar el idioma con flexibilidad para fines sociales y profesionales</li><li>Producir textos claros, bien estructurados y matizados</li><li>Reconocer expresiones idiomáticas y distintos registros</li>", prog:"→ <b>Programa 03</b>" },
+      { group:"Avanzado", name:"Maestría", can:"Comprendes todo y te expresas con precisión y naturalidad totales.", points:"<li>Comprender prácticamente cualquier mensaje oral o escrito</li><li>Distinguir matices sutiles de significado</li><li>Expresarte con precisión, fluidez y naturalidad total</li>", prog:"→ <b>Programa 03</b> · meta" }
+    ],
+    footerRate: "Propuesta v5 · Tarifa base R$ 60 / sesión"
+  },
+  pt: {
+    heroTitle: "Aprender espanhol <em>com método</em>, não com sorte.",
+    heroLead: "Quatro programas pedagógicos adaptados ao seu ponto de partida, construídos sobre uma tarifa base transparente de <strong id=\"hero-lead-rate\">R$&nbsp;60 por sessão</strong>. Aulas individuais, materiais interativos próprios e acompanhamento real entre as aulas.",
+    btnReserve: "Reservar minha vaga →",
+    btnDiagHero: "Não sabe seu nível? Faça um diagnóstico primeiro",
+    navProf: "Professor",
+    navNiveles: "Niveis",
+    navCero: "Do zero",
+    navFluidez: "Fluidez",
+    navConv: "Conversação",
+    navDiag: "Diagnóstico",
+    navSave: "Economia",
+    navTest: "Depoimentos",
+    navCuadro: "Tabela",
+    navCond: "Condições",
+    teacherTitle: "Jonathan Mendoza",
+    teacherSub: "Especialista em Conteúdo Pedagógico Multimídia",
+    teacherBio: "Aprender um idioma não precisa ser chato nem baseado em listas infinitas de regras. Minha metodologia combina o rigor pedagógico com ferramentas interativas e recursos visuais sob medida para você avançar com clareza e confiança.",
+    teacherBio2: "Acompanho profissionais e estudantes a perderem o medo de falar, superarem a interferência do português e dominarem o espanhol real.",
+    closeTitle: "Escolha seu programa <em>e começamos esta mesma semana.</em>",
+    
+    heroMetaBaseLbl: "Tarifa base",
+    currencyBase: "R$ 60 / sessão",
+    paySingleLabel: "Pagamento único (PIX / Wise)",
+    payInstallmentsLabel: "Em parcelas",
+    paySessionLabel: "Valor por sessão",
+    subscriptionLabel: "Assinatura recorrente",
+    refundLabel: "Reembolso",
+    applyLabel: "Abonável a um programa",
+    
+    p1Price: "R$ 600",
+    p1Subprice: "Programa completo · 10 sessões · 10 semanas",
+    p1Single: "R$ 540",
+    p1Installments: "2 × R$ 300",
+    p1Session: "R$ 60",
+    
+    p2Price: "R$ 480",
+    p2Subprice: "Programa completo · 8 sessões · 8 semanas",
+    p2Single: "R$ 432",
+    p2Installments: "2 × R$ 240",
+    p2Session: "R$ 60",
+    
+    p3Price: "R$ 240",
+    p3Subprice: "Plano mensal de manutenção · 4 sessões",
+    p3Recurrent: "R$ 220 / mês",
+    p3Session: "R$ 60",
+    
+    p4Price: "R$ 50",
+    p4Subprice: "Sessão pontual de avaliação pedagógica",
+    p4Refund: "100 %",
+    p4Apply: "7 dias",
+    p4Note: "Montante 100% reembolsável ou dedutível se contratar um programa completo dentro dos próximos 7 dias.",
+    
+    tableP1Tot: "R$ 600", tableP1Ses: "R$ 60",
+    tableP2Tot: "R$ 480", tableP2Ses: "R$ 60",
+    tableP3Tot: "R$ 240 <span style=\"font-size:.85rem;font-weight:400\">/mês</span>", tableP3Ses: "R$ 60",
+    tableP4Tot: "R$ 50", tableP4Ses: "R$ 50 (tarifa única)",
+
+    heroMetaSaveLbl: "Custos ocultos evitados",
+    heroMetaSaveVal: "até R$ 600",
+    savingsKicker: "Custos ocultos do mercado",
+    savingsTitle: "Isso é tudo <em>o que você NÃO paga</em>",
+    savingsLead: "Em uma escola comum, à mensalidade somam-se matrícula, material, livros e taxa de manutenção — custos que aparecem <strong>depois</strong> de você se comprometer. Com Jonathan não: a tarifa de <strong>R$ 60 por sessão</strong> inclui tudo. Isto é o que você <strong>não paga</strong>, calculado sobre os preços do mercado brasileiro de escolas de idiomas (2025-2026).",
+    saveTagline: "Sem matrícula · Sem material · Sem livros · Sem manutenção",
+    costMatLabel: "Inscrição / Matrícula",
+    costMatVal: "R$ 150",
+    costMatFree: "Inclusa · R$ 0",
+    costMat2Label: "Material didático",
+    costMat2Val: "R$ 200",
+    costMat2Free: "Interativo próprio · R$ 0",
+    costLibLabel: "Livros didáticos",
+    costLibVal: "R$ 180",
+    costLibFree: "Não precisa comprar · R$ 0",
+    costMntLabel: "Manutenção / Plataforma",
+    costMntVal: "R$ 70",
+    costMntFree: "Sem taxa mensal · R$ 0",
+    cmpP1Name: "Primeiros Passos (A1)",
+    cmpP1Pct: "100%",
+    cmpP2Name: "Do Portuñol à Fluidez",
+    cmpP2Pct: "125%",
+    cmpP3Name: "Conversação com Propósito",
+    cmpP3Pct: "250%",
+    saveVal: "R$ 600",
+    saveTxt: "em custos que você não paga<br>sem matrícula · sem material · sem livros",
+    saveCostTotalLbl: "Custo total em escola",
+    saveCostTotal: "R$ 1.200",
+    saveHiddenAmount: "R$ 600",
+    saveHiddenLbl: "custos ocultos",
+    savePayLbl: "Hoje você paga",
+    savePayVal: "R$ 599",
+    saveDiscount: "-50%",
+
+    levelsKicker: "Quadro Comum Europeu de Referência",
+    levelsTitle: "Os 6 níveis <em>do espanhol internacional</em>",
+    levelsLead: "O MCER é o padrão internacional que mede seu domínio do idioma, de <strong>A1</strong> (iniciante) a <strong>C2</strong> (maestria). Assim você sempre sabe onde está e para onde vai. Jonathan te acompanha principalmente de <strong>A1 a C1</strong>, com manutenção avançada rumo ao C2.",
+    covLabel: "Cobertura dos programas",
+    covRange: "Jonathan cobre <b>A1 → C1</b> · manutenção rumo ao C2",
+    levels: [
+      { group:"Básico", name:"Acesso", can:"Você se apresenta e descreve coisas com expressões muito simples de uso imediato.", points:"<li>Se apresentar, rotina, gostos e profissão</li><li>Estruturas no presente: ser, estar, tener, gustar</li><li>Primeiras conversas simples e guiadas</li>", prog:"→ <b>Programa 01</b>" },
+      { group:"Básico", name:"Plataforma", can:"Você se comunica em tarefas cotidianas e rotineiras com trocas breves.", points:"<li>Narrar experiências do passado (pretérito, imperfeito)</li><li>Descrever seu ambiente, planos e compras do dia a dia</li><li>Trocas breves sobre temas familiares</li>", prog:"→ <b>Programa 01</b> · continuação" },
+      { group:"Intermediário", name:"Limiar", can:"Você se desenrola em viagens e justifica brevemente suas opiniões.", points:"<li>Encadear frases para descrever experiências e desejos</li><li>Se desenrolar na maioria das situações de viagem</li><li>Expressar e justificar opiniões de forma simples</li>", prog:"→ <b>Programa 02</b>" },
+      { group:"Intermediário", name:"Independente", can:"Você se relaciona com fluidez e defende seus pontos de vista com detalhe.", points:"<li>Entender as ideias principais de textos complexos</li><li>Falar com fluidez e naturalidade com falantes nativos</li><li>Defender posições com argumentos claros e detalhados</li>", prog:"→ <b>Programa 02 / 03</b>" },
+      { group:"Avançado", name:"Domínio operativo", can:"Você se expressa com fluidez espontânea e flexibilidade para fins profissionais.", points:"<li>Usar o idioma com flexibilidade para fins sociais e profissionais</li><li>Produzir textos claros, bem estruturados e matizados</li><li>Reconhecer expressões idiomáticas e distintos registros</li>", prog:"→ <b>Programa 03</b>" },
+      { group:"Avançado", name:"Maestria", can:"Você compreende tudo e se expressa com precisão e naturalidade totais.", points:"<li>Compreender praticamente qualquer mensagem oral ou escrita</li><li>Distinguir nuanças sutis de significado</li><li>Se expressar com precisão, fluidez e naturalidade total</li>", prog:"→ <b>Programa 03</b> · meta" }
+    ],
+    footerRate: "Proposta v5 · Tarifa base R$ 60 / sessão"
+  },
+  en: {
+    heroTitle: "Learn Spanish <em>with a proven method</em>, not luck.",
+    heroLead: "Four tailored pedagogical programs designed for your exact starting point, built on a transparent rate of <strong id=\"hero-lead-rate\">$36 per session</strong>. 1-on-1 classes, custom interactive materials, and real support between sessions.",
+    btnReserve: "Reserve my spot →",
+    btnDiagHero: "Not sure of your level? Take a diagnosis first",
+    navProf: "Teacher",
+    navNiveles: "Levels",
+    navCero: "From scratch",
+    navFluidez: "Fluency",
+    navConv: "Conversation",
+    navDiag: "Diagnosis",
+    navSave: "Savings",
+    navTest: "Testimonials",
+    navCuadro: "Pricing Table",
+    navCond: "Terms",
+    teacherTitle: "Jonathan Mendoza",
+    teacherSub: "Multimedia Educational Content Specialist",
+    teacherBio: "Learning a language shouldn't be boring or stuck in endless grammar rules. My methodology combines educational rigor with custom visual and interactive tools so you learn with clarity, momentum, and confidence.",
+    teacherBio2: "I help professionals and students speak confidently, overcome language barriers, and master real-world Spanish.",
+    closeTitle: "Choose your program <em>and let's start this week.</em>",
+    
+    // Tarifas en Dólares (Multiplicadas por 3: Base de $36/sesión) y PayPal
+    heroMetaBaseLbl: "Base rate",
+    currencyBase: "$36 / session",
+    paySingleLabel: "Single payment (PayPal / Wise)",
+    payInstallmentsLabel: "Installments",
+    paySessionLabel: "Value per session",
+    subscriptionLabel: "Recurring subscription (PayPal)",
+    refundLabel: "Refund",
+    applyLabel: "Applicable to program",
+    
+    p1Price: "$360",
+    p1Subprice: "Complete program · 10 sessions · 10 weeks",
+    p1Single: "$324",
+    p1Installments: "2 × $180",
+    p1Session: "$36",
+    
+    p2Price: "$288",
+    p2Subprice: "Complete program · 8 sessions · 8 weeks",
+    p2Single: "$259",
+    p2Installments: "2 × $144",
+    p2Session: "$36",
+    
+    p3Price: "$144",
+    p3Subprice: "Monthly maintenance plan · 4 sessions",
+    p3Recurrent: "$132 / month",
+    p3Session: "$36",
+    
+    p4Price: "$30",
+    p4Subprice: "One-time pedagogical evaluation session",
+    p4Refund: "100%",
+    p4Apply: "7 days",
+    p4Note: "100% refundable or applicable to any program if you sign up within 7 days.",
+    
+    tableP1Tot: "$360", tableP1Ses: "$36",
+    tableP2Tot: "$288", tableP2Ses: "$36",
+    tableP3Tot: "$144 <span style=\"font-size:.85rem;font-weight:400\">/mo</span>", tableP3Ses: "$36",
+    tableP4Tot: "$30", tableP4Ses: "$30 (one-time fee)",
+
+    heroMetaSaveLbl: "Hidden costs avoided",
+    heroMetaSaveVal: "up to $360",
+    savingsKicker: "Hidden costs in the market",
+    savingsTitle: "This is everything <em>you DON'T pay</em>",
+    savingsLead: "In a typical school, enrollment, materials, books and platform fees pile on top of tuition — costs that appear <strong>after</strong> you commit. Not with Jonathan: the <strong>$36 per session</strong> rate includes everything. This is what you <strong>don't pay</strong>, based on Brazilian language-school market prices (2025-2026).",
+    saveTagline: "No enrollment · No materials · No books · No platform fee",
+    costMatLabel: "Enrollment fee",
+    costMatVal: "$90",
+    costMatFree: "Included · $0",
+    costMat2Label: "Study materials",
+    costMat2Val: "$120",
+    costMat2Free: "Custom interactive · $0",
+    costLibLabel: "Textbooks",
+    costLibVal: "$108",
+    costLibFree: "Nothing to buy · $0",
+    costMntLabel: "Maintenance / Platform",
+    costMntVal: "$42",
+    costMntFree: "No monthly fee · $0",
+    cmpP1Name: "First Steps (A1)",
+    cmpP1Pct: "100%",
+    cmpP2Name: "From Portuñol to Fluency",
+    cmpP2Pct: "125%",
+    cmpP3Name: "Purposeful Conversation",
+    cmpP3Pct: "250%",
+    saveVal: "$360",
+    saveTxt: "in costs you don't pay<br>no enrollment · no materials · no books",
+    saveCostTotalLbl: "Total cost in a school",
+    saveCostTotal: "$720",
+    saveHiddenAmount: "$360",
+    saveHiddenLbl: "hidden costs",
+    savePayLbl: "You pay today",
+    savePayVal: "$359",
+    saveDiscount: "-50%",
+
+    levelsKicker: "Common European Framework of Reference",
+    levelsTitle: "The 6 levels <em>of international Spanish</em>",
+    levelsLead: "The CEFR is the international standard that measures your command of the language, from <strong>A1</strong> (beginner) to <strong>C2</strong> (mastery). That way you always know where you stand and where you're heading. Jonathan mainly guides you from <strong>A1 to C1</strong>, with advanced maintenance toward C2.",
+    covLabel: "Program coverage",
+    covRange: "Jonathan covers <b>A1 → C1</b> · maintenance toward C2",
+    levels: [
+      { group:"Basic", name:"Breakthrough", can:"You introduce yourself and describe things with very simple, immediate expressions.", points:"<li>Introduce yourself, your routine, likes and profession</li><li>Present-tense structures: ser, estar, tener, gustar</li><li>First simple, guided conversations</li>", prog:"→ <b>Program 01</b>" },
+      { group:"Basic", name:"Waystage", can:"You communicate in everyday, routine tasks with brief exchanges.", points:"<li>Narrate past experiences (preterite, imperfect)</li><li>Describe your surroundings, plans and daily errands</li><li>Brief exchanges on familiar topics</li>", prog:"→ <b>Program 01</b> · continuation" },
+      { group:"Intermediate", name:"Threshold", can:"You get by while traveling and briefly justify your opinions.", points:"<li>Link sentences to describe experiences and wishes</li><li>Handle most situations that arise while traveling</li><li>Express and justify opinions in a simple way</li>", prog:"→ <b>Program 02</b>" },
+      { group:"Intermediate", name:"Vantage", can:"You interact with fluency and defend your viewpoints in detail.", points:"<li>Understand the main ideas of complex texts</li><li>Speak with fluency and naturalness with native speakers</li><li>Defend positions with clear, detailed arguments</li>", prog:"→ <b>Program 02 / 03</b>" },
+      { group:"Advanced", name:"Effective operational", can:"You express yourself with spontaneous fluency and flexibility for professional purposes.", points:"<li>Use the language flexibly for social and professional aims</li><li>Produce clear, well-structured, nuanced texts</li><li>Recognize idioms and different registers</li>", prog:"→ <b>Program 03</b>" },
+      { group:"Advanced", name:"Mastery", can:"You understand everything and express yourself with total precision and naturalness.", points:"<li>Understand virtually any spoken or written message</li><li>Distinguish subtle shades of meaning</li><li>Express yourself with total precision, fluency and naturalness</li>", prog:"→ <b>Program 03</b> · goal" }
+    ],
+    footerRate: "Proposal v5 · Base rate $36 / session"
+  },
+  fr: {
+    heroTitle: "Apprendre l'espagnol <em>avec une méthode</em>, pas par chance.",
+    heroLead: "Quatre programmes pédagogiques adaptés à votre niveau, basés sur un tarif transparent de <strong id=\"hero-lead-rate\">12 € par séance</strong>. Cours particuliers, supports interactifs sur mesure et suivi personnalisé entre les cours.",
+    btnReserve: "Réserver ma place →",
+    btnDiagHero: "Vous ne connaissez pas votre niveau ? Faites un diagnostic",
+    navProf: "Professeur",
+    navNiveles: "Niveaux",
+    navCero: "Débutant",
+    navFluidez: "Fluidité",
+    navConv: "Conversation",
+    navDiag: "Diagnostic",
+    navSave: "Économie",
+    navTest: "Témoignages",
+    navCuadro: "Tarifs",
+    navCond: "Conditions",
+    teacherTitle: "Jonathan Mendoza",
+    teacherSub: "Spécialiste en Contenu Pédagogique Multimédia",
+    teacherBio: "Apprendre une langue ne doit pas être ennuyeux. Ma méthode associe la rigueur pédagogique à des outils visuels et interactifs pour vous faire progresser avec clarté et confiance.",
+    teacherBio2: "J'accompagne les professionnels et étudiants à prendre la parole sans peur et à maîtriser l'espagnol authentique.",
+    closeTitle: "Choisissez votre programme <em>et commençons cette semaine.</em>",
+    
+    // Tarifas en Euros (Base de 12 €) y Wise/Carte
+    heroMetaBaseLbl: "Tarif de base",
+    currencyBase: "12 € / séance",
+    paySingleLabel: "Paiement unique (Wise / Carte)",
+    payInstallmentsLabel: "En plusieurs fois",
+    paySessionLabel: "Tarif par séance",
+    subscriptionLabel: "Abonnement récurrent",
+    refundLabel: "Remboursement",
+    applyLabel: "Déductible d'un programme",
+    
+    p1Price: "120 €",
+    p1Subprice: "Programme complet · 10 séances · 10 semaines",
+    p1Single: "108 €",
+    p1Installments: "2 × 60 €",
+    p1Session: "12 €",
+    
+    p2Price: "96 €",
+    p2Subprice: "Programme complet · 8 séances · 8 semaines",
+    p2Single: "86 €",
+    p2Installments: "2 × 48 €",
+    p2Session: "12 €",
+    
+    p3Price: "48 €",
+    p3Subprice: "Plan d'entretien mensuel · 4 séances",
+    p3Recurrent: "44 € / mois",
+    p3Session: "12 €",
+    
+    p4Price: "10 €",
+    p4Subprice: "Séance d'évaluation pédagogique unique",
+    p4Refund: "100%",
+    p4Apply: "7 jours",
+    p4Note: "Montant 100% remboursable ou déductible si vous réservez un programme complet sous 7 jours.",
+    
+    tableP1Tot: "120 €", tableP1Ses: "12 €",
+    tableP2Tot: "96 €", tableP2Ses: "12 €",
+    tableP3Tot: "48 € <span style=\"font-size:.85rem;font-weight:400\">/mois</span>", tableP3Ses: "12 €",
+    tableP4Tot: "10 €", tableP4Ses: "10 € (tarif unique)",
+
+    heroMetaSaveLbl: "Frais cachés évités",
+    heroMetaSaveVal: "jusqu'à 120 €",
+    savingsKicker: "Frais cachés du marché",
+    savingsTitle: "C'est tout <em>ce que vous NE payez PAS</em>",
+    savingsLead: "Dans une école classique, aux frais de scolarité s'ajoutent l'inscription, le matériel, les livres et les frais de plateforme — des coûts qui apparaissent <strong>après</strong> votre engagement. Pas avec Jonathan : le tarif de <strong>12 € par séance</strong> inclut tout. Voici ce que vous <strong>ne payez pas</strong>, calculé sur les prix du marché brésilien des écoles de langues (2025-2026).",
+    saveTagline: "Sans inscription · Sans matériel · Sans livres · Sans frais",
+    costMatLabel: "Frais d'inscription",
+    costMatVal: "30 €",
+    costMatFree: "Inclus · 0 €",
+    costMat2Label: "Matériel pédagogique",
+    costMat2Val: "40 €",
+    costMat2Free: "Interactif sur mesure · 0 €",
+    costLibLabel: "Manuels scolaires",
+    costLibVal: "36 €",
+    costLibFree: "Rien à acheter · 0 €",
+    costMntLabel: "Maintenance / Plateforme",
+    costMntVal: "14 €",
+    costMntFree: "Sans frais mensuel · 0 €",
+    cmpP1Name: "Premiers Pas (A1)",
+    cmpP1Pct: "100%",
+    cmpP2Name: "Du Portuñol à la Fluidité",
+    cmpP2Pct: "125%",
+    cmpP3Name: "Conversation avec Objectif",
+    cmpP3Pct: "250%",
+    saveVal: "120 €",
+    saveTxt: "en frais que vous ne payez pas<br>sans inscription · sans matériel · sans livres",
+    saveCostTotalLbl: "Coût total en école",
+    saveCostTotal: "240 €",
+    saveHiddenAmount: "120 €",
+    saveHiddenLbl: "frais cachés",
+    savePayLbl: "Vous payez",
+    savePayVal: "120 €",
+    saveDiscount: "-50%",
+
+    levelsKicker: "Cadre Européen Commun de Référence",
+    levelsTitle: "Les 6 niveaux <em>de l'espagnol international</em>",
+    levelsLead: "Le CECR est le standard international qui mesure votre maîtrise de la langue, de <strong>A1</strong> (débutant) à <strong>C2</strong> (maîtrise). Ainsi vous savez toujours où vous en êtes et vers quoi vous allez. Jonathan vous accompagne principalement de <strong>A1 à C1</strong>, avec un entretien avancé vers le C2.",
+    covLabel: "Couverture des programmes",
+    covRange: "Jonathan couvre <b>A1 → C1</b> · entretien vers le C2",
+    levels: [
+      { group:"Basique", name:"Découverte", can:"Vous vous présentez et décrivez des choses avec des expressions très simples et immédiates.", points:"<li>Vous présenter, votre routine, vos goûts et profession</li><li>Structures au présent : ser, estar, tener, gustar</li><li>Premières conversations simples et guidées</li>", prog:"→ <b>Programme 01</b>" },
+      { group:"Basique", name:"Survie", can:"Vous communiquez dans des tâches courantes et routinières par des échanges brefs.", points:"<li>Raconter des expériences passées (passé simple, imparfait)</li><li>Décrire votre environnement, vos projets et vos courses</li><li>Échanges brefs sur des sujets familiers</li>", prog:"→ <b>Programme 01</b> · suite" },
+      { group:"Intermédiaire", name:"Seuil", can:"Vous vous débrouillez en voyage et justifiez brièvement vos opinions.", points:"<li>Relier des phrases pour décrire expériences et souhaits</li><li>Gérer la plupart des situations de voyage</li><li>Exprimer et justifier des opinions simplement</li>", prog:"→ <b>Programme 02</b>" },
+      { group:"Intermédiaire", name:"Avancé", can:"Vous interagissez avec fluidité et défendez vos points de vue en détail.", points:"<li>Comprendre les idées principales de textes complexes</li><li>Parler avec fluidité et naturel avec des natifs</li><li>Défendre des positions avec des arguments clairs et détaillés</li>", prog:"→ <b>Programme 02 / 03</b>" },
+      { group:"Avancé", name:"Autonome", can:"Vous vous exprimez avec une fluidité spontanée et de la flexibilité à des fins professionnelles.", points:"<li>Utiliser la langue avec flexibilité pour des fins sociales et professionnelles</li><li>Produire des textes clairs, bien structurés et nuancés</li><li>Reconnaître les idiotismes et différents registres</li>", prog:"→ <b>Programme 03</b>" },
+      { group:"Avancé", name:"Maîtrise", can:"Vous comprenez tout et vous exprimez avec une précision et un naturel totaux.", points:"<li>Comprendre pratiquement tout message oral ou écrit</li><li>Distinguer des nuances subtiles de sens</li><li>Vous exprimer avec une précision, fluidité et naturel totaux</li>", prog:"→ <b>Programme 03</b> · objectif" }
+    ],
+    footerRate: "Proposition v5 · Tarif de base 12 € / séance"
+  }
+};
+
+function changeLanguage(lang) {
+  const data = translations[lang] || translations.es;
+  
+  const txt = (id, html, isHTML = false) => {
+    const el = document.getElementById(id);
+    if (el) {
+      if (isHTML) el.innerHTML = html;
+      else el.innerText = html;
+    }
+  };
+
+  // Sección Hero
+  txt('hero-title', data.heroTitle, true);
+  txt('hero-lead', data.heroLead, true);
+  txt('btn-reserve', data.btnReserve);
+  txt('btn-diag-hero', data.btnDiagHero);
+  txt('hero-meta-base-lbl', data.heroMetaBaseLbl);
+  txt('hero-meta-base-val', data.currencyBase);
+  txt('hero-meta-save-lbl', data.heroMetaSaveLbl);
+  txt('hero-meta-save-val', data.heroMetaSaveVal);
+
+  // Barra de Navegación
+  const navLinks = document.querySelectorAll('#nav a');
+  if(navLinks.length >= 10) {
+    navLinks[0].innerText = data.navProf;
+    navLinks[1].innerText = data.navNiveles;
+    navLinks[2].innerText = data.navCero;
+    navLinks[3].innerText = data.navFluidez;
+    navLinks[4].innerText = data.navConv;
+    navLinks[5].innerText = data.navDiag;
+    navLinks[6].innerText = data.navSave;
+    navLinks[7].innerText = data.navTest;
+    navLinks[8].innerText = data.navCuadro;
+    navLinks[9].innerText = data.navCond;
+  }
+  
+  // Información del Docente
+  txt('teacher-title', data.teacherTitle);
+  txt('teacher-sub', data.teacherSub);
+  const docP = document.querySelectorAll('#docente p');
+  if(docP.length >= 2) {
+    docP[0].innerText = data.teacherBio;
+    docP[1].innerText = data.teacherBio2;
+  }
+
+  // Tarjeta de Inversión Programa 01
+  txt('p1-pill-rate', data.p1Session);
+  txt('p1-price', `${data.p1Price}<small>${data.p1Subprice}</small>`, true);
+  txt('p1-pay-single-lbl', data.paySingleLabel);
+  txt('p1-pay-single-val', data.p1Single);
+  txt('p1-pay-installments-lbl', data.payInstallmentsLabel);
+  txt('p1-pay-installments-val', data.p1Installments);
+  txt('p1-pay-session-lbl', data.paySessionLabel);
+  txt('p1-pay-session-val', data.p1Session);
+
+  // Tarjeta de Inversión Programa 02
+  txt('p2-pill-rate', data.p2Session);
+  txt('p2-price', `${data.p2Price}<small>${data.p2Subprice}</small>`, true);
+  txt('p2-pay-single-lbl', data.paySingleLabel);
+  txt('p2-pay-single-val', data.p2Single);
+  txt('p2-pay-installments-lbl', data.payInstallmentsLabel);
+  txt('p2-pay-installments-val', data.p2Installments);
+  txt('p2-pay-session-lbl', data.paySessionLabel);
+  txt('p2-pay-session-val', data.p2Session);
+
+  // Tarjeta de Inversión Programa 03
+  txt('p3-pill-rate', data.p3Session);
+  txt('p3-price', `${data.p3Price}<small>${data.p3Subprice}</small>`, true);
+  txt('p3-pay-rec-lbl', data.subscriptionLabel);
+  txt('p3-pay-rec-val', data.p3Recurrent);
+  txt('p3-pay-session-lbl', data.paySessionLabel);
+  txt('p3-pay-session-val', data.p3Session);
+
+  // Tarjeta de Diagnóstico Programa 04
+  txt('p4-price', `${data.p4Price}<small>${data.p4Subprice}</small>`, true);
+  txt('p4-pay-refund-lbl', data.refundLabel);
+  txt('p4-pay-refund-val', data.p4Refund);
+  txt('p4-pay-apply-lbl', data.applyLabel);
+  txt('p4-pay-apply-val', data.p4Apply);
+  txt('p4-note', data.p4Note);
+
+  // Cuadro Comparativo (Tabla)
+  txt('table-p1-tot', data.tableP1Tot);
+  txt('table-p1-ses', data.tableP1Ses);
+  txt('table-p2-tot', data.tableP2Tot);
+  txt('table-p2-ses', data.tableP2Ses);
+  txt('table-p3-tot', data.tableP3Tot, true);
+  txt('table-p3-ses', data.tableP3Ses);
+  txt('table-p4-tot', data.tableP4Tot);
+  txt('table-p4-ses', data.tableP4Ses);
+
+  // Sección de Ahorro
+  txt('savings-kicker', data.savingsKicker);
+  txt('savings-title', data.savingsTitle, true);
+  txt('savings-lead', data.savingsLead, true);
+  txt('save-tagline', data.saveTagline);
+  txt('save-cost-total-lbl', data.saveCostTotalLbl);
+  txt('save-cost-total', data.saveCostTotal);
+  txt('save-hidden-amount', data.saveHiddenAmount);
+  txt('save-hidden-lbl', data.saveHiddenLbl);
+  txt('save-pay-lbl', data.savePayLbl);
+  txt('save-pay-val', data.savePayVal);
+  txt('save-discount', data.saveDiscount);
+  txt('cost-mat-label', data.costMatLabel);
+  txt('cost-mat-val', data.costMatVal);
+  txt('cost-mat-free', data.costMatFree);
+  txt('cost-mat2-label', data.costMat2Label);
+  txt('cost-mat2-val', data.costMat2Val);
+  txt('cost-mat2-free', data.costMat2Free);
+  txt('cost-lib-label', data.costLibLabel);
+  txt('cost-lib-val', data.costLibVal);
+  txt('cost-lib-free', data.costLibFree);
+  txt('cost-mnt-label', data.costMntLabel);
+  txt('cost-mnt-val', data.costMntVal);
+  txt('cost-mnt-free', data.costMntFree);
+  txt('cmp-p1-name', data.cmpP1Name);
+  txt('cmp-p1-pct', data.cmpP1Pct);
+  txt('cmp-p2-name', data.cmpP2Name);
+  txt('cmp-p2-pct', data.cmpP2Pct);
+  txt('cmp-p3-name', data.cmpP3Name);
+  txt('cmp-p3-pct', data.cmpP3Pct);
+
+  // Sellos de ahorro en las tarjetas de inversión
+  ['p1','p2','p3','p4'].forEach(p => {
+    txt(p + '-save-val', data.saveVal);
+    const sstxt = document.getElementById(p + '-save-txt');
+    if (sstxt) sstxt.innerHTML = data.saveTxt;
+  });
+
+  // Niveles MCER
+  txt('levels-kicker', data.levelsKicker);
+  txt('levels-title', data.levelsTitle, true);
+  txt('levels-lead', data.levelsLead, true);
+  txt('cov-label', data.covLabel);
+  txt('cov-range', data.covRange, true);
+  if (data.levels) {
+    data.levels.forEach((lv, i) => {
+      txt('lvl-grp-' + i, lv.group);
+      txt('lvl-name-' + i, lv.name);
+      txt('lvl-can-' + i, lv.can);
+      txt('lvl-pts-' + i, lv.points, true);
+      txt('lvl-prog-' + i, lv.prog, true);
+    });
+  }
+
+  // Sección de Cierre y Footer
+  txt('close-title', data.closeTitle, true);
+  txt('footer-rate', data.footerRate);
+}
+</script>
+
+</body>
+</html>
