@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"><head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Programas y Servicios de Español · Jonathan Mendoza</title>
   <meta name="description" content="Clases de español individuales online con Jonathan Mendoza, Lic. en Educación. Programas de A1 a C1, materiales interactivos propios y tarifa transparente de R$ 60 por sesión. Sin matrícula, sin libros, sin costos ocultos.">
   <meta name="author" content="Jonathan Mendoza">
@@ -13,8 +12,8 @@
   <meta property="og:locale" content="es_ES">
   <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=Karla:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&amp;family=Karla:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 <style>
 :root {
   --paper: #F5EFE1;
@@ -42,7 +41,7 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
+  scroll-padding-top: 80px;
 }
 body {
   background: var(--paper);
@@ -52,37 +51,6 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
-}
-img, svg, video {
-  max-width: 100%;
-  height: auto;
-}
-:focus-visible {
-  outline: 2px solid var(--green);
-  outline-offset: 3px;
-}
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-body.nav-lock {
-  overflow: hidden;
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
-  .rv { opacity: 1; transform: none; }
 }
 ::selection {
   background: var(--green);
@@ -108,7 +76,7 @@ header {
   left: 16px;
   right: 16px;
   z-index: 150;
-  background: rgba(245, 239, 225, 0.9);
+  background: rgba(245, 239, 225, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--line);
@@ -123,7 +91,6 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  min-height: 52px;
 }
 .brand {
   display: flex;
@@ -166,19 +133,13 @@ nav {
   gap: 2px;
 }
 nav a {
-  font-size: 0.88rem;
+  font-size: 0.78rem;
   color: var(--ink-soft);
   text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: 5px 8px;
+  border-radius: 6px;
   transition: var(--transition);
   white-space: nowrap;
-}
-.nav-panel-foot {
-  display: none;
-}
-#nav-backdrop {
-  display: none;
 }
 nav a:hover {
   color: var(--green);
@@ -202,22 +163,6 @@ nav a.on {
 }
 .social-link:hover {
   color: var(--terra);
-}
-.lang-select-wrap select {
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.05em;
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 6px 12px;
-  background: var(--paper-2);
-  color: var(--ink);
-  cursor: pointer;
-  outline: none;
-  transition: var(--transition);
-}
-.lang-select-wrap select:hover {
-  border-color: var(--muted);
 }
 .chip {
   font-family: var(--mono);
@@ -789,9 +734,6 @@ h3 {
   font-family: var(--mono);
   font-size: 0.55rem;
   letter-spacing: 0.05em;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  padding: 2px 6p-spacing: 0.05em;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 20px;
   padding: 2px 6px;
@@ -1564,154 +1506,89 @@ footer a:hover {
 }
 
 /* ---------- DISPOSITIVOS MÓVILES / RESPONSIVE ---------- */
-@media (max-width: 1080px) {
-  html { scroll-padding-top: 70px; }
-  header {
-    top: 0;
-    left: 0;
-    right: 0;
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    padding-top: env(safe-area-inset-top);
-  }
-  .head-in {
-    padding: 8px 14px;
-    min-height: 56px;
-  }
+@media(max-width: 1080px) {
   .row {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 32px;
   }
-  #docente .col-right { order: -1; }
   .cond, .testimonials-grid {
     grid-template-columns: 1fr;
   }
   .levels-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .ghost { display: none; }
-  .chip,
-  .social-link,
-  .actions-wrap .lang-select-wrap {
-    display: none;
-  }
-  .burger {
-    display: grid;
-    place-items: center;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    font-size: 1.2rem;
-    flex-shrink: 0;
-  }
-  .btn-nav-action {
-    min-height: 40px;
-  }
-  #nav-backdrop.open {
-    display: block;
-    position: fixed;
-    inset: 0;
-    background: rgba(27, 25, 23, 0.38);
-    z-index: 140;
+  .ghost {
+    top: 40px;
+    opacity: 0.6;
   }
   nav {
     position: fixed;
-    top: calc(env(safe-area-inset-top) + 60px);
-    left: 12px;
-    right: 12px;
+    top: 72px;
+    left: 16px;
+    right: 16px;
     background: var(--paper-2);
     border: 1px solid var(--line);
-    border-radius: 16px;
-    box-shadow: 0 16px 40px rgba(27, 25, 23, 0.14);
+    border-radius: 14px;
+    box-shadow: 0 8px 28px rgba(27, 25, 23, 0.08);
     flex-direction: column;
     align-items: stretch;
-    padding: 8px 10px 14px;
+    padding: 8px 16px 16px;
     display: none;
-    z-index: 151;
-    max-height: calc(100dvh - env(safe-area-inset-top) - 80px);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
   }
-  nav.open { display: flex; }
-  nav > a {
-    padding: 14px 12px;
-    font-size: 1.05rem;
+  nav.open {
+    display: flex;
+  }
+  nav a {
+    padding: 10px 8px;
     border-bottom: 1px solid var(--line-soft);
-    border-radius: 8px;
-    min-height: 48px;
-    display: flex;
-    align-items: center;
+    border-radius: 0;
   }
-  nav > a.on { background: rgba(30, 91, 79, 0.06); }
-  .nav-panel-foot {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 8px;
-    padding-top: 12px;
-    border-top: 1px solid var(--line);
+  nav a.on {
+    background: transparent;
   }
-  .nav-panel-foot .lang-select-wrap select {
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 14px;
-    border-radius: 12px;
-    min-height: 48px;
+  .burger {
+    display: block;
   }
-  .nav-panel-foot .btn-nav-action {
-    width: 100%;
-    justify-content: center;
-    padding: 14px 16px;
-    font-size: 0.78rem;
-    border-radius: 12px;
-    min-height: 48px;
+  .chip,
+  .social-link {
+    display: none;
   }
 }
-@media (max-width: 860px) {
+@media(max-width: 860px) {
   .wrap {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .head-in {
-    padding: 6px 12px;
+    padding: 7px 12px;
     gap: 8px;
   }
-  .brand { gap: 8px; }
-  .brand small { display: none; }
-  .actions-wrap { gap: 6px; }
+  .brand {
+    gap: 9px;
+  }
+  .brand small {
+    display: none;
+  }
+  .actions-wrap {
+    gap: 7px;
+  }
   .btn-nav-action {
-    padding: 8px 12px;
-    font-size: 0.62rem;
+    padding: 7px 12px;
+    font-size: 0.6rem;
+  }
+  .burger {
+    padding: 7px 10px;
+    font-size: 0.95rem;
   }
   .hero {
-    padding-top: 96px;
-    padding-bottom: 48px;
+    padding-top: 116px;
   }
-  section { padding: 48px 0; }
-  .price { font-size: 2.2rem; }
-  .hero-cta-group {
-    flex-direction: column;
-    align-items: stretch;
+  section {
+    padding: 56px 0;
   }
-  .hero-cta-group .btn,
-  .hero-cta-group .btn-secondary {
-    width: 100%;
-    justify-content: center;
-    min-height: 48px;
+  .price {
+    font-size: 2.3rem;
   }
-  .hero-meta {
-    gap: 16px 24px;
-    margin-top: 32px;
-  }
-  .savings-impact {
-    padding: 28px 18px 32px;
-    border-radius: 16px;
-  }
-  .price-box { max-width: 100%; }
-  .pb-row { flex-wrap: wrap; }
-  .hidden-costs-grid { grid-template-columns: 1fr; }
   .compare-row {
     grid-template-columns: 1fr auto;
     gap: 6px 14px;
@@ -1720,51 +1597,18 @@ footer a:hover {
     grid-column: 1 / -1;
     margin-top: 4px;
   }
-  .levels-grid { grid-template-columns: 1fr; }
-  .teacher-media-container {
-    max-width: 280px;
-    margin: 0 auto;
+  .levels-grid {
+    grid-template-columns: 1fr;
   }
-  .closing { padding: 56px 0; }
-  .closing .btn {
-    width: 100%;
-    justify-content: center;
-    min-height: 48px;
-  }
-  footer {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-  .card { padding: 18px 16px; }
-  .coverage-bar { padding: 16px; }
-  .sec-head {
-    padding-bottom: 24px;
-    margin-bottom: 28px;
-  }
-  h1 { max-width: none; }
-  .table-x { -webkit-overflow-scrolling: touch; }
 }
-@media (max-width: 480px) {
-  .brand-text { display: none; }
+@media(max-width: 480px) {
+  .brand-text {
+    display: none;
+  }
   .head-in {
     padding: 6px 10px;
     gap: 6px;
-    min-height: 52px;
   }
-  .logo {
-    width: 38px;
-    height: 38px;
-  }
-  .actions-wrap .btn-nav-action {
-    padding: 8px 10px;
-    font-size: 0.6rem;
-    letter-spacing: 0.06em;
-  }
-}
-
-@media (max-width: 380px) {
-  .actions-wrap .btn-nav-action { display: none; }
 }
 </style>
 </head>
@@ -1773,47 +1617,34 @@ footer a:hover {
 <div id="progress"></div>
 
 <!-- ================= HEADER ================= -->
-<div id="nav-backdrop"></div>
 <header>
   <div class="head-in">
     <a href="#inicio" class="brand">
       <div class="logo">es</div>
       <div class="brand-text">
-        <b>Jonathan Mendoza</b>
-        <small>Español · 1 a 1</small>
+        <b>Programas de Español</b>
+        <small>Propuesta v5 · Jonathan Mendoza</small>
       </div>
     </a>
-    <nav id="nav" aria-label="Principal">
+    <nav id="nav">
       <a href="#docente">Profesor</a>
       <a href="#niveles">Niveles</a>
-      <a href="#p1">Programas</a>
-      <a href="#cuadro">Precios</a>
+      <a href="#p1">Desde cero</a>
+      <a href="#p2">Fluidez</a>
+      <a href="#p3">Conversación</a>
+      <a href="#p4">Diagnóstico</a>
+      <a href="#ahorro">Ahorro</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#cuadro">Cuadro</a>
       <a href="#condiciones">Condiciones</a>
-      <div class="nav-panel-foot">
-        <label class="lang-select-wrap">
-          <span class="sr-only">Idioma</span>
-          <select class="lang-select" onchange="changeLanguage(this.value)" aria-label="Idioma">
-            <option value="es">🇪🇸 Español</option>
-            <option value="pt">🇧🇷 Português</option>
-            <option value="en">🇺🇸 English</option>
-            <option value="fr">🇫🇷 Français</option>
-          </select>
-        </label>
-        <a class="btn-nav-action" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20me%20gustar%C3%ADa%20consultar%20por%20tus%20clases%20de%20espa%C3%B1ol" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
     </nav>
     <div class="actions-wrap">
-      <div class="lang-select-wrap">
-        <label class="sr-only" for="lang-select-desk">Idioma</label>
-        <select id="lang-select-desk" class="lang-select" onchange="changeLanguage(this.value)" aria-label="Idioma">
-          <option value="es">🇪🇸 ES</option>
-          <option value="pt">🇧🇷 PT</option>
-          <option value="en">🇺🇸 EN</option>
-          <option value="fr">🇫🇷 FR</option>
-        </select>
-      </div>
+      <a class="social-link" href="https://www.instagram.com/idiomaswebespanol/" target="_blank" rel="noopener" title="Instagram @idiomaswebespanol">◎</a>
+      <a class="social-link" href="https://www.youtube.com/@idiomasweb" target="_blank" rel="noopener" title="YouTube @idiomasweb">▶</a>
+
+      <span class="chip">A1 — C1</span>
       <a class="btn-nav-action" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20me%20gustar%C3%ADa%20consultar%20por%20tus%20clases%20de%20espa%C3%B1ol" target="_blank" rel="noopener">WhatsApp</a>
-      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">☰</button>
+      <button class="burger" id="burger" aria-label="Menú">☰</button>
     </div>
   </div>
 </header>
@@ -1821,7 +1652,8 @@ footer a:hover {
 <!-- ================= HERO ================= -->
 <div class="hero" id="inicio">
   <div class="wrap" style="position:relative">
-    <div class="kicker"><span class="num">§ 00</span> Programas y servicios</div>
+    <div class="ghost" style="top:-10px">v5</div>
+    <div class="kicker"><span class="num">§ 00</span> Propuesta de programas y servicios</div>
     <h1 id="hero-title">Aprender español <em>con método</em>, no con suerte.</h1>
     <p class="lead" id="hero-lead">
       Cuatro programas pedagógicos adaptados a tu punto de partida, construidos sobre una
@@ -1837,7 +1669,7 @@ footer a:hover {
       <div class="meta-i">Formación<b>Lic. en Educación</b></div>
       <div class="meta-i">Especialidad<b>Contenido Pedagógico Multimedia</b></div>
       <div class="meta-i"><span id="hero-meta-base-lbl">Tarifa base</span><b id="hero-meta-base-val">R$ 60 / sesión</b></div>
-      <div class="meta-i"><span id="hero-meta-save-lbl">Costos ocultos evitados</span><b id="hero-meta-save-val" class="hl-save">hasta R$ 600</b></div>
+      <div class="meta-i"><span id="hero-meta-save-val" class="hl-save"><font color="#8c8577"><span style="font-size: 10.88px;">costos extras que vas a ahorrar:<br></span></font><span style="font-weight: bold;">hasta R$ 600</span></span></div>
     </div>
   </div>
 </div>
@@ -1851,59 +1683,75 @@ footer a:hover {
       <h2 class="si-title" id="savings-title">Esto es todo <em>lo que NO pagas</em></h2>
       <div class="price-box">
         <div class="pb-row">
-          <span class="pb-lbl" id="save-cost-total-lbl">Costo total en academia</span>
+          <span class="pb-lbl" id="save-cost-total-lbl">Costo total en escuelas tradicionales</span>
           <span class="pb-val pb-strike" id="save-cost-total">R$ 1.200</span>
         </div>
         <div class="pb-minus">- <span id="save-hidden-amount">R$ 600</span> <small id="save-hidden-lbl">costos ocultos</small></div>
         <div class="pb-divider"></div>
         <div class="pb-row">
-          <span class="pb-lbl" id="save-pay-lbl">Hoy pagas</span>
-          <span class="pb-val pb-final" id="save-pay-val">R$ 600</span>
+          <span class="pb-lbl" id="save-pay-lbl">Hoy pagas solo</span>
+          <span class="pb-val pb-final" id="save-pay-val">R$ 599</span>
           <span class="pb-badge" id="save-discount">-50%</span>
         </div>
       </div>
-      <div class="si-tagline" id="save-tagline">Sin matrícula &middot; Sin material &middot; Sin libros &middot; Sin mantenimiento</div>
+      <div class="si-tagline" id="save-tagline">Sin matrícula · Sin material con costo adicional · Sin libros con costo adicional · Sin mantenimiento</div>
     </div>
 
     <div class="savings-detail rv">
-      <p class="lead" id="savings-lead">En una academia común, a la mensualidad se le suman matrícula, material, libros y tasa de mantenimiento &mdash; costos que aparecen <strong>después</strong> de comprometerte. Con Jonathan no: la tarifa de <strong>R$ 60 por sesión</strong> lo incluye todo. Esto es lo que <strong>no pagas</strong>, calculado sobre los precios del mercado brasileño de escuelas de idiomas (2025-2026).</p>
+      <p class="lead" id="savings-lead">En una escuela tradicional común, a la mensualidad se le suman matrícula, material, libros y tasa de mantenimiento — costos que aparecen <strong>después</strong> de comprometerte. Con Jonathan no: la tarifa de <strong>R$ 60 por sesión</strong> lo incluye todo. Esto es lo que <strong>no pagas.</strong></p>
       <div class="hidden-costs-grid">
         <div class="hidden-cost-item">
           <div class="hc-top">
             <span class="hc-label" id="cost-mat-label">Inscripción / Matrícula</span>
-            <span class="hc-check">&#10003;</span>
+            <span class="hc-check">✓</span>
           </div>
           <span class="hc-val" id="cost-mat-val">R$ 150</span>
-          <span class="hc-free" id="cost-mat-free">Incluida &middot; R$ 0</span>
+          <span class="hc-free" id="cost-mat-free">Incluida · R$ 0</span>
         </div>
         <div class="hidden-cost-item">
           <div class="hc-top">
             <span class="hc-label" id="cost-mat2-label">Material didáctico</span>
-            <span class="hc-check">&#10003;</span>
+            <span class="hc-check">✓</span>
           </div>
           <span class="hc-val" id="cost-mat2-val">R$ 200</span>
-          <span class="hc-free" id="cost-mat2-free">Interactivo propio &middot; R$ 0</span>
+          <span class="hc-free" id="cost-mat2-free">Interactivo propio · R$ 0</span>
         </div>
         <div class="hidden-cost-item">
           <div class="hc-top">
             <span class="hc-label" id="cost-lib-label">Libros de texto</span>
-            <span class="hc-check">&#10003;</span>
+            <span class="hc-check">✓</span>
           </div>
           <span class="hc-val" id="cost-lib-val">R$ 180</span>
-          <span class="hc-free" id="cost-lib-free">No necesitas comprar &middot; R$ 0</span>
+          <span class="hc-free" id="cost-lib-free">No necesitas comprar · R$ 0</span>
         </div>
         <div class="hidden-cost-item">
           <div class="hc-top">
             <span class="hc-label" id="cost-mnt-label">Mantenimiento / Plataforma</span>
-            <span class="hc-check">&#10003;</span>
+            <span class="hc-check">✓</span>
           </div>
           <span class="hc-val" id="cost-mnt-val">R$ 70</span>
-          <span class="hc-free" id="cost-mnt-free">Sin tasa mensual &middot; R$ 0</span>
+          <span class="hc-free" id="cost-mnt-free">Sin tasa mensual · R$ 0</span>
         </div>
       </div>
     </div>
 
-
+    <div class="savings-compare rv">
+      <div class="compare-row">
+        <div class="compare-name"><span id="cmp-p1-name">Primeros Pasos (A1)</span><small>R$ 600</small></div>
+        <div class="compare-pct" id="cmp-p1-pct">100%</div>
+        <div class="compare-bar"><i style="width:40%"></i></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-name"><span id="cmp-p2-name">Del Portuñol a la Fluidez</span><small>R$ 480</small></div>
+        <div class="compare-pct" id="cmp-p2-pct">125%</div>
+        <div class="compare-bar"><i style="width:50%"></i></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-name"><span id="cmp-p3-name">Conversación con Propósito</span><small>R$ 240 / mes</small></div>
+        <div class="compare-pct" id="cmp-p3-pct">250%</div>
+        <div class="compare-bar"><i style="width:100%"></i></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1950,8 +1798,7 @@ footer a:hover {
       <h2 id="levels-title">Los 6 niveles <em>del español internacional</em></h2>
       <p class="lead" id="levels-lead">
         El MCER es el estándar internacional que mide tu dominio del idioma, de <strong>A1</strong> (principiante) a
-        <strong>C2</strong> (maestría). Así siempre sabes dónde estás y hacia dónde vas. Jonathan te acompaña
-        principalmente de <strong>A1 a C1</strong>, con mantenimiento avanzado hacia C2.
+        <strong>C2</strong> (maestría). Así siempre sabes dónde estás y hacia dónde vas. Yo te acompañaré desde el nivel&nbsp;<strong>A1 hasta el&nbsp; C1</strong>, con mantenimiento avanzado hacia C2.
       </p>
     </div>
 
@@ -2170,13 +2017,13 @@ footer a:hover {
           </div>
           <div class="price" id="p1-price">R$ 600<small>Programa completo · 10 sesiones · 10 semanas</small></div>
           <ul class="pay">
-            <li><span class="k" id="p1-pay-single-lbl">Pago único (PIX / Wise)</span><span class="v off" id="p1-pay-single-val">R$ 540</span></li>
+            <li><span class="k" id="p1-pay-single-lbl">Pago único (PIX / Wise / otros)</span><span class="v off" id="p1-pay-single-val">R$ 540</span></li>
             <li><span class="k" id="p1-pay-installments-lbl">En cuotas</span><span class="v" id="p1-pay-installments-val">2 × R$ 300</span></li>
             <li><span class="k" id="p1-pay-session-lbl">Valor por sesión</span><span class="v" id="p1-pay-session-val">R$ 60</span></li>
           </ul>
           <div class="savings-stamp">
             <span class="ss-val" id="p1-save-val">R$ 600</span>
-            <span class="ss-txt" id="p1-save-txt">en costos que no pagas<br>sin matrícula · sin material · sin libros</span>
+            <span class="ss-txt" id="p1-save-txt">en costos que no pagas<br>sin matrícula · sin material · sin libros con costo adicional</span>
           </div>
           <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20me%20interesa%20inscribirme%20en%20el%20Programa%2001:%20Primeros%20pasos%20(A1)" target="_blank" rel="noopener">Elegir Programa 01 →</a>
         </div>
@@ -2209,15 +2056,15 @@ footer a:hover {
         
         <!-- Muestra Multimedia Visual 2 -->
         <div class="multimedia-preview">
-          <div class="preview-tag">Matriz de Corrección PT → ES</div>
+          <div class="preview-tag">Matriz de Corrección (ES)</div>
           <div class="preview-card-interactive">
             <div class="preview-header">
-              <span class="preview-title">Falsos Amigos & Preposiciones</span>
+              <span class="preview-title">Falsos Amigos &amp; Preposiciones</span>
               <span class="preview-badge">B1/B2 Pro</span>
             </div>
             <div class="preview-content-grid">
               <div class="preview-chip-item"><strong>Muy vs. Mucho</strong>regla aplicada directa</div>
-              <div class="preview-chip-item"><strong>Portuñol Killer</strong>tarjetas de corrección</div>
+              <div class="preview-chip-item"><strong><span style="font-size: 12.8px;">PARA EJERCITAR LA MEMORIA<br></span><span style="color: rgb(74, 69, 61); font-size: 0.75rem;">tarjetas de corrección</span></strong></div>
             </div>
           </div>
         </div>
@@ -2237,7 +2084,7 @@ footer a:hover {
             <span class="pills"><span class="pill">Meta</span><span class="pill">01</span></span>
           </div>
           <div class="card-main">Ganar <span class="hl">espontaneidad</span> en situaciones reales o profesionales.</div>
-          <div class="card-note">Simulaciones de reuniones, interviews y conversación cotidiana.</div>
+          <div class="card-note">Simulaciones de reuniones, entrevistas y conversación cotidiana.</div>
         </div>
         <div class="card">
           <div class="card-top">
@@ -2284,7 +2131,7 @@ footer a:hover {
           </ul>
           <div class="savings-stamp">
             <span class="ss-val" id="p2-save-val">R$ 600</span>
-            <span class="ss-txt" id="p2-save-txt">en costos que no pagas<br>sin matrícula · sin material · sin libros</span>
+            <span class="ss-txt" id="p2-save-txt">en costos que no pagas<br>sin matrícula · sin material · sin libros con costo adicional</span>
           </div>
           <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20me%20interesa%20inscribirme%20en%20el%20Programa%2002:%20Del%20portu%C3%B1ol%20a%20la%20fluidez" target="_blank" rel="noopener">Elegir Programa 02 →</a>
         </div>
@@ -2303,8 +2150,7 @@ footer a:hover {
       <p class="lead">
         <strong>Perfil del alumno.</strong> Orientado a profesionales o estudiantes de nivel
         intermedio-avanzado que necesitan mantener su fluidez, ampliar vocabulario y ganar
-        seguridad en debates o reuniones.
-      </p>
+        seguridad en debates, reuniones, trabajo o viajes.</p>
     </div>
 
     <div class="row rv">
@@ -2373,7 +2219,7 @@ footer a:hover {
           </ul>
           <div class="savings-stamp">
             <span class="ss-val" id="p3-save-val">R$ 600</span>
-            <span class="ss-txt" id="p3-save-txt">en costos que no pagas<br>sin matrícula · sin material · sin libros</span>
+            <span class="ss-txt" id="p3-save-txt">en costos que no pagas<br>sin matrícula · sin material · sin libros con costo adicuonal</span>
           </div>
           <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20sumarme%20al%20Programa%2003:%20Conversaci%C3%B3n%20con%20prop%C3%B3sito" target="_blank" rel="noopener">Elegir Programa 03 →</a>
         </div>
@@ -2427,6 +2273,10 @@ footer a:hover {
           <div class="card-note" id="p4-note" style="border-color:rgba(255,255,255,.18);color:rgba(255,255,255,.72)">
             Monto 100 % reembolsable o abonable si contratas un programa completo dentro de los siguientes 7 días.
           </div>
+          <div class="savings-stamp">
+            <span class="ss-val" id="p4-save-val">R$ 600</span>
+            <span class="ss-txt" id="p4-save-txt">en costos que no pagas<br>sin matrícula · sin material · sin libros</span>
+          </div>
           <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20agendar%20una%20Sesi%C3%B3n%20de%20Diagn%C3%B3stico" target="_blank" rel="noopener">Agendar Diagnóstico →</a>
         </div>
       </div>
@@ -2440,7 +2290,7 @@ footer a:hover {
     <div class="sec-head rv">
       <div class="ghost">06</div>
       <div class="kicker"><span class="num">§ 06</span> Experiencias de alumnos</div>
-      <h2>Resultados reales <em>de portuñol a fluidez</em></h2>
+      <h2>Resultados reales <em>de la duda a fluidez en español</em></h2>
       <p class="lead">Lo que dicen profesionales y estudiantes que ya transformaron su confianza al hablar en español.</p>
     </div>
     <div class="testimonials-grid rv">
@@ -2500,7 +2350,7 @@ footer a:hover {
             <td class="tot" id="table-p1-tot">R$ 600</td><td class="ses" id="table-p1-ses">R$ 60</td>
           </tr>
           <tr>
-            <td class="name"><span>§ 02</span>Del Portuñol a la Fluidez</td>
+            <td class="name"><span>§ 02</span>De las dudas hacia la Fluidez</td>
             <td>8 semanas</td><td>8 sesiones de 60 min</td>
             <td class="tot" id="table-p2-tot">R$ 480</td><td class="ses" id="table-p2-ses">R$ 60</td>
           </tr>
@@ -2557,7 +2407,7 @@ footer a:hover {
     <span>Jonathan Mendoza · Lic. en Educación</span>
     <span><a href="https://www.instagram.com/idiomaswebespanol/" target="_blank" rel="noopener">Instagram: @idiomaswebespanol</a></span>
     <span><a href="https://www.youtube.com/@idiomasweb" target="_blank" rel="noopener">YouTube: @idiomasweb</a></span>
-    <span id="footer-rate">Tarifa base R$ 60 / sesión</span>
+    <span id="footer-rate"><br></span>
   </footer>
 </div>
 
@@ -2566,15 +2416,15 @@ footer a:hover {
 const bar = document.getElementById('progress');
 const secs = [...document.querySelectorAll('section[id]')];
 const nav = document.getElementById('nav');
-const links = [...nav.querySelectorAll(':scope > a')];
+const links = [...nav.querySelectorAll('a')];
 
 window.addEventListener('scroll', () => {
   const h = document.documentElement;
-  const scrollTop = window.scrollY || h.scrollTop;
+  const scrollTop = h.scrollTop;
   const scrollHeight = h.scrollHeight;
   const clientHeight = h.clientHeight;
-  const den = scrollHeight - clientHeight;
-  bar.style.width = (den > 0 ? (scrollTop / den * 100) : 0) + '%';
+  
+  bar.style.width = (scrollTop / (scrollHeight - clientHeight) * 100) + '%';
   
   let cur = null;
   secs.forEach(s => {
@@ -2582,30 +2432,12 @@ window.addEventListener('scroll', () => {
       cur = s.id;
     }
   });
-  links.forEach(l => {
-    const href = l.getAttribute('href');
-    const on = href === '#' + cur || (href === '#p1' && ['p1','p2','p3','p4'].includes(cur));
-    l.classList.toggle('on', on);
-  });
+  links.forEach(l => l.classList.toggle('on', l.getAttribute('href') === '#' + cur));
 }, { passive: true });
 
 /* ================= MENÚ MÓVIL ================= */
-const burger = document.getElementById('burger');
-const backdrop = document.getElementById('nav-backdrop');
-function setNavOpen(open) {
-  nav.classList.toggle('open', open);
-  if (backdrop) backdrop.classList.toggle('open', open);
-  document.body.classList.toggle('nav-lock', open);
-  burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-  burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
-  burger.textContent = open ? '✕' : '☰';
-}
-burger.onclick = () => setNavOpen(!nav.classList.contains('open'));
-if (backdrop) backdrop.onclick = () => setNavOpen(false);
-nav.querySelectorAll('a').forEach(a => a.onclick = () => setNavOpen(false));
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && nav.classList.contains('open')) setNavOpen(false);
-});
+document.getElementById('burger').onclick = () => nav.classList.toggle('open');
+nav.querySelectorAll('a').forEach(a => a.onclick = () => nav.classList.remove('open'));
 
 /* ================= REVEAL (INTERSECTION OBSERVER) ================= */
 const io = new IntersectionObserver(entries => {
@@ -2617,579 +2449,6 @@ const io = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.rv').forEach(el => io.observe(el));
-
-/* ================= TRADUCCIONES Y MONEDAS MULTILINGÜE ================= */
-const translations = {
-  es: {
-    heroTitle: "Aprender español <em>con método</em>, no con suerte.",
-    heroLead: "Cuatro programas pedagógicos adaptados a tu punto de partida, construidos sobre una tarifa base transparente de <strong id=\"hero-lead-rate\">R$&nbsp;60 por sesión</strong>. Clases individuales, materiales interactivos propios y acompañamiento real entre clase y clase.",
-    btnReserve: "Reservar mi cupo →",
-    btnDiagHero: "¿No sabes tu nivel? Haz un diagnóstico primero",
-    navProf: "Profesor",
-    navNiveles: "Niveles",
-    navProgramas: "Programas",
-    navCuadro: "Precios",
-    navCond: "Condiciones",
-    teacherTitle: "Jonathan Mendoza",
-    teacherSub: "Especialista en Contenido Pedagógico Multimedia",
-    teacherBio: "Aprender un idioma no tiene por qué ser aburrido ni basarse en listas infinitas de reglas. Mi metodología combina el rigor pedagógico con herramientas interactivas y recursos visuales diseñados a medida para que avances con claridad, ritmo y confianza.",
-    teacherBio2: "Acompaño a profesionales y estudiantes a perder el miedo a hablar, superar la interferencia del portugués y dominar el español de uso real.",
-    closeTitle: "Elige tu programa <em>y empezamos esta misma semana.</em>",
-    
-    heroMetaBaseLbl: "Tarifa base",
-    currencyBase: "R$ 60 / sesión",
-    paySingleLabel: "Pago único (PIX / Wise)",
-    payInstallmentsLabel: "En cuotas",
-    paySessionLabel: "Valor por sesión",
-    subscriptionLabel: "Suscripción recurrente",
-    refundLabel: "Reembolso",
-    applyLabel: "Abonable a un programa",
-    
-    p1Price: "R$ 600",
-    p1Subprice: "Programa completo · 10 sesiones · 10 semanas",
-    p1Single: "R$ 540",
-    p1Installments: "2 × R$ 300",
-    p1Session: "R$ 60",
-    
-    p2Price: "R$ 480",
-    p2Subprice: "Programa completo · 8 sesiones · 8 semanas",
-    p2Single: "R$ 432",
-    p2Installments: "2 × R$ 240",
-    p2Session: "R$ 60",
-    
-    p3Price: "R$ 240",
-    p3Subprice: "Plan mensual de mantenimiento · 4 sesiones",
-    p3Recurrent: "R$ 220 / mes",
-    p3Session: "R$ 60",
-    
-    p4Price: "R$ 50",
-    p4Subprice: "Sesión puntual de evaluación pedagógica",
-    p4Refund: "100 %",
-    p4Apply: "7 días",
-    p4Note: "Monto 100 % reembolsable o abonable si contratas un programa completo dentro de los siguientes 7 días.",
-    
-    tableP1Tot: "R$ 600", tableP1Ses: "R$ 60",
-    tableP2Tot: "R$ 480", tableP2Ses: "R$ 60",
-    tableP3Tot: "R$ 240 <span style=\"font-size:.85rem;font-weight:400\">/mes</span>", tableP3Ses: "R$ 60",
-    tableP4Tot: "R$ 50", tableP4Ses: "R$ 50 (tarifa única)",
-
-    heroMetaSaveLbl: "Costos ocultos evitados",
-    heroMetaSaveVal: "hasta R$ 600",
-    savingsKicker: "Costos ocultos del mercado",
-    savingsTitle: "Esto es todo <em>lo que NO pagas</em>",
-    savingsLead: "En una academia común, a la mensualidad se le suman matrícula, material, libros y tasa de mantenimiento — costos que aparecen <strong>después</strong> de comprometerte. Con Jonathan no: la tarifa de <strong>R$ 60 por sesión</strong> lo incluye todo. Esto es lo que <strong>no pagas</strong>, calculado sobre los precios del mercado brasileño de escuelas de idiomas (2025-2026).",
-    saveTagline: "Sin matrícula · Sin material · Sin libros · Sin mantenimiento",
-    costMatLabel: "Inscripción / Matrícula",
-    costMatVal: "R$ 150",
-    costMatFree: "Incluida · R$ 0",
-    costMat2Label: "Material didáctico",
-    costMat2Val: "R$ 200",
-    costMat2Free: "Interactivo propio · R$ 0",
-    costLibLabel: "Libros de texto",
-    costLibVal: "R$ 180",
-    costLibFree: "No necesitas comprar · R$ 0",
-    costMntLabel: "Mantenimiento / Plataforma",
-    costMntVal: "R$ 70",
-    costMntFree: "Sin tasa mensual · R$ 0",
-    cmpP1Name: "Primeros Pasos (A1)",
-    cmpP1Pct: "100%",
-    cmpP2Name: "Del Portuñol a la Fluidez",
-    cmpP2Pct: "125%",
-    cmpP3Name: "Conversación con Propósito",
-    cmpP3Pct: "250%",
-    saveVal: "R$ 600",
-    saveTxt: "en costos que no pagas<br>sin matrícula · sin material · sin libros",
-    saveCostTotalLbl: "Costo total en academia",
-    saveCostTotal: "R$ 1.200",
-    saveHiddenAmount: "R$ 600",
-    saveHiddenLbl: "costos ocultos",
-    savePayLbl: "Hoy pagas",
-    savePayVal: "R$ 600",
-    saveDiscount: "-50%",
-
-    levelsKicker: "Marco Común Europeo de Referencia",
-    levelsTitle: "Los 6 niveles <em>del español internacional</em>",
-    levelsLead: "El MCER es el estándar internacional que mide tu dominio del idioma, de <strong>A1</strong> (principiante) a <strong>C2</strong> (maestría). Así siempre sabes dónde estás y hacia dónde vas. Jonathan te acompaña principalmente de <strong>A1 a C1</strong>, con mantenimiento avanzado hacia C2.",
-    covLabel: "Cobertura de los programas",
-    covRange: "Jonathan cubre <b>A1 → C1</b> · mantenimiento hacia C2",
-    levels: [
-      { group:"Básico", name:"Acceso", can:"Te presentas y describes cosas con expresiones muy sencillas de uso inmediato.", points:"<li>Presentarte, tu rutina, gustos y profesión</li><li>Estructuras en presente: ser, estar, tener, gustar</li><li>Primeras conversaciones sencillas y guiadas</li>", prog:"→ <b>Programa 01</b>" },
-      { group:"Básico", name:"Plataforma", can:"Comunicas en tareas cotidianas y rutinarias con intercambios breves.", points:"<li>Narrar experiencias del pasado (pretérito, imperfecto)</li><li>Describir tu entorno, planes y compras del día a día</li><li>Intercambios breves sobre temas familiares</li>", prog:"→ <b>Programa 01</b> · continuación" },
-      { group:"Intermedio", name:"Umbral", can:"Te desenvuelves en viajes y justificas brevemente tus opiniones.", points:"<li>Enlazar frases para describir experiencias y deseos</li><li>Desenvolverte en la mayoría de situaciones de viaje</li><li>Expresar y justificar opiniones de forma sencilla</li>", prog:"→ <b>Programa 02</b>" },
-      { group:"Intermedio", name:"Independiente", can:"Te relacionas con fluidez y defiendes tus puntos de vista con detalle.", points:"<li>Entender las ideas principales de textos complejos</li><li>Hablar con fluidez y naturalidad con hablantes nativos</li><li>Defender posturas con argumentos claros y detallados</li>", prog:"→ <b>Programa 02 / 03</b>" },
-      { group:"Avanzado", name:"Dominio operativo", can:"Te expresas con fluidez espontánea y flexibilidad para fines profesionales.", points:"<li>Usar el idioma con flexibilidad para fines sociales y profesionales</li><li>Producir textos claros, bien estructurados y matizados</li><li>Reconocer expresiones idiomáticas y distintos registros</li>", prog:"→ <b>Programa 03</b>" },
-      { group:"Avanzado", name:"Maestría", can:"Comprendes todo y te expresas con precisión y naturalidad totales.", points:"<li>Comprender prácticamente cualquier mensaje oral o escrito</li><li>Distinguir matices sutiles de significado</li><li>Expresarte con precisión, fluidez y naturalidad total</li>", prog:"→ <b>Programa 03</b> · meta" }
-    ],
-    footerRate: "Tarifa base R$ 60 / sesión"
-  },
-  pt: {
-    heroTitle: "Aprender espanhol <em>com método</em>, não com sorte.",
-    heroLead: "Quatro programas pedagógicos adaptados ao seu ponto de partida, construídos sobre uma tarifa base transparente de <strong id=\"hero-lead-rate\">R$&nbsp;60 por sessão</strong>. Aulas individuais, materiais interativos próprios e acompanhamento real entre as aulas.",
-    btnReserve: "Reservar minha vaga →",
-    btnDiagHero: "Não sabe seu nível? Faça um diagnóstico primeiro",
-    navProf: "Professor",
-    navNiveles: "Níveis",
-    navProgramas: "Programas",
-    navCuadro: "Preços",
-    navCond: "Condições",
-    teacherTitle: "Jonathan Mendoza",
-    teacherSub: "Especialista em Conteúdo Pedagógico Multimídia",
-    teacherBio: "Aprender um idioma não precisa ser chato nem baseado em listas infinitas de regras. Minha metodologia combina o rigor pedagógico com ferramentas interativas e recursos visuais sob medida para você avançar com clareza e confiança.",
-    teacherBio2: "Acompanho profissionais e estudantes a perderem o medo de falar, superarem a interferência do português e dominarem o espanhol real.",
-    closeTitle: "Escolha seu programa <em>e começamos esta mesma semana.</em>",
-    
-    heroMetaBaseLbl: "Tarifa base",
-    currencyBase: "R$ 60 / sessão",
-    paySingleLabel: "Pagamento único (PIX / Wise)",
-    payInstallmentsLabel: "Em parcelas",
-    paySessionLabel: "Valor por sessão",
-    subscriptionLabel: "Assinatura recorrente",
-    refundLabel: "Reembolso",
-    applyLabel: "Abonável a um programa",
-    
-    p1Price: "R$ 600",
-    p1Subprice: "Programa completo · 10 sessões · 10 semanas",
-    p1Single: "R$ 540",
-    p1Installments: "2 × R$ 300",
-    p1Session: "R$ 60",
-    
-    p2Price: "R$ 480",
-    p2Subprice: "Programa completo · 8 sessões · 8 semanas",
-    p2Single: "R$ 432",
-    p2Installments: "2 × R$ 240",
-    p2Session: "R$ 60",
-    
-    p3Price: "R$ 240",
-    p3Subprice: "Plano mensal de manutenção · 4 sessões",
-    p3Recurrent: "R$ 220 / mês",
-    p3Session: "R$ 60",
-    
-    p4Price: "R$ 50",
-    p4Subprice: "Sessão pontual de avaliação pedagógica",
-    p4Refund: "100 %",
-    p4Apply: "7 dias",
-    p4Note: "Montante 100% reembolsável ou dedutível se contratar um programa completo dentro dos próximos 7 dias.",
-    
-    tableP1Tot: "R$ 600", tableP1Ses: "R$ 60",
-    tableP2Tot: "R$ 480", tableP2Ses: "R$ 60",
-    tableP3Tot: "R$ 240 <span style=\"font-size:.85rem;font-weight:400\">/mês</span>", tableP3Ses: "R$ 60",
-    tableP4Tot: "R$ 50", tableP4Ses: "R$ 50 (tarifa única)",
-
-    heroMetaSaveLbl: "Custos ocultos evitados",
-    heroMetaSaveVal: "até R$ 600",
-    savingsKicker: "Custos ocultos do mercado",
-    savingsTitle: "Isso é tudo <em>o que você NÃO paga</em>",
-    savingsLead: "Em uma escola comum, à mensalidade somam-se matrícula, material, livros e taxa de manutenção — custos que aparecem <strong>depois</strong> de você se comprometer. Com Jonathan não: a tarifa de <strong>R$ 60 por sessão</strong> inclui tudo. Isto é o que você <strong>não paga</strong>, calculado sobre os preços do mercado brasileiro de escolas de idiomas (2025-2026).",
-    saveTagline: "Sem matrícula · Sem material · Sem livros · Sem manutenção",
-    costMatLabel: "Inscrição / Matrícula",
-    costMatVal: "R$ 150",
-    costMatFree: "Inclusa · R$ 0",
-    costMat2Label: "Material didático",
-    costMat2Val: "R$ 200",
-    costMat2Free: "Interativo próprio · R$ 0",
-    costLibLabel: "Livros didáticos",
-    costLibVal: "R$ 180",
-    costLibFree: "Não precisa comprar · R$ 0",
-    costMntLabel: "Manutenção / Plataforma",
-    costMntVal: "R$ 70",
-    costMntFree: "Sem taxa mensal · R$ 0",
-    cmpP1Name: "Primeiros Passos (A1)",
-    cmpP1Pct: "100%",
-    cmpP2Name: "Do Portuñol à Fluidez",
-    cmpP2Pct: "125%",
-    cmpP3Name: "Conversação com Propósito",
-    cmpP3Pct: "250%",
-    saveVal: "R$ 600",
-    saveTxt: "em custos que você não paga<br>sem matrícula · sem material · sem livros",
-    saveCostTotalLbl: "Custo total em escola",
-    saveCostTotal: "R$ 1.200",
-    saveHiddenAmount: "R$ 600",
-    saveHiddenLbl: "custos ocultos",
-    savePayLbl: "Hoje você paga",
-    savePayVal: "R$ 600",
-    saveDiscount: "-50%",
-
-    levelsKicker: "Quadro Comum Europeu de Referência",
-    levelsTitle: "Os 6 níveis <em>do espanhol internacional</em>",
-    levelsLead: "O MCER é o padrão internacional que mede seu domínio do idioma, de <strong>A1</strong> (iniciante) a <strong>C2</strong> (maestria). Assim você sempre sabe onde está e para onde vai. Jonathan te acompanha principalmente de <strong>A1 a C1</strong>, com manutenção avançada rumo ao C2.",
-    covLabel: "Cobertura dos programas",
-    covRange: "Jonathan cobre <b>A1 → C1</b> · manutenção rumo ao C2",
-    levels: [
-      { group:"Básico", name:"Acesso", can:"Você se apresenta e descreve coisas com expressões muito simples de uso imediato.", points:"<li>Se apresentar, rotina, gostos e profissão</li><li>Estruturas no presente: ser, estar, tener, gustar</li><li>Primeiras conversas simples e guiadas</li>", prog:"→ <b>Programa 01</b>" },
-      { group:"Básico", name:"Plataforma", can:"Você se comunica em tarefas cotidianas e rotineiras com trocas breves.", points:"<li>Narrar experiências do passado (pretérito, imperfeito)</li><li>Descrever seu ambiente, planos e compras do dia a dia</li><li>Trocas breves sobre temas familiares</li>", prog:"→ <b>Programa 01</b> · continuação" },
-      { group:"Intermediário", name:"Limiar", can:"Você se desenrola em viagens e justifica brevemente suas opiniões.", points:"<li>Encadear frases para descrever experiências e desejos</li><li>Se desenrolar na maioria das situações de viagem</li><li>Expressar e justificar opiniões de forma simples</li>", prog:"→ <b>Programa 02</b>" },
-      { group:"Intermediário", name:"Independente", can:"Você se relaciona com fluidez e defende seus pontos de vista com detalhe.", points:"<li>Entender as ideias principais de textos complexos</li><li>Falar com fluidez e naturalidade com falantes nativos</li><li>Defender posições com argumentos claros e detalhados</li>", prog:"→ <b>Programa 02 / 03</b>" },
-      { group:"Avançado", name:"Domínio operativo", can:"Você se expressa com fluidez espontânea e flexibilidade para fins profissionais.", points:"<li>Usar o idioma com flexibilidade para fins sociais e profissionais</li><li>Produzir textos claros, bem estruturados e matizados</li><li>Reconhecer expressões idiomáticas e distintos registros</li>", prog:"→ <b>Programa 03</b>" },
-      { group:"Avançado", name:"Maestria", can:"Você compreende tudo e se expressa com precisão e naturalidade totais.", points:"<li>Compreender praticamente qualquer mensagem oral ou escrita</li><li>Distinguir nuanças sutis de significado</li><li>Se expressar com precisão, fluidez e naturalidade total</li>", prog:"→ <b>Programa 03</b> · meta" }
-    ],
-    footerRate: "Tarifa base R$ 60 / sessão"
-  },
-  en: {
-    heroTitle: "Learn Spanish <em>with a proven method</em>, not luck.",
-    heroLead: "Four tailored pedagogical programs designed for your exact starting point, built on a transparent rate of <strong id=\"hero-lead-rate\">$36 per session</strong>. 1-on-1 classes, custom interactive materials, and real support between sessions.",
-    btnReserve: "Reserve my spot →",
-    btnDiagHero: "Not sure of your level? Take a diagnosis first",
-    navProf: "Teacher",
-    navNiveles: "Levels",
-    navProgramas: "Programs",
-    navCuadro: "Pricing",
-    navCond: "Terms",
-    teacherTitle: "Jonathan Mendoza",
-    teacherSub: "Multimedia Educational Content Specialist",
-    teacherBio: "Learning a language shouldn't be boring or stuck in endless grammar rules. My methodology combines educational rigor with custom visual and interactive tools so you learn with clarity, momentum, and confidence.",
-    teacherBio2: "I help professionals and students speak confidently, overcome language barriers, and master real-world Spanish.",
-    closeTitle: "Choose your program <em>and let's start this week.</em>",
-    
-    // Tarifas en Dólares (Multiplicadas por 3: Base de $36/sesión) y PayPal
-    heroMetaBaseLbl: "Base rate",
-    currencyBase: "$36 / session",
-    paySingleLabel: "Single payment (PayPal / Wise)",
-    payInstallmentsLabel: "Installments",
-    paySessionLabel: "Value per session",
-    subscriptionLabel: "Recurring subscription (PayPal)",
-    refundLabel: "Refund",
-    applyLabel: "Applicable to program",
-    
-    p1Price: "$360",
-    p1Subprice: "Complete program · 10 sessions · 10 weeks",
-    p1Single: "$324",
-    p1Installments: "2 × $180",
-    p1Session: "$36",
-    
-    p2Price: "$288",
-    p2Subprice: "Complete program · 8 sessions · 8 weeks",
-    p2Single: "$259",
-    p2Installments: "2 × $144",
-    p2Session: "$36",
-    
-    p3Price: "$144",
-    p3Subprice: "Monthly maintenance plan · 4 sessions",
-    p3Recurrent: "$132 / month",
-    p3Session: "$36",
-    
-    p4Price: "$30",
-    p4Subprice: "One-time pedagogical evaluation session",
-    p4Refund: "100%",
-    p4Apply: "7 days",
-    p4Note: "100% refundable or applicable to any program if you sign up within 7 days.",
-    
-    tableP1Tot: "$360", tableP1Ses: "$36",
-    tableP2Tot: "$288", tableP2Ses: "$36",
-    tableP3Tot: "$144 <span style=\"font-size:.85rem;font-weight:400\">/mo</span>", tableP3Ses: "$36",
-    tableP4Tot: "$30", tableP4Ses: "$30 (one-time fee)",
-
-    heroMetaSaveLbl: "Hidden costs avoided",
-    heroMetaSaveVal: "up to $360",
-    savingsKicker: "Hidden costs in the market",
-    savingsTitle: "This is everything <em>you DON'T pay</em>",
-    savingsLead: "In a typical school, enrollment, materials, books and platform fees pile on top of tuition — costs that appear <strong>after</strong> you commit. Not with Jonathan: the <strong>$36 per session</strong> rate includes everything. This is what you <strong>don't pay</strong>, based on Brazilian language-school market prices (2025-2026).",
-    saveTagline: "No enrollment · No materials · No books · No platform fee",
-    costMatLabel: "Enrollment fee",
-    costMatVal: "$90",
-    costMatFree: "Included · $0",
-    costMat2Label: "Study materials",
-    costMat2Val: "$120",
-    costMat2Free: "Custom interactive · $0",
-    costLibLabel: "Textbooks",
-    costLibVal: "$108",
-    costLibFree: "Nothing to buy · $0",
-    costMntLabel: "Maintenance / Platform",
-    costMntVal: "$42",
-    costMntFree: "No monthly fee · $0",
-    cmpP1Name: "First Steps (A1)",
-    cmpP1Pct: "100%",
-    cmpP2Name: "From Portuñol to Fluency",
-    cmpP2Pct: "125%",
-    cmpP3Name: "Purposeful Conversation",
-    cmpP3Pct: "250%",
-    saveVal: "$360",
-    saveTxt: "in costs you don't pay<br>no enrollment · no materials · no books",
-    saveCostTotalLbl: "Total cost in a school",
-    saveCostTotal: "$720",
-    saveHiddenAmount: "$360",
-    saveHiddenLbl: "hidden costs",
-    savePayLbl: "You pay today",
-    savePayVal: "$360",
-    saveDiscount: "-50%",
-
-    levelsKicker: "Common European Framework of Reference",
-    levelsTitle: "The 6 levels <em>of international Spanish</em>",
-    levelsLead: "The CEFR is the international standard that measures your command of the language, from <strong>A1</strong> (beginner) to <strong>C2</strong> (mastery). That way you always know where you stand and where you're heading. Jonathan mainly guides you from <strong>A1 to C1</strong>, with advanced maintenance toward C2.",
-    covLabel: "Program coverage",
-    covRange: "Jonathan covers <b>A1 → C1</b> · maintenance toward C2",
-    levels: [
-      { group:"Basic", name:"Breakthrough", can:"You introduce yourself and describe things with very simple, immediate expressions.", points:"<li>Introduce yourself, your routine, likes and profession</li><li>Present-tense structures: ser, estar, tener, gustar</li><li>First simple, guided conversations</li>", prog:"→ <b>Program 01</b>" },
-      { group:"Basic", name:"Waystage", can:"You communicate in everyday, routine tasks with brief exchanges.", points:"<li>Narrate past experiences (preterite, imperfect)</li><li>Describe your surroundings, plans and daily errands</li><li>Brief exchanges on familiar topics</li>", prog:"→ <b>Program 01</b> · continuation" },
-      { group:"Intermediate", name:"Threshold", can:"You get by while traveling and briefly justify your opinions.", points:"<li>Link sentences to describe experiences and wishes</li><li>Handle most situations that arise while traveling</li><li>Express and justify opinions in a simple way</li>", prog:"→ <b>Program 02</b>" },
-      { group:"Intermediate", name:"Vantage", can:"You interact with fluency and defend your viewpoints in detail.", points:"<li>Understand the main ideas of complex texts</li><li>Speak with fluency and naturalness with native speakers</li><li>Defend positions with clear, detailed arguments</li>", prog:"→ <b>Program 02 / 03</b>" },
-      { group:"Advanced", name:"Effective operational", can:"You express yourself with spontaneous fluency and flexibility for professional purposes.", points:"<li>Use the language flexibly for social and professional aims</li><li>Produce clear, well-structured, nuanced texts</li><li>Recognize idioms and different registers</li>", prog:"→ <b>Program 03</b>" },
-      { group:"Advanced", name:"Mastery", can:"You understand everything and express yourself with total precision and naturalness.", points:"<li>Understand virtually any spoken or written message</li><li>Distinguish subtle shades of meaning</li><li>Express yourself with total precision, fluency and naturalness</li>", prog:"→ <b>Program 03</b> · goal" }
-    ],
-    footerRate: "Base rate $36 / session"
-  },
-  fr: {
-    heroTitle: "Apprendre l'espagnol <em>avec une méthode</em>, pas par chance.",
-    heroLead: "Quatre programmes pédagogiques adaptés à votre niveau, basés sur un tarif transparent de <strong id=\"hero-lead-rate\">12 € par séance</strong>. Cours particuliers, supports interactifs sur mesure et suivi personnalisé entre les cours.",
-    btnReserve: "Réserver ma place →",
-    btnDiagHero: "Vous ne connaissez pas votre niveau ? Faites un diagnostic",
-    navProf: "Professeur",
-    navNiveles: "Niveaux",
-    navProgramas: "Programmes",
-    navCuadro: "Tarifs",
-    navCond: "Conditions",
-    teacherTitle: "Jonathan Mendoza",
-    teacherSub: "Spécialiste en Contenu Pédagogique Multimédia",
-    teacherBio: "Apprendre une langue ne doit pas être ennuyeux. Ma méthode associe la rigueur pédagogique à des outils visuels et interactifs pour vous faire progresser avec clarté et confiance.",
-    teacherBio2: "J'accompagne les professionnels et étudiants à prendre la parole sans peur et à maîtriser l'espagnol authentique.",
-    closeTitle: "Choisissez votre programme <em>et commençons cette semaine.</em>",
-    
-    // Tarifas en Euros (Base de 12 €) y Wise/Carte
-    heroMetaBaseLbl: "Tarif de base",
-    currencyBase: "12 € / séance",
-    paySingleLabel: "Paiement unique (Wise / Carte)",
-    payInstallmentsLabel: "En plusieurs fois",
-    paySessionLabel: "Tarif par séance",
-    subscriptionLabel: "Abonnement récurrent",
-    refundLabel: "Remboursement",
-    applyLabel: "Déductible d'un programme",
-    
-    p1Price: "120 €",
-    p1Subprice: "Programme complet · 10 séances · 10 semaines",
-    p1Single: "108 €",
-    p1Installments: "2 × 60 €",
-    p1Session: "12 €",
-    
-    p2Price: "96 €",
-    p2Subprice: "Programme complet · 8 séances · 8 semaines",
-    p2Single: "86 €",
-    p2Installments: "2 × 48 €",
-    p2Session: "12 €",
-    
-    p3Price: "48 €",
-    p3Subprice: "Plan d'entretien mensuel · 4 séances",
-    p3Recurrent: "44 € / mois",
-    p3Session: "12 €",
-    
-    p4Price: "10 €",
-    p4Subprice: "Séance d'évaluation pédagogique unique",
-    p4Refund: "100%",
-    p4Apply: "7 jours",
-    p4Note: "Montant 100% remboursable ou déductible si vous réservez un programme complet sous 7 jours.",
-    
-    tableP1Tot: "120 €", tableP1Ses: "12 €",
-    tableP2Tot: "96 €", tableP2Ses: "12 €",
-    tableP3Tot: "48 € <span style=\"font-size:.85rem;font-weight:400\">/mois</span>", tableP3Ses: "12 €",
-    tableP4Tot: "10 €", tableP4Ses: "10 € (tarif unique)",
-
-    heroMetaSaveLbl: "Frais cachés évités",
-    heroMetaSaveVal: "jusqu'à 120 €",
-    savingsKicker: "Frais cachés du marché",
-    savingsTitle: "C'est tout <em>ce que vous NE payez PAS</em>",
-    savingsLead: "Dans une école classique, aux frais de scolarité s'ajoutent l'inscription, le matériel, les livres et les frais de plateforme — des coûts qui apparaissent <strong>après</strong> votre engagement. Pas avec Jonathan : le tarif de <strong>12 € par séance</strong> inclut tout. Voici ce que vous <strong>ne payez pas</strong>, calculé sur les prix du marché brésilien des écoles de langues (2025-2026).",
-    saveTagline: "Sans inscription · Sans matériel · Sans livres · Sans frais",
-    costMatLabel: "Frais d'inscription",
-    costMatVal: "30 €",
-    costMatFree: "Inclus · 0 €",
-    costMat2Label: "Matériel pédagogique",
-    costMat2Val: "40 €",
-    costMat2Free: "Interactif sur mesure · 0 €",
-    costLibLabel: "Manuels scolaires",
-    costLibVal: "36 €",
-    costLibFree: "Rien à acheter · 0 €",
-    costMntLabel: "Maintenance / Plateforme",
-    costMntVal: "14 €",
-    costMntFree: "Sans frais mensuel · 0 €",
-    cmpP1Name: "Premiers Pas (A1)",
-    cmpP1Pct: "100%",
-    cmpP2Name: "Du Portuñol à la Fluidité",
-    cmpP2Pct: "125%",
-    cmpP3Name: "Conversation avec Objectif",
-    cmpP3Pct: "250%",
-    saveVal: "120 €",
-    saveTxt: "en frais que vous ne payez pas<br>sans inscription · sans matériel · sans livres",
-    saveCostTotalLbl: "Coût total en école",
-    saveCostTotal: "240 €",
-    saveHiddenAmount: "120 €",
-    saveHiddenLbl: "frais cachés",
-    savePayLbl: "Vous payez",
-    savePayVal: "120 €",
-    saveDiscount: "-50%",
-
-    levelsKicker: "Cadre Européen Commun de Référence",
-    levelsTitle: "Les 6 niveaux <em>de l'espagnol international</em>",
-    levelsLead: "Le CECR est le standard international qui mesure votre maîtrise de la langue, de <strong>A1</strong> (débutant) à <strong>C2</strong> (maîtrise). Ainsi vous savez toujours où vous en êtes et vers quoi vous allez. Jonathan vous accompagne principalement de <strong>A1 à C1</strong>, avec un entretien avancé vers le C2.",
-    covLabel: "Couverture des programmes",
-    covRange: "Jonathan couvre <b>A1 → C1</b> · entretien vers le C2",
-    levels: [
-      { group:"Basique", name:"Découverte", can:"Vous vous présentez et décrivez des choses avec des expressions très simples et immédiates.", points:"<li>Vous présenter, votre routine, vos goûts et profession</li><li>Structures au présent : ser, estar, tener, gustar</li><li>Premières conversations simples et guidées</li>", prog:"→ <b>Programme 01</b>" },
-      { group:"Basique", name:"Survie", can:"Vous communiquez dans des tâches courantes et routinières par des échanges brefs.", points:"<li>Raconter des expériences passées (passé simple, imparfait)</li><li>Décrire votre environnement, vos projets et vos courses</li><li>Échanges brefs sur des sujets familiers</li>", prog:"→ <b>Programme 01</b> · suite" },
-      { group:"Intermédiaire", name:"Seuil", can:"Vous vous débrouillez en voyage et justifiez brièvement vos opinions.", points:"<li>Relier des phrases pour décrire expériences et souhaits</li><li>Gérer la plupart des situations de voyage</li><li>Exprimer et justifier des opinions simplement</li>", prog:"→ <b>Programme 02</b>" },
-      { group:"Intermédiaire", name:"Avancé", can:"Vous interagissez avec fluidité et défendez vos points de vue en détail.", points:"<li>Comprendre les idées principales de textes complexes</li><li>Parler avec fluidité et naturel avec des natifs</li><li>Défendre des positions avec des arguments clairs et détaillés</li>", prog:"→ <b>Programme 02 / 03</b>" },
-      { group:"Avancé", name:"Autonome", can:"Vous vous exprimez avec une fluidité spontanée et de la flexibilité à des fins professionnelles.", points:"<li>Utiliser la langue avec flexibilité pour des fins sociales et professionnelles</li><li>Produire des textes clairs, bien structurés et nuancés</li><li>Reconnaître les idiotismes et différents registres</li>", prog:"→ <b>Programme 03</b>" },
-      { group:"Avancé", name:"Maîtrise", can:"Vous comprenez tout et vous exprimez avec une précision et un naturel totaux.", points:"<li>Comprendre pratiquement tout message oral ou écrit</li><li>Distinguer des nuances subtiles de sens</li><li>Vous exprimer avec une précision, fluidité et naturel totaux</li>", prog:"→ <b>Programme 03</b> · objectif" }
-    ],
-    footerRate: "Tarif de base 12 € / séance"
-  }
-};
-
-function changeLanguage(lang) {
-  const data = translations[lang] || translations.es;
-  try { localStorage.setItem('lang', lang); } catch (e) {}
-  document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
-  document.querySelectorAll('.lang-select').forEach(s => { s.value = lang; });
-  
-  const txt = (id, html, isHTML = false) => {
-    const el = document.getElementById(id);
-    if (el) {
-      if (isHTML) el.innerHTML = html;
-      else el.innerText = html;
-    }
-  };
-
-  // Sección Hero
-  txt('hero-title', data.heroTitle, true);
-  txt('hero-lead', data.heroLead, true);
-  txt('btn-reserve', data.btnReserve);
-  txt('btn-diag-hero', data.btnDiagHero);
-  txt('hero-meta-base-lbl', data.heroMetaBaseLbl);
-  txt('hero-meta-base-val', data.currencyBase);
-  txt('hero-meta-save-lbl', data.heroMetaSaveLbl);
-  txt('hero-meta-save-val', data.heroMetaSaveVal);
-
-  // Barra de Navegación
-  const navLinks = document.querySelectorAll('#nav > a');
-  if (navLinks.length >= 5) {
-    navLinks[0].innerText = data.navProf;
-    navLinks[1].innerText = data.navNiveles;
-    navLinks[2].innerText = data.navProgramas;
-    navLinks[3].innerText = data.navCuadro;
-    navLinks[4].innerText = data.navCond;
-  }
-  
-  // Información del Docente
-  txt('teacher-title', data.teacherTitle);
-  txt('teacher-sub', data.teacherSub);
-  const docP = document.querySelectorAll('#docente p');
-  if(docP.length >= 2) {
-    docP[0].innerText = data.teacherBio;
-    docP[1].innerText = data.teacherBio2;
-  }
-
-  // Tarjeta de Inversión Programa 01
-  txt('p1-pill-rate', data.p1Session);
-  txt('p1-price', `${data.p1Price}<small>${data.p1Subprice}</small>`, true);
-  txt('p1-pay-single-lbl', data.paySingleLabel);
-  txt('p1-pay-single-val', data.p1Single);
-  txt('p1-pay-installments-lbl', data.payInstallmentsLabel);
-  txt('p1-pay-installments-val', data.p1Installments);
-  txt('p1-pay-session-lbl', data.paySessionLabel);
-  txt('p1-pay-session-val', data.p1Session);
-
-  // Tarjeta de Inversión Programa 02
-  txt('p2-pill-rate', data.p2Session);
-  txt('p2-price', `${data.p2Price}<small>${data.p2Subprice}</small>`, true);
-  txt('p2-pay-single-lbl', data.paySingleLabel);
-  txt('p2-pay-single-val', data.p2Single);
-  txt('p2-pay-installments-lbl', data.payInstallmentsLabel);
-  txt('p2-pay-installments-val', data.p2Installments);
-  txt('p2-pay-session-lbl', data.paySessionLabel);
-  txt('p2-pay-session-val', data.p2Session);
-
-  // Tarjeta de Inversión Programa 03
-  txt('p3-pill-rate', data.p3Session);
-  txt('p3-price', `${data.p3Price}<small>${data.p3Subprice}</small>`, true);
-  txt('p3-pay-rec-lbl', data.subscriptionLabel);
-  txt('p3-pay-rec-val', data.p3Recurrent);
-  txt('p3-pay-session-lbl', data.paySessionLabel);
-  txt('p3-pay-session-val', data.p3Session);
-
-  // Tarjeta de Diagnóstico Programa 04
-  txt('p4-price', `${data.p4Price}<small>${data.p4Subprice}</small>`, true);
-  txt('p4-pay-refund-lbl', data.refundLabel);
-  txt('p4-pay-refund-val', data.p4Refund);
-  txt('p4-pay-apply-lbl', data.applyLabel);
-  txt('p4-pay-apply-val', data.p4Apply);
-  txt('p4-note', data.p4Note);
-
-  // Cuadro Comparativo (Tabla)
-  txt('table-p1-tot', data.tableP1Tot);
-  txt('table-p1-ses', data.tableP1Ses);
-  txt('table-p2-tot', data.tableP2Tot);
-  txt('table-p2-ses', data.tableP2Ses);
-  txt('table-p3-tot', data.tableP3Tot, true);
-  txt('table-p3-ses', data.tableP3Ses);
-  txt('table-p4-tot', data.tableP4Tot);
-  txt('table-p4-ses', data.tableP4Ses);
-
-  // Sección de Ahorro
-  txt('savings-kicker', data.savingsKicker);
-  txt('savings-title', data.savingsTitle, true);
-  txt('savings-lead', data.savingsLead, true);
-  txt('save-tagline', data.saveTagline);
-  txt('save-cost-total-lbl', data.saveCostTotalLbl);
-  txt('save-cost-total', data.saveCostTotal);
-  txt('save-hidden-amount', data.saveHiddenAmount);
-  txt('save-hidden-lbl', data.saveHiddenLbl);
-  txt('save-pay-lbl', data.savePayLbl);
-  txt('save-pay-val', data.savePayVal);
-  txt('save-discount', data.saveDiscount);
-  txt('cost-mat-label', data.costMatLabel);
-  txt('cost-mat-val', data.costMatVal);
-  txt('cost-mat-free', data.costMatFree);
-  txt('cost-mat2-label', data.costMat2Label);
-  txt('cost-mat2-val', data.costMat2Val);
-  txt('cost-mat2-free', data.costMat2Free);
-  txt('cost-lib-label', data.costLibLabel);
-  txt('cost-lib-val', data.costLibVal);
-  txt('cost-lib-free', data.costLibFree);
-  txt('cost-mnt-label', data.costMntLabel);
-  txt('cost-mnt-val', data.costMntVal);
-  txt('cost-mnt-free', data.costMntFree);
-  txt('cmp-p1-name', data.cmpP1Name);
-  txt('cmp-p1-pct', data.cmpP1Pct);
-  txt('cmp-p2-name', data.cmpP2Name);
-  txt('cmp-p2-pct', data.cmpP2Pct);
-  txt('cmp-p3-name', data.cmpP3Name);
-  txt('cmp-p3-pct', data.cmpP3Pct);
-
-  // Sellos de ahorro en las tarjetas de inversión
-  ['p1','p2','p3'].forEach(p => {
-    txt(p + '-save-val', data.saveVal);
-    const sstxt = document.getElementById(p + '-save-txt');
-    if (sstxt) sstxt.innerHTML = data.saveTxt;
-  });
-
-  // Niveles MCER
-  txt('levels-kicker', data.levelsKicker);
-  txt('levels-title', data.levelsTitle, true);
-  txt('levels-lead', data.levelsLead, true);
-  txt('cov-label', data.covLabel);
-  txt('cov-range', data.covRange, true);
-  if (data.levels) {
-    data.levels.forEach((lv, i) => {
-      txt('lvl-grp-' + i, lv.group);
-      txt('lvl-name-' + i, lv.name);
-      txt('lvl-can-' + i, lv.can);
-      txt('lvl-pts-' + i, lv.points, true);
-      txt('lvl-prog-' + i, lv.prog, true);
-    });
-  }
-
-  // Sección de Cierre y Footer
-  txt('close-title', data.closeTitle, true);
-  txt('footer-rate', data.footerRate);
-}
-
-try {
-  const savedLang = localStorage.getItem('lang');
-  if (savedLang && translations[savedLang]) changeLanguage(savedLang);
-} catch (e) {}
 </script>
 
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a34738465d2cc727',t:'MTc4ODI5NjU4Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
-</html>e(savedLang);
-} catch (e) {}
-</script>
-
-</body>
-</html>
+</body></html>
