@@ -2,13 +2,13 @@
 <html lang="es"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Programas y Servicios de Español · Jonathan Mendoza</title>
-  <meta name="description" content="Clases de español individuales online con Jonathan Mendoza, Lic. en Educación. Programas de A1 a C1, materiales interactivos propios y tarifa transparente de R$ 60 por sesión. Sin matrícula, sin libros, sin costos ocultos.">
+<title>Clases y Paquetes de Español · Jonathan Mendoza</title>
+  <meta name="description" content="Clases de español individuales online con Jonathan Mendoza, Lic. en Educación. Paquetes de 4, 8 y 10 sesiones desde R$ 50 por sesión, camino claro de A1 a C1 con tiempos y precio por nivel. Sin matrícula, sin libros, sin costos ocultos.">
   <meta name="author" content="Jonathan Mendoza">
   <meta name="theme-color" content="#1E5B4F">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Programas de Español · Jonathan Mendoza">
-  <meta property="og:description" content="Aprende español con método: 4 programas de A1 a C1, clases 1 a 1 y tarifa transparente. Sin matrícula, sin libros, sin costos ocultos.">
+  <meta property="og:title" content="Clases de Español · Jonathan Mendoza">
+  <meta property="og:description" content="Aprende español con método: paquetes de 4, 8 y 10 clases 1 a 1 desde R$ 50 por sesión y un camino claro de A1 a C1 con tiempo y precio por nivel.">
   <meta property="og:locale" content="es_ES">
   <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1494,6 +1494,267 @@ footer a:hover {
   letter-spacing: 0.08em;
 }
 
+
+/* ---------- PAQUETES DE CLASES ---------- */
+.packs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+.pack-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+.pack-card:hover {
+  border-color: #CDBFA4;
+  box-shadow: 0 10px 24px rgba(27, 25, 23, 0.05);
+  transform: translateY(-2px);
+}
+.pack-best {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+  box-shadow: 0 14px 32px rgba(30, 91, 79, 0.22);
+}
+.pack-best:hover { box-shadow: 0 18px 40px rgba(30, 91, 79, 0.3); }
+.pack-best .tag {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.85);
+}
+.pack-ribbon {
+  position: absolute;
+  top: -13px;
+  right: 18px;
+  background: var(--terra);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(196, 85, 44, 0.3);
+}
+.pack-top {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.pack-name {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 1.25rem;
+  line-height: 1.15;
+}
+.pack-card .price { font-size: 2.4rem; }
+.pack-per {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+.pack-best .pack-per { color: rgba(255, 255, 255, 0.75); }
+.pack-feat {
+  list-style: none;
+  margin: 16px 0 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line-soft);
+  flex: 1;
+}
+.pack-best .pack-feat { border-top-color: rgba(255, 255, 255, 0.2); }
+.pack-feat li {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  padding: 6px 0 6px 22px;
+  position: relative;
+  line-height: 1.45;
+}
+.pack-best .pack-feat li { color: rgba(255, 255, 255, 0.88); }
+.pack-feat li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  color: var(--green);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.pack-best .pack-feat li::before { color: #F2C7AE; }
+.pack-save {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(196, 85, 44, 0.1);
+  color: var(--terra);
+  padding: 4px 10px;
+  border-radius: 20px;
+  align-self: flex-start;
+  font-weight: 700;
+  margin-top: 10px;
+}
+.pack-best .pack-save { background: rgba(255, 255, 255, 0.15); color: #fff; }
+.pack-advantage {
+  margin-top: 36px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper-2);
+  padding: 26px 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 28px;
+  align-items: center;
+}
+.pack-advantage h3 { margin-bottom: 10px; }
+.pack-advantage p { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.65; max-width: 46ch; }
+.pa-bars { display: flex; flex-direction: column; gap: 12px; }
+.pa-bar { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: center; }
+.pa-lbl {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: right;
+}
+.pa-track {
+  height: 30px;
+  background: var(--line-soft);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.pa-track i {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background: var(--green);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  padding: 0 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.pa-bar:last-child .pa-track i { background: var(--terra); font-weight: 700; }
+
+/* ---------- CAMINO POR NIVELES ---------- */
+.camino-list { display: flex; flex-direction: column; gap: 16px; }
+.camino-row {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr) 280px;
+  gap: 24px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px 24px;
+  align-items: center;
+  transition: var(--transition);
+}
+.camino-row:hover { border-color: #CDBFA4; box-shadow: 0 10px 24px rgba(27, 25, 23, 0.05); }
+.camino-row[data-group="basico"] { border-left: 5px solid var(--green); }
+.camino-row[data-group="intermedio"] { border-left: 5px solid #9C7B3B; }
+.camino-row[data-group="avanzado"] { border-left: 5px solid var(--terra); }
+.camino-code {
+  font-family: var(--serif);
+  font-weight: 900;
+  font-size: 2.6rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.camino-code span {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.camino-info h3 { font-size: clamp(1.15rem, 1.8vw, 1.45rem); margin-bottom: 8px; }
+.camino-info p { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.6; max-width: 56ch; }
+.camino-stats { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.camino-stats span {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 5px 12px;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+}
+.camino-stats b { font-family: var(--serif); font-size: 0.95rem; color: var(--green); }
+.camino-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding-left: 24px;
+  border-left: 1px solid var(--line-soft);
+  align-self: stretch;
+  justify-content: center;
+}
+.camino-price .price { font-size: 2.2rem; }
+.camino-note {
+  margin-top: 28px;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  background: var(--paper-2);
+  padding: 16px 20px;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+.camino-note b { color: var(--green); }
+.camino-total {
+  margin-top: 20px;
+  background: var(--green);
+  color: #fff;
+  border-radius: 16px;
+  padding: 24px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 32px;
+  box-shadow: 0 14px 32px rgba(30, 91, 79, 0.2);
+}
+.camino-total .ct-t { font-family: var(--serif); font-weight: 900; font-size: 1.3rem; line-height: 1.2; }
+.camino-total .ct-t em { color: #F2C7AE; font-style: italic; }
+.camino-total .ct-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 26px;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.92;
+}
+.camino-total .ct-stats b { font-size: 1rem; font-family: var(--serif); letter-spacing: 0; }
+@media(max-width: 1080px) {
+  .packs-grid { grid-template-columns: 1fr; }
+  .pack-advantage { grid-template-columns: 1fr; }
+  .camino-row { grid-template-columns: 1fr; gap: 16px; }
+  .camino-price { border-left: none; border-top: 1px solid var(--line-soft); padding: 16px 0 0; }
+}
+
 /* ---------- ANIMACIÓN REVEAL ---------- */
 .rv {
   opacity: 0;
@@ -1623,17 +1884,17 @@ footer a:hover {
       <div class="logo">es</div>
       <div class="brand-text">
         <b>Programas de Español</b>
-        <small>Propuesta v5 · Jonathan Mendoza</small>
+        <small>Jonathan Mendoza · Lic. en Educación</small>
       </div>
     </a>
     <nav id="nav">
+      <a href="#paquetes">Paquetes</a>
+      <a href="#ahorro">Ahorro</a>
       <a href="#docente">Profesor</a>
       <a href="#niveles">Niveles</a>
-      <a href="#p1">Desde cero</a>
-      <a href="#p2">Fluidez</a>
-      <a href="#p3">Conversación</a>
+      <a href="#camino">Camino</a>
+      <a href="#metodo">Método</a>
       <a href="#p4">Diagnóstico</a>
-      <a href="#ahorro">Ahorro</a>
       <a href="#testimonios">Testimonios</a>
       <a href="#cuadro">Cuadro</a>
       <a href="#condiciones">Condiciones</a>
@@ -1652,13 +1913,14 @@ footer a:hover {
 <!-- ================= HERO ================= -->
 <div class="hero" id="inicio">
   <div class="wrap" style="position:relative">
-    <div class="ghost" style="top:-10px">v5</div>
-    <div class="kicker"><span class="num">§ 00</span> Propuesta de programas y servicios</div>
+    <div class="ghost" style="top:-10px">hola</div>
+    <div class="kicker"><span class="num">§ 00</span> Clases de español individuales · online</div>
     <h1 id="hero-title">Aprender español <em>con método</em>, no con suerte.</h1>
     <p class="lead" id="hero-lead">
-      Cuatro programas pedagógicos adaptados a tu punto de partida, construidos sobre una
-      tarifa base transparente de <strong id="hero-lead-rate">R$&nbsp;60 por sesión</strong>. Clases individuales,
-      materiales interactivos propios y acompañamiento real entre clase y clase.
+      Clases individuales online con material interactivo propio y acompañamiento real entre
+      clase y clase. Elegís tu paquete — <strong id="hero-lead-rate">R$ 60 por sesión, o R$ 50 en el pack de 10</strong> —
+      y avanzás por un camino claro de <strong>A1 a C1</strong>, sabiendo de antemano cuánto tiempo
+      y cuánto cuesta cada nivel.
     </p>
     <div class="hero-cta-group">
       <a class="btn" id="btn-reserve" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20reservar%20mi%20cupo%20para%20empezar%20clases%20de%20espa%C3%B1ol" target="_blank" rel="noopener">Reservar mi cupo →</a>
@@ -1669,16 +1931,107 @@ footer a:hover {
       <div class="meta-i">Formación<b>Lic. en Educación</b></div>
       <div class="meta-i">Especialidad<b>Contenido Pedagógico Multimedia</b></div>
       <div class="meta-i"><span id="hero-meta-base-lbl">Tarifa base</span><b id="hero-meta-base-val">R$ 60 / sesión</b></div>
-      <div class="meta-i"><span id="hero-meta-save-val" class="hl-save"><font color="#8c8577"><span style="font-size: 10.88px;">costos extras que vas a ahorrar:<br></span></font><span style="font-weight: bold;">hasta R$ 600</span></span></div>
+      <div class="meta-i"><span id="hero-meta-save-val" class="hl-save"><font color="#8c8577"><span style="font-size: 10.88px;">costos extras que vas a ahorrar:<br></span></font><span style="font-weight: bold;">hasta R$ 700</span></span></div>
     </div>
   </div>
 </div>
 
+
+<!-- ================= PAQUETES ================= -->
+<section id="paquetes">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="ghost">§01</div>
+      <div class="kicker"><span class="num">§ 01</span> Precios simples, sin letra chica</div>
+      <h2>Paquetes de clases <em>con descuento por volumen</em></h2>
+      <p class="lead">
+        <strong>Cómo funcionan.</strong> Todas las clases son individuales, online y de 60 minutos,
+        con el material interactivo incluido. Elegís cuántas sesiones querés por delante: probar con 4,
+        avanzar un tramo con 8, o encarar tu nivel con 10 — el mejor precio por sesión.
+      </p>
+    </div>
+
+    <div class="packs-grid rv">
+      <div class="pack-card">
+        <div class="pack-top">
+          <span class="pack-name">Pack de 4 sesiones</span>
+          <span class="tag plain">Para probar o mantener el nivel</span>
+        </div>
+        <div class="price">R$ 240<small>4 clases de 60 min · 1 a 1 online</small></div>
+        <div class="pack-per">R$ 60 por sesión</div>
+        <ul class="pack-feat">
+          <li>Material interactivo incluido</li>
+          <li>Vigencia: 6 semanas</li>
+          <li>Pago por PIX, Wise u otros</li>
+        </ul>
+        <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20empezar%20con%20el%20pack%20de%204%20sesiones" target="_blank" rel="noopener">Empezar con 4 sesiones →</a>
+      </div>
+
+      <div class="pack-card">
+        <div class="pack-top">
+          <span class="pack-name">Pack de 8 sesiones</span>
+          <span class="tag plain">Para avanzar un tramo</span>
+        </div>
+        <div class="price">R$ 440<small>8 clases de 60 min · 1 a 1 online</small></div>
+        <div class="pack-per">R$ 55 por sesión</div>
+        <span class="pack-save">ahorrás R$ 40 · −8 %</span>
+        <ul class="pack-feat">
+          <li>Material interactivo incluido</li>
+          <li>Vigencia: 10 semanas</li>
+          <li>Pago por PIX, Wise u otros</li>
+        </ul>
+        <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20el%20pack%20de%208%20sesiones" target="_blank" rel="noopener">Elegir 8 sesiones →</a>
+      </div>
+
+      <div class="pack-card pack-best">
+        <div class="pack-ribbon">El más elegido · −17 %</div>
+        <div class="pack-top">
+          <span class="pack-name">Pack de 10 sesiones</span>
+          <span class="tag plain">Para encarar tu nivel</span>
+        </div>
+        <div class="price">R$ 500<small>10 clases de 60 min · 1 a 1 online</small></div>
+        <div class="pack-per">R$ 50 por sesión</div>
+        <span class="pack-save">ahorrás R$ 100 · −17 %</span>
+        <ul class="pack-feat">
+          <li>El precio más bajo por clase</li>
+          <li>Vigencia: 12 semanas</li>
+          <li>2 sesiones extra cuestan solo R$ 60 más que el pack de 8</li>
+        </ul>
+        <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20el%20pack%20de%2010%20sesiones" target="_blank" rel="noopener">Elegir 10 sesiones →</a>
+      </div>
+    </div>
+
+    <div class="pack-advantage rv">
+      <div>
+        <h3>La ventaja del pack de 10</h3>
+        <p>Cada sesión sale <strong>R$ 50 en vez de R$ 60</strong>. Y si venís del pack de 8, las dos clases
+           extra te cuestan apenas <strong>R$ 60</strong> — R$ 30 cada una, mitad de precio. Es el paquete
+           pensado para quien quiere llegar lejos sin frenar cada mes.</p>
+      </div>
+      <div class="pa-bars">
+        <div class="pa-bar">
+          <span class="pa-lbl">4 sesiones</span>
+          <div class="pa-track"><i style="width:100%">R$ 60 / sesión</i></div>
+        </div>
+        <div class="pa-bar">
+          <span class="pa-lbl">8 sesiones</span>
+          <div class="pa-track"><i style="width:88%">R$ 55 / sesión</i></div>
+        </div>
+        <div class="pa-bar">
+          <span class="pa-lbl">10 sesiones</span>
+          <div class="pa-track"><i style="width:78%">R$ 50 / sesión</i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ================= ECONOMÍA / AHORRO (INICIO) ================= -->
 <section id="ahorro">
   <div class="wrap">
+    <div class="kicker rv" style="margin-bottom:28px"><span class="num">§ 02</span> Comparado con escuelas tradicionales</div>
     <div class="savings-impact rv">
-      <span class="si-ghost">50%</span>
+      <span class="si-ghost">58%</span>
       <div class="si-kicker" id="savings-kicker">Costos ocultos del mercado</div>
       <h2 class="si-title" id="savings-title">Esto es todo <em>lo que NO pagas</em></h2>
       <div class="price-box">
@@ -1686,19 +2039,19 @@ footer a:hover {
           <span class="pb-lbl" id="save-cost-total-lbl">Costo total en escuelas tradicionales</span>
           <span class="pb-val pb-strike" id="save-cost-total">R$ 1.200</span>
         </div>
-        <div class="pb-minus">- <span id="save-hidden-amount">R$ 600</span> <small id="save-hidden-lbl">costos ocultos</small></div>
+        <div class="pb-minus">- <span id="save-hidden-amount">R$ 700</span> <small id="save-hidden-lbl">de ahorro total</small></div>
         <div class="pb-divider"></div>
         <div class="pb-row">
           <span class="pb-lbl" id="save-pay-lbl">Hoy pagas solo</span>
-          <span class="pb-val pb-final" id="save-pay-val">R$ 599</span>
-          <span class="pb-badge" id="save-discount">-50%</span>
+          <span class="pb-val pb-final" id="save-pay-val">R$ 500</span>
+          <span class="pb-badge" id="save-discount">-58%</span>
         </div>
       </div>
       <div class="si-tagline" id="save-tagline">Sin matrícula · Sin material con costo adicional · Sin libros con costo adicional · Sin mantenimiento</div>
     </div>
 
     <div class="savings-detail rv">
-      <p class="lead" id="savings-lead">En una escuela tradicional común, a la mensualidad se le suman matrícula, material, libros y tasa de mantenimiento — costos que aparecen <strong>después</strong> de comprometerte. Con Jonathan no: la tarifa de <strong>R$ 60 por sesión</strong> lo incluye todo. Esto es lo que <strong>no pagas.</strong></p>
+      <p class="lead" id="savings-lead">En una escuela tradicional común, a la mensualidad se le suman matrícula, material, libros y tasa de mantenimiento — costos que aparecen <strong>después</strong> de comprometerte. Con Jonathan no: la tarifa de <strong>R$ 60 por sesión</strong> lo incluye todo. Esto es lo que <strong>no pagás</strong> — y con el pack de 10 sesiones, el mismo curso que cuesta R$ 1.200 en la escuela acá queda en <strong>R$ 500</strong>.</p>
       <div class="hidden-costs-grid">
         <div class="hidden-cost-item">
           <div class="hc-top">
@@ -1735,23 +2088,6 @@ footer a:hover {
       </div>
     </div>
 
-    <div class="savings-compare rv">
-      <div class="compare-row">
-        <div class="compare-name"><span id="cmp-p1-name">Primeros Pasos (A1)</span><small>R$ 600</small></div>
-        <div class="compare-pct" id="cmp-p1-pct">100%</div>
-        <div class="compare-bar"><i style="width:40%"></i></div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-name"><span id="cmp-p2-name">Del Portuñol a la Fluidez</span><small>R$ 480</small></div>
-        <div class="compare-pct" id="cmp-p2-pct">125%</div>
-        <div class="compare-bar"><i style="width:50%"></i></div>
-      </div>
-      <div class="compare-row">
-        <div class="compare-name"><span id="cmp-p3-name">Conversación con Propósito</span><small>R$ 240 / mes</small></div>
-        <div class="compare-pct" id="cmp-p3-pct">250%</div>
-        <div class="compare-bar"><i style="width:100%"></i></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1817,7 +2153,7 @@ footer a:hover {
             <li>Estructuras en presente: ser, estar, tener, gustar</li>
             <li>Primeras conversaciones sencillas y guiadas</li>
           </ul>
-          <div class="level-prog" id="lvl-prog-0">→ <b>Programa 01</b></div>
+          <div class="level-prog" id="lvl-prog-0">→ <b>Camino A1</b> · 20 sesiones · R$ 1.000</div>
         </div>
       </div>
 
@@ -1835,7 +2171,7 @@ footer a:hover {
             <li>Describir tu entorno, planes y compras del día a día</li>
             <li>Intercambios breves sobre temas familiares</li>
           </ul>
-          <div class="level-prog" id="lvl-prog-1">→ <b>Programa 01</b> · continuación</div>
+          <div class="level-prog" id="lvl-prog-1">→ <b>Camino A2</b> · 30 sesiones · R$ 1.500</div>
         </div>
       </div>
 
@@ -1853,7 +2189,7 @@ footer a:hover {
             <li>Desenvolverte en la mayoría de situaciones de viaje</li>
             <li>Expresar y justificar opiniones de forma sencilla</li>
           </ul>
-          <div class="level-prog" id="lvl-prog-2">→ <b>Programa 02</b></div>
+          <div class="level-prog" id="lvl-prog-2">→ <b>Camino B1</b> · 40 sesiones · R$ 2.000</div>
         </div>
       </div>
 
@@ -1871,7 +2207,7 @@ footer a:hover {
             <li>Hablar con fluidez y naturalidad con hablantes nativos</li>
             <li>Defender posturas con argumentos claros y detallados</li>
           </ul>
-          <div class="level-prog" id="lvl-prog-3">→ <b>Programa 02 / 03</b></div>
+          <div class="level-prog" id="lvl-prog-3">→ <b>Camino B2</b> · 50 sesiones · R$ 2.500</div>
         </div>
       </div>
 
@@ -1889,7 +2225,7 @@ footer a:hover {
             <li>Producir textos claros, bien estructurados y matizados</li>
             <li>Reconocer expresiones idiomáticas y distintos registros</li>
           </ul>
-          <div class="level-prog" id="lvl-prog-4">→ <b>Programa 03</b></div>
+          <div class="level-prog" id="lvl-prog-4">→ <b>Camino C1</b> · 60 sesiones · R$ 3.000</div>
         </div>
       </div>
 
@@ -1907,7 +2243,7 @@ footer a:hover {
             <li>Distinguir matices sutiles de significado</li>
             <li>Expresarte con precisión, fluidez y naturalidad total</li>
           </ul>
-          <div class="level-prog" id="lvl-prog-5">→ <b>Programa 03</b> · meta</div>
+          <div class="level-prog" id="lvl-prog-5">→ <b>Mantenimiento</b> · packs de 4 sesiones</div>
         </div>
       </div>
     </div>
@@ -1925,29 +2261,156 @@ footer a:hover {
   </div>
 </section>
 
-<!-- ================= PROGRAMA 01 ================= -->
-<section id="p1">
+
+<!-- ================= CAMINO POR NIVELES ================= -->
+<section id="camino" class="alt">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="ghost">01</div>
-      <div class="kicker"><span class="num">§ 01</span> Programa principiantes · desde cero</div>
-      <h2>Primeros pasos <em>en español</em></h2>
+      <div class="ghost">§03</div>
+      <div class="kicker"><span class="num">§ 03</span> Tu plan, paso a paso</div>
+      <h2>El camino de <em>A1 a C1</em>: cuánto tiempo y cuánto cuesta</h2>
       <p class="lead">
-        <strong>Perfil del alumno.</strong> Diseñado para personas sin conocimientos previos de español
-        que desean aprender las bases del idioma de forma estructurada, visual y sin la frustración
-        de memorizar reglas complejas.
+        Cada nivel es un bloque con <strong>sesiones, semanas e inversión definidas</strong> — nada de
+        mensualidades eternas. Avanzás a tu ritmo, comprando paquete por paquete, y siempre sabés
+        exactamente dónde estás y cuánto falta.
+      </p>
+    </div>
+
+    <div class="camino-list rv">
+
+      <div class="camino-row" data-group="basico">
+        <div class="camino-code">A1<span>Acceso · desde cero</span></div>
+        <div class="camino-info">
+          <h3>De cero a tu primera conversación</h3>
+          <p>Te presentás, hablás de tu rutina, gustos y profesión. Estructuras esenciales en presente (ser, estar, tener, gustar) y primeros diálogos reales desde la primera semana.</p>
+          <div class="camino-stats">
+            <span><b>20</b> sesiones · 2 packs de 10</span>
+            <span><b>16–24</b> semanas</span>
+            <span><b>R$ 50</b> / sesión</span>
+          </div>
+        </div>
+        <div class="camino-price">
+          <span class="tag plain">Nivel completo</span>
+          <div class="price">R$ 1.000<small>paquete por paquete · sin matrícula</small></div>
+          <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20empezar%20el%20camino%20al%20nivel%20A1" target="_blank" rel="noopener">Empezar el nivel A1 →</a>
+        </div>
+      </div>
+
+      <div class="camino-row" data-group="basico">
+        <div class="camino-code">A2<span>Plataforma</span></div>
+        <div class="camino-info">
+          <h3>El español de la vida diaria, con pasado y futuro</h3>
+          <p>Contás experiencias con pretérito e imperfecto, hacés planes, describís tu entorno y resolvés situaciones cotidianas de viaje y de trabajo.</p>
+          <div class="camino-stats">
+            <span><b>30</b> sesiones · 3 packs de 10</span>
+            <span><b>24–36</b> semanas</span>
+            <span><b>R$ 50</b> / sesión</span>
+          </div>
+        </div>
+        <div class="camino-price">
+          <span class="tag plain">Nivel completo</span>
+          <div class="price">R$ 1.500<small>paquete por paquete · sin matrícula</small></div>
+          <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20empezar%20el%20camino%20al%20nivel%20A2" target="_blank" rel="noopener">Empezar el nivel A2 →</a>
+        </div>
+      </div>
+
+      <div class="camino-row" data-group="intermedio">
+        <div class="camino-code">B1<span>Umbral</span></div>
+        <div class="camino-info">
+          <h3>Del portuñol al español correcto</h3>
+          <p>Corrección dirigida de la interferencia portugués → español: falsos amigos, muy vs. mucho, preposiciones. Enlazás ideas, opinás con fundamentos y te desenvolvés en cualquier viaje.</p>
+          <div class="camino-stats">
+            <span><b>40</b> sesiones · 4 packs de 10</span>
+            <span><b>32–48</b> semanas</span>
+            <span><b>R$ 50</b> / sesión</span>
+          </div>
+        </div>
+        <div class="camino-price">
+          <span class="tag plain">Nivel completo</span>
+          <div class="price">R$ 2.000<small>paquete por paquete · sin matrícula</small></div>
+          <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20empezar%20el%20camino%20al%20nivel%20B1" target="_blank" rel="noopener">Empezar el nivel B1 →</a>
+        </div>
+      </div>
+
+      <div class="camino-row" data-group="intermedio">
+        <div class="camino-code">B2<span>Independiente</span></div>
+        <div class="camino-info">
+          <h3>Fluidez para el trabajo y para la vida</h3>
+          <p>Entendés textos complejos, hablás con naturalidad con nativos y defendés tus ideas con argumentos claros: español listo para reuniones, entrevistas y presentaciones.</p>
+          <div class="camino-stats">
+            <span><b>50</b> sesiones · 5 packs de 10</span>
+            <span><b>40–56</b> semanas</span>
+            <span><b>R$ 50</b> / sesión</span>
+          </div>
+        </div>
+        <div class="camino-price">
+          <span class="tag plain">Nivel completo</span>
+          <div class="price">R$ 2.500<small>paquete por paquete · sin matrícula</small></div>
+          <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20empezar%20el%20camino%20al%20nivel%20B2" target="_blank" rel="noopener">Empezar el nivel B2 →</a>
+        </div>
+      </div>
+
+      <div class="camino-row" data-group="avanzado">
+        <div class="camino-code">C1<span>Dominio operativo</span></div>
+        <div class="camino-info">
+          <h3>Español de precisión, para fines profesionales</h3>
+          <p>Fluidez espontánea y flexible, vocabulario especializado, giros idiomáticos y matices de registro. El nivel que abre puertas académicas y profesionales.</p>
+          <div class="camino-stats">
+            <span><b>60</b> sesiones · 6 packs de 10</span>
+            <span><b>48–68</b> semanas</span>
+            <span><b>R$ 50</b> / sesión</span>
+          </div>
+        </div>
+        <div class="camino-price">
+          <span class="tag plain">Nivel completo</span>
+          <div class="price">R$ 3.000<small>paquete por paquete · sin matrícula</small></div>
+          <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20empezar%20el%20camino%20al%20nivel%20C1" target="_blank" rel="noopener">Empezar el nivel C1 →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="camino-note rv">
+      ⏱ <b>Tiempos calculados a 1 clase por semana</b> — con 2 clases por semana llegás en la mitad del tiempo.
+      Las estimaciones se basan en las horas guiadas por nivel del <b>Instituto Cervantes</b> y del <b>MCER</b>,
+      ajustadas por la ventaja del portugués (≈ 89 % de vocabulario compartido con el español) y por el formato
+      de clases individuales. Tu <b>diagnóstico inicial</b> define el plan exacto para vos.
+    </div>
+
+    <div class="camino-total rv">
+      <div class="ct-t">El camino completo <em>A1 → C1</em></div>
+      <div class="ct-stats">
+        <span><b>200</b> sesiones</span>
+        <span><b>R$ 10.000</b> en total</span>
+        <span><b>≈ 2 años</b> a 2 clases/semana</span>
+        <span>siempre paquete por paquete · sin contrato</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= MÉTODO ================= -->
+<section id="metodo">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="ghost">§04</div>
+      <div class="kicker"><span class="num">§ 04</span> Cómo son las clases</div>
+      <h2>Un método visual, <em>hecho a tu medida</em></h2>
+      <p class="lead">
+        <strong>El método.</strong> Nada de listas infinitas de reglas ni libros caros. Cada clase combina
+        rigor pedagógico con herramientas interactivas y recursos visuales propios, diseñados
+        especialmente para hablantes de portugués.
       </p>
     </div>
 
     <div class="row rv">
       <div class="col-left">
-        <div class="idx-line"><span class="idx">1.A</span><span class="tag">Nivel A1 · 10 semanas</span></div>
-        <h3>Lo que vas a lograr</h3>
-        <p class="sub">De cero absoluto a tus primeras conversaciones reales.</p>
-        <p>El recorrido está pensado en bloques cortos y visuales: cada sesión suma una estructura
-           nueva y la pone inmediatamente en uso, para que hables desde la primera semana.</p>
-        
-        <!-- Muestra Multimedia Visual 1 -->
+        <div class="idx-line"><span class="tag">Material interactivo propio · incluido en el precio</span></div>
+        <h3>Aprender viendo, haciendo y hablando</h3>
+        <p class="sub">Los recursos que vas a usar todos los días.</p>
+        <p>Guías, infografías interactivas y tarjetas de corrección creadas a medida: cada estructura
+           nueva se muestra visualmente y se usa en conversación en la misma clase.</p>
+
         <div class="multimedia-preview">
           <div class="preview-tag">Vista previa de tu material multimedia</div>
           <div class="preview-card-interactive">
@@ -1962,99 +2425,6 @@ footer a:hover {
           </div>
         </div>
 
-        <div class="formula">
-          <span class="lbl">Formato</span>
-          <span class="box">10 sesiones · 60 min</span>
-          <span style="color:var(--muted)">→</span>
-          <span class="lo">1 a 1</span>
-          <i>online</i>
-        </div>
-      </div>
-      <div class="col-right">
-        <div class="card">
-          <div class="card-top">
-            <span class="card-q">Gramática esencial…</span>
-            <span class="pills"><span class="pill">Meta</span><span class="pill">01</span></span>
-          </div>
-          <div class="card-main">Dominar las estructuras <span class="hl">en presente</span>: verbos de estado, <em>gustar</em> y pronombres.</div>
-          <div class="card-note">Explicadas con infografías interactivas, no con listas de memorización.</div>
-        </div>
-        <div class="card">
-          <div class="card-top">
-            <span class="card-q">Hablar de ti…</span>
-            <span class="pills"><span class="pill">Meta</span><span class="pill">02</span></span>
-          </div>
-          <div class="card-main">Presentarte, hablar de tu <span class="hl">profesión</span>, gustos, rutinas y necesidades cotidianas.</div>
-          <div class="card-note">Vocabulario funcional aplicado a tu contexto real (viaje / trabajo).</div>
-        </div>
-        <div class="card">
-          <div class="card-top">
-            <span class="card-q">Primeras conversaciones…</span>
-            <span class="pills"><span class="pill">Meta</span><span class="pill">03</span></span>
-          </div>
-          <div class="card-main">Mantener diálogos sencillos con <span class="hl">recursos visuales</span> e interactivos.</div>
-          <div class="card-note">Práctica guiada con soporte gráfico para reducir el bloqueo inicial.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row rv">
-      <div class="col-left">
-        <div class="idx-line"><span class="idx">1.B</span><span class="tag plain">La experiencia</span></div>
-        <h3>Qué incluye</h3>
-        <p class="sub">Todo lo necesario para avanzar también fuera de la clase.</p>
-        <ul class="incl">
-          <li data-n="01">10 sesiones individuales 1 a 1 de 60 minutos de duración.</li>
-          <li data-n="02">Guías e infografías interactivas A1 adaptadas a tu ritmo de aprendizaje.</li>
-          <li data-n="03">Ejercicios prácticos entre clases con revisión por WhatsApp.</li>
-        </ul>
-      </div>
-      <div class="col-right">
-        <div class="card invest">
-          <div class="card-top">
-            <span class="card-q">Desglose de inversión</span>
-            <span class="pills"><span class="pill" id="p1-pill-rate">R$ 60</span><span class="pill">/ sesión</span></span>
-          </div>
-          <div class="price" id="p1-price">R$ 600<small>Programa completo · 10 sesiones · 10 semanas</small></div>
-          <ul class="pay">
-            <li><span class="k" id="p1-pay-single-lbl">Pago único (PIX / Wise / otros)</span><span class="v off" id="p1-pay-single-val">R$ 540</span></li>
-            <li><span class="k" id="p1-pay-installments-lbl">En cuotas</span><span class="v" id="p1-pay-installments-val">2 × R$ 300</span></li>
-            <li><span class="k" id="p1-pay-session-lbl">Valor por sesión</span><span class="v" id="p1-pay-session-val">R$ 60</span></li>
-          </ul>
-          <div class="savings-stamp">
-            <span class="ss-val" id="p1-save-val">R$ 600</span>
-            <span class="ss-txt" id="p1-save-txt">en costos que no pagas<br>sin matrícula · sin material · sin libros con costo adicional</span>
-          </div>
-          <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20me%20interesa%20inscribirme%20en%20el%20Programa%2001:%20Primeros%20pasos%20(A1)" target="_blank" rel="noopener">Elegir Programa 01 →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PROGRAMA 02 ================= -->
-<section id="p2" class="alt">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="ghost">02</div>
-      <div class="kicker"><span class="num">§ 02</span> Programa intensivo intermedio</div>
-      <h2>Del portuñol <em>a la fluidez real</em></h2>
-      <p class="lead">
-        <strong>Perfil del alumno.</strong> Para estudiantes con conocimientos previos que entienden
-        la mayor parte del español pero se traban al hablar o cometen errores recurrentes de
-        interferencia entre el portugués y el español.
-      </p>
-    </div>
-
-    <div class="row rv">
-      <div class="col-left">
-        <div class="idx-line"><span class="idx">2.A</span><span class="tag">Intermedio · 8 semanas</span></div>
-        <h3>Lo que vas a lograr</h3>
-        <p class="sub">Desactivar la interferencia y soltar la lengua.</p>
-        <p>Partimos de un diagnóstico de tus errores reales y trabajamos sobre ellos: nada de
-           contenidos genéricos, sino corrección dirigida a lo que te frena hoy.</p>
-        
-        <!-- Muestra Multimedia Visual 2 -->
         <div class="multimedia-preview">
           <div class="preview-tag">Matriz de Corrección (ES)</div>
           <div class="preview-card-interactive">
@@ -2064,164 +2434,62 @@ footer a:hover {
             </div>
             <div class="preview-content-grid">
               <div class="preview-chip-item"><strong>Muy vs. Mucho</strong>regla aplicada directa</div>
-              <div class="preview-chip-item"><strong><span style="font-size: 12.8px;">PARA EJERCITAR LA MEMORIA<br></span><span style="color: rgb(74, 69, 61); font-size: 0.75rem;">tarjetas de corrección</span></strong></div>
+              <div class="preview-chip-item"><strong>Para ejercitar la memoria</strong>tarjetas de corrección</div>
             </div>
           </div>
         </div>
-
-        <div class="formula">
-          <span class="lbl">Formato</span>
-          <span class="box">8 sesiones · 60 min</span>
-          <span style="color:var(--muted)">→</span>
-          <span class="lo">1 a 1</span>
-          <i>online</i>
-        </div>
       </div>
+
       <div class="col-right">
         <div class="card">
           <div class="card-top">
-            <span class="card-q">Soltura al hablar…</span>
-            <span class="pills"><span class="pill">Meta</span><span class="pill">01</span></span>
+            <span class="card-q">Corrección de la interferencia PT → ES…</span>
+            <span class="pills"><span class="pill">Foco</span><span class="pill">01</span></span>
           </div>
-          <div class="card-main">Ganar <span class="hl">espontaneidad</span> en situaciones reales o profesionales.</div>
-          <div class="card-note">Simulaciones de reuniones, entrevistas y conversación cotidiana.</div>
+          <div class="card-main">Eliminar falsos amigos, <span class="hl">muy vs. mucho</span> y errores de preposiciones.</div>
+          <div class="card-note">Corrección sistemática, pensada para hablantes de portugués.</div>
         </div>
         <div class="card">
           <div class="card-top">
-            <span class="card-q">Errores recurrentes…</span>
-            <span class="pills"><span class="pill">Meta</span><span class="pill">02</span></span>
+            <span class="card-q">Acompañamiento real entre clases…</span>
+            <span class="pills"><span class="pill">Foco</span><span class="pill">02</span></span>
           </div>
-          <div class="card-main">Eliminar falsos amigos, <span class="hl">muy vs. mucho</span> y el uso de preposiciones.</div>
-          <div class="card-note">Corrección sistemática de interferencias PT → ES.</div>
+          <div class="card-main">Ejercicios con revisión por <span class="hl">WhatsApp</span> y dudas resueltas en el día.</div>
+          <div class="card-note">El español no se apaga cuando termina la clase.</div>
         </div>
         <div class="card">
           <div class="card-top">
-            <span class="card-q">Entender la lógica…</span>
-            <span class="pills"><span class="pill">Meta</span><span class="pill">03</span></span>
+            <span class="card-q">Plan y ritmo a tu medida…</span>
+            <span class="pills"><span class="pill">Foco</span><span class="pill">03</span></span>
           </div>
-          <div class="card-main">Comprender la estructura del idioma con <span class="hl">materiales dinámicos</span> personalizados.</div>
-          <div class="card-note">Recursos creados a medida a partir de tu diagnóstico inicial.</div>
+          <div class="card-main">Temarios personalizados con <span class="hl">feedback</span> al cierre de cada sesión.</div>
+          <div class="card-note">Seguís el camino de tu nivel con metas claras semana a semana.</div>
         </div>
       </div>
     </div>
 
     <div class="row rv">
       <div class="col-left">
-        <div class="idx-line"><span class="idx">2.B</span><span class="tag plain">La experiencia</span></div>
-        <h3>Qué incluye</h3>
-        <p class="sub">Diagnóstico, materiales propios y seguimiento semanal.</p>
+        <div class="idx-line"><span class="tag plain">La experiencia</span></div>
+        <h3>Todo paquete incluye</h3>
+        <p class="sub">Sin costos extra, sin libros, sin matrícula.</p>
         <ul class="incl">
-          <li data-n="01">8 sesiones individuales 1 a 1 de 60 minutos de duración.</li>
-          <li data-n="02">Evaluación inicial de nivel y diagnóstico de interferencias lingüísticas.</li>
-          <li data-n="03">Acceso a guías interactivas y recursos pedagógicos propios creados a tu medida.</li>
-          <li data-n="04">Acompañamiento semanal vía WhatsApp: dudas rápidas y corrección de audios.</li>
+          <li data-n="01">Clases individuales 1 a 1 de 60 minutos por videollamada.</li>
+          <li data-n="02">Guías e infografías interactivas adaptadas a tu ritmo de aprendizaje.</li>
+          <li data-n="03">Ejercicios prácticos entre clases con revisión por WhatsApp.</li>
+          <li data-n="04">Diagnóstico de nivel y de interferencias portugués → español.</li>
+          <li data-n="05">Feedback con puntos clave al cierre de cada sesión.</li>
         </ul>
       </div>
       <div class="col-right">
         <div class="card invest">
           <div class="card-top">
-            <span class="card-q">Desglose de inversión</span>
-            <span class="pills"><span class="pill" id="p2-pill-rate">R$ 60</span><span class="pill">/ sesión</span></span>
+            <span class="card-q">Antes de empezar</span>
+            <span class="pills"><span class="pill solo">Sin compromiso</span></span>
           </div>
-          <div class="price" id="p2-price">R$ 480<small>Programa completo · 8 sesiones · 8 semanas</small></div>
-          <ul class="pay">
-            <li><span class="k" id="p2-pay-single-lbl">Pago único (PIX / Wise)</span><span class="v off" id="p2-pay-single-val">R$ 432</span></li>
-            <li><span class="k" id="p2-pay-installments-lbl">En cuotas</span><span class="v" id="p2-pay-installments-val">2 × R$ 240</span></li>
-            <li><span class="k" id="p2-pay-session-lbl">Valor por sesión</span><span class="v" id="p2-pay-session-val">R$ 60</span></li>
-          </ul>
-          <div class="savings-stamp">
-            <span class="ss-val" id="p2-save-val">R$ 600</span>
-            <span class="ss-txt" id="p2-save-txt">en costos que no pagas<br>sin matrícula · sin material · sin libros con costo adicional</span>
-          </div>
-          <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20me%20interesa%20inscribirme%20en%20el%20Programa%2002:%20Del%20portu%C3%B1ol%20a%20la%20fluidez" target="_blank" rel="noopener">Elegir Programa 02 →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= PROGRAMA 03 ================= -->
-<section id="p3">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="ghost">03</div>
-      <div class="kicker"><span class="num">§ 03</span> Mantenimiento y conversación guiada</div>
-      <h2>Conversación <em>con propósito</em></h2>
-      <p class="lead">
-        <strong>Perfil del alumno.</strong> Orientado a profesionales o estudiantes de nivel
-        intermedio-avanzado que necesitan mantener su fluidez, ampliar vocabulario y ganar
-        seguridad en debates, reuniones, trabajo o viajes.</p>
-    </div>
-
-    <div class="row rv">
-      <div class="col-left">
-        <div class="idx-line"><span class="idx">3.A</span><span class="tag">Plan mensual · B2–C1</span></div>
-        <h3>Lo que vas a lograr</h3>
-        <p class="sub">Que el idioma no se oxide y siga creciendo.</p>
-        <p>Cada mes elegimos ejes temáticos según tu interés profesional o personal, con material
-           auténtico y feedback puntual sobre lo que dices y cómo lo dices.</p>
-        <div class="formula">
-          <span class="lbl">Formato</span>
-          <span class="box">4 sesiones / mes · 60 min</span>
-          <span style="color:var(--muted)">→</span>
-          <span class="lo">1 × semana</span>
-        </div>
-      </div>
-      <div class="col-right">
-        <div class="card">
-          <div class="card-top">
-            <span class="card-q">Agilidad mental…</span>
-            <span class="pills"><span class="pill">Meta</span><span class="pill">01</span></span>
-          </div>
-          <div class="card-main">Hablar con fluidez sobre <span class="hl">tus temas</span>: trabajo, cultura y actualidad.</div>
-          <div class="card-note">Temarios elegidos contigo, renovados cada mes.</div>
-        </div>
-        <div class="card">
-          <div class="card-top">
-            <span class="card-q">Riqueza léxica…</span>
-            <span class="pills"><span class="pill">Meta</span><span class="pill">02</span></span>
-          </div>
-          <div class="card-main">Incorporar <span class="hl">vocabulario especializado</span> y giros idiomáticos naturales.</div>
-          <div class="card-note">Expresiones de uso real, no de manual.</div>
-        </div>
-        <div class="card">
-          <div class="card-top">
-            <span class="card-q">Corrección fina…</span>
-            <span class="pills"><span class="pill">Meta</span><span class="pill">03</span></span>
-          </div>
-          <div class="card-main">Retroalimentación inmediata sobre <span class="hl">pronunciación</span>, coherencia y gramática.</div>
-          <div class="card-note">Informe de puntos clave al cierre de cada sesión.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row rv">
-      <div class="col-left">
-        <div class="idx-line"><span class="idx">3.B</span><span class="tag plain">La experiencia</span></div>
-        <h3>Qué incluye</h3>
-        <p class="sub">Conversación estructurada, nunca improvisada.</p>
-        <ul class="incl">
-          <li data-n="01">4 sesiones mensuales de 60 minutos (1 clase por semana).</li>
-          <li data-n="02">Temarios personalizados basados en artículos, videos y material multimedia interactivo.</li>
-          <li data-n="03">Feedback detallado al finalizar cada sesión con puntos clave a mejorar.</li>
-        </ul>
-      </div>
-      <div class="col-right">
-        <div class="card invest">
-          <div class="card-top">
-            <span class="card-q">Desglose de inversión</span>
-            <span class="pills"><span class="pill" id="p3-pill-rate">R$ 60</span><span class="pill">/ sesión</span></span>
-          </div>
-          <div class="price" id="p3-price">R$ 240<small>Plan mensual de mantenimiento · 4 sesiones</small></div>
-          <ul class="pay">
-            <li><span class="k" id="p3-pay-rec-lbl">Suscripción recurrente</span><span class="v" id="p3-pay-rec-val">R$ 220 / mes</span></li>
-            <li><span class="k" id="p3-pay-session-lbl">Valor por sesión</span><span class="v" id="p3-pay-session-val">R$ 60</span></li>
-          </ul>
-          <div class="savings-stamp">
-            <span class="ss-val" id="p3-save-val">R$ 600</span>
-            <span class="ss-txt" id="p3-save-txt">en costos que no pagas<br>sin matrícula · sin material · sin libros con costo adicuonal</span>
-          </div>
-          <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20sumarme%20al%20Programa%2003:%20Conversaci%C3%B3n%20con%20prop%C3%B3sito" target="_blank" rel="noopener">Elegir Programa 03 →</a>
+          <div class="card-main">Una sesión de <span class="hl">diagnóstico</span> define tu nivel real y tu hoja de ruta.</div>
+          <div class="card-note">Monto 100 % reembolsable o abonable a tu primer paquete.</div>
+          <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20agendar%20una%20Sesi%C3%B3n%20de%20Diagn%C3%B3stico" target="_blank" rel="noopener">Agendar Diagnóstico →</a>
         </div>
       </div>
     </div>
@@ -2232,12 +2500,12 @@ footer a:hover {
 <section id="p4" class="alt">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="ghost">04</div>
-      <div class="kicker"><span class="num">§ 04</span> Sesión de diagnóstico y plan personalizado</div>
+      <div class="ghost">05</div>
+      <div class="kicker"><span class="num">§ 05</span> Sesión de diagnóstico y plan personalizado</div>
       <h2>Evaluación 1 a 1 <em>+ hoja de ruta</em></h2>
       <p class="lead">
         <strong>Perfil del alumno.</strong> Personas que no están seguras de su nivel exacto y desean
-        una evaluación pedagógica profesional antes de comprometerse con un programa completo.
+        una evaluación pedagógica profesional antes de elegir su primer paquete de clases.
       </p>
     </div>
 
@@ -2268,13 +2536,13 @@ footer a:hover {
           <div class="price" id="p4-price">R$ 50<small>Sesión puntual de evaluación pedagógica</small></div>
           <ul class="pay">
             <li><span class="k" id="p4-pay-refund-lbl">Reembolso</span><span class="v" id="p4-pay-refund-val">100 %</span></li>
-            <li><span class="k" id="p4-pay-apply-lbl">Abonable a un programa</span><span class="v" id="p4-pay-apply-val">7 días</span></li>
+            <li><span class="k" id="p4-pay-apply-lbl">Abonable a cualquier paquete</span><span class="v" id="p4-pay-apply-val">7 días</span></li>
           </ul>
           <div class="card-note" id="p4-note" style="border-color:rgba(255,255,255,.18);color:rgba(255,255,255,.72)">
-            Monto 100 % reembolsable o abonable si contratas un programa completo dentro de los siguientes 7 días.
+            Monto 100 % reembolsable o abonable si comprás cualquier paquete dentro de los siguientes 7 días.
           </div>
           <div class="savings-stamp">
-            <span class="ss-val" id="p4-save-val">R$ 600</span>
+            <span class="ss-val" id="p4-save-val">R$ 700</span>
             <span class="ss-txt" id="p4-save-txt">en costos que no pagas<br>sin matrícula · sin material · sin libros</span>
           </div>
           <a class="card-cta-btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20agendar%20una%20Sesi%C3%B3n%20de%20Diagn%C3%B3stico" target="_blank" rel="noopener">Agendar Diagnóstico →</a>
@@ -2320,7 +2588,7 @@ footer a:hover {
           <div class="author-avatar">CL</div>
           <div class="author-details">
             <b>Camila L.</b>
-            <small>Estudiante de Programa Intermedio</small>
+            <small>Estudiante · camino B1</small>
           </div>
         </div>
       </div>
@@ -2334,35 +2602,40 @@ footer a:hover {
     <div class="sec-head rv">
       <div class="ghost">07</div>
       <div class="kicker"><span class="num">§ 07</span> Comparativa</div>
-      <h2>Cuadro de programas <em>y valores</em></h2>
-      <p class="lead">Todos los programas comparten la misma tarifa base por sesión. La diferencia
-        está en la profundidad del recorrido y en el tipo de acompañamiento.</p>
+      <h2>Precios, <em>de un vistazo</em></h2>
+      <p class="lead">Todos los paquetes incluyen la misma clase: 60 minutos, individual, online y con
+        material propio. La diferencia está en cuántas sesiones llevás por delante — y cuánto ahorrás.</p>
     </div>
     <div class="table-x rv">
       <table>
         <thead>
-          <tr><th>Programa</th><th>Duración</th><th>Formato</th><th>Inversión total</th><th>Valor por sesión</th></tr>
+          <tr><th>Opción</th><th>Sesiones</th><th>Ideal para</th><th>Inversión</th><th>Por sesión</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td class="name"><span>§ 01</span>Primeros Pasos<br><em style="font-family:var(--sans);font-size:.82rem;font-weight:400;color:var(--muted)">Desde cero · A1</em></td>
-            <td>10 semanas</td><td>10 sesiones de 60 min</td>
-            <td class="tot" id="table-p1-tot">R$ 600</td><td class="ses" id="table-p1-ses">R$ 60</td>
+            <td class="name"><span>§ 01</span>Pack de 4 sesiones</td>
+            <td>4 × 60 min</td><td>Probar las clases o mantener el nivel</td>
+            <td class="tot">R$ 240</td><td class="ses">R$ 60</td>
           </tr>
           <tr>
-            <td class="name"><span>§ 02</span>De las dudas hacia la Fluidez</td>
-            <td>8 semanas</td><td>8 sesiones de 60 min</td>
-            <td class="tot" id="table-p2-tot">R$ 480</td><td class="ses" id="table-p2-ses">R$ 60</td>
+            <td class="name"><span>§ 01</span>Pack de 8 sesiones</td>
+            <td>8 × 60 min</td><td>Avanzar un tramo corto del camino</td>
+            <td class="tot">R$ 440 <span style="font-size:.85rem;font-weight:400">−8 %</span></td><td class="ses">R$ 55</td>
           </tr>
           <tr>
-            <td class="name"><span>§ 03</span>Conversación con Propósito</td>
-            <td>Mensual</td><td>4 sesiones/mes de 60 min</td>
-            <td class="tot" id="table-p3-tot">R$ 240 <span style="font-size:.85rem;font-weight:400">/mes</span></td><td class="ses" id="table-p3-ses">R$ 60</td>
+            <td class="name"><span>§ 01</span>Pack de 10 sesiones</td>
+            <td>10 × 60 min</td><td>El más elegido — mejor precio por sesión</td>
+            <td class="tot">R$ 500 <span style="font-size:.85rem;font-weight:400">−17 %</span></td><td class="ses">R$ 50</td>
           </tr>
           <tr>
-            <td class="name"><span>§ 04</span>Sesión de Diagnóstico</td>
-            <td>Puntual</td><td>1 sesión de 45 min</td>
-            <td class="tot" id="table-p4-tot">R$ 50</td><td class="ses" id="table-p4-ses">R$ 50 (tarifa única)</td>
+            <td class="name"><span>§ 03</span>Un nivel del camino</td>
+            <td>20–60 × 60 min</td><td>Alcanzar un nivel MCER completo (ej. A1)</td>
+            <td class="tot">desde R$ 1.000</td><td class="ses">R$ 50</td>
+          </tr>
+          <tr>
+            <td class="name"><span>§ 05</span>Sesión de Diagnóstico</td>
+            <td>1 × 45 min</td><td>Definir tu nivel y tu plan exacto</td>
+            <td class="tot">R$ 50</td><td class="ses">R$ 50 (puntual)</td>
           </tr>
         </tbody>
       </table>
@@ -2387,12 +2660,12 @@ footer a:hover {
       <div class="card">
         <div class="n">02</div>
         <h4>Vigencia de paquetes</h4>
-        <p>El paquete de 10 semanas tiene un plazo máximo de utilización de <b>12 semanas</b> a partir de la primera sesión.</p>
+        <p>Cada paquete vence a los <b>número de sesiones + 2 semanas</b>: pack de 4 → 6 semanas; de 8 → 10; de 10 → 12, contadas desde la primera clase.</p>
       </div>
       <div class="card">
         <div class="n">03</div>
         <h4>Reserva de cupo</h4>
-        <p>El cupo en la agenda se confirma una vez abonada la <b>primera cuota</b> o la totalidad del programa.</p>
+        <p>El cupo en la agenda se confirma una vez abonado <b>el paquete elegido</b> — o su primera parte, si lo dividís en dos pagos.</p>
       </div>
     </div>
   </div>
@@ -2401,13 +2674,13 @@ footer a:hover {
 <!-- ================= CIERRE ================= -->
 <div class="closing wrap">
   <div class="kicker" style="justify-content:center"><span class="num">§ 09</span> Siguiente paso</div>
-  <h2 id="close-title">Elige tu programa <em>y empezamos esta misma semana.</em></h2>
+  <h2 id="close-title">Elegí tu paquete <em>y empezamos esta misma semana.</em></h2>
   <a class="btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20reservar%20mi%20cupo%20para%20empezar%20esta%20semana" target="_blank" rel="noopener">Reservar mi cupo por WhatsApp →</a>
   <footer>
     <span>Jonathan Mendoza · Lic. en Educación</span>
     <span><a href="https://www.instagram.com/idiomaswebespanol/" target="_blank" rel="noopener">Instagram: @idiomaswebespanol</a></span>
     <span><a href="https://www.youtube.com/@idiomasweb" target="_blank" rel="noopener">YouTube: @idiomasweb</a></span>
-    <span id="footer-rate"><br></span>
+    <span id="footer-rate">Clases 1 a 1 online · desde R$ 50/sesión · sin matrícula</span>
   </footer>
 </div>
 
@@ -2451,4 +2724,4 @@ const io = new IntersectionObserver(entries => {
 document.querySelectorAll('.rv').forEach(el => io.observe(el));
 </script>
 
-</body></html>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a34dbe469f905e5b',t:'MTc4ODM2NDk5MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
