@@ -729,17 +729,6 @@ h3 {
   font-size: 1.1rem;
   white-space: nowrap;
 }
-.pay .v.off::after {
-  content: "−10%";
-  font-family: var(--mono);
-  font-size: 0.55rem;
-  letter-spacing: 0.05em;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  padding: 2px 6px;
-  margin-left: 6px;
-  vertical-align: middle;
-}
 .card-cta-btn {
   display: inline-flex;
   width: 100%;
@@ -1236,57 +1225,6 @@ footer a:hover {
   font-size: 0.95rem;
   margin-top: 2px;
 }
-.savings-compare {
-  margin-top: 36px;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: var(--card);
-  padding: 6px 24px;
-}
-.compare-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1.3fr) 78px minmax(0, 2fr);
-  gap: 18px;
-  align-items: center;
-  padding: 14px 0;
-  border-bottom: 1px solid var(--line-soft);
-}
-.compare-row:last-child { border-bottom: none; }
-.compare-name {
-  font-family: var(--serif);
-  font-weight: 700;
-  font-size: 0.98rem;
-}
-.compare-name small {
-  display: block;
-  font-family: var(--mono);
-  font-size: 0.56rem;
-  color: var(--muted);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-top: 3px;
-  font-weight: 400;
-}
-.compare-pct {
-  font-family: var(--serif);
-  font-weight: 900;
-  color: var(--terra);
-  font-size: 1.2rem;
-  text-align: right;
-  white-space: nowrap;
-}
-.compare-bar {
-  height: 9px;
-  background: var(--line-soft);
-  border-radius: 20px;
-  overflow: hidden;
-}
-.compare-bar i {
-  display: block;
-  height: 100%;
-  background: linear-gradient(90deg, var(--green), var(--terra));
-  border-radius: 20px;
-}
 /* Sello de ahorro en tarjetas invest */
 .savings-stamp {
   margin-top: 14px;
@@ -1320,6 +1258,14 @@ footer a:hover {
 /* Hook de ahorro en hero */
 .meta-i .hl-save {
   color: var(--terra);
+}
+.meta-i .hl-save .hl-lbl {
+  display: block;
+  color: #8c8577;
+}
+.meta-i .hl-save .hl-val {
+  display: block;
+  font-weight: 700;
 }
 
 /* ---------- NIVELES MCER ---------- */
@@ -1493,7 +1439,6 @@ footer a:hover {
   color: var(--muted);
   letter-spacing: 0.08em;
 }
-
 
 /* ---------- PAQUETES DE CLASES ---------- */
 .packs-grid {
@@ -1850,14 +1795,6 @@ footer a:hover {
   .price {
     font-size: 2.3rem;
   }
-  .compare-row {
-    grid-template-columns: 1fr auto;
-    gap: 6px 14px;
-  }
-  .compare-row .compare-bar {
-    grid-column: 1 / -1;
-    margin-top: 4px;
-  }
   .levels-grid {
     grid-template-columns: 1fr;
   }
@@ -1918,8 +1855,8 @@ footer a:hover {
     <h1 id="hero-title">Aprender español <em>con método</em>, no con suerte.</h1>
     <p class="lead" id="hero-lead">
       Clases individuales online con material interactivo propio y acompañamiento real entre
-      clase y clase. Elegís tu paquete — <strong id="hero-lead-rate">R$ 60 por sesión, o R$ 50 en el pack de 10</strong> —
-      y avanzás por un camino claro de <strong>A1 a C1</strong>, sabiendo de antemano cuánto tiempo
+      clase y clase. Elige tu paquete — <strong id="hero-lead-rate">R$ 60 por sesión, o R$ 50 en el pack de 10</strong> —
+      y avanzas por un camino claro de <strong>A1 a C1</strong>, sabiendo de antemano cuánto tiempo
       y cuánto cuesta cada nivel.
     </p>
     <div class="hero-cta-group">
@@ -1931,11 +1868,10 @@ footer a:hover {
       <div class="meta-i">Formación<b>Lic. en Educación</b></div>
       <div class="meta-i">Especialidad<b>Contenido Pedagógico Multimedia</b></div>
       <div class="meta-i"><span id="hero-meta-base-lbl">Tarifa base</span><b id="hero-meta-base-val">R$ 60 / sesión</b></div>
-      <div class="meta-i"><span id="hero-meta-save-val" class="hl-save"><font color="#8c8577"><span style="font-size: 10.88px;">costos extras que vas a ahorrar:<br></span></font><span style="font-weight: bold;">hasta R$ 700</span></span></div>
+      <div class="meta-i"><span id="hero-meta-save-val" class="hl-save"><span class="hl-lbl">costos extras que vas a ahorrar:</span><span class="hl-val">hasta R$ 700</span></span></div>
     </div>
   </div>
 </div>
-
 
 <!-- ================= PAQUETES ================= -->
 <section id="paquetes">
@@ -1946,7 +1882,7 @@ footer a:hover {
       <h2>Paquetes de clases <em>con descuento por volumen</em></h2>
       <p class="lead">
         <strong>Cómo funcionan.</strong> Todas las clases son individuales, online y de 60 minutos,
-        con el material interactivo incluido. Elegís cuántas sesiones querés por delante: probar con 4,
+        con el material interactivo incluido. Eliges cuántas sesiones quieres por delante: probar con 4,
         avanzar un tramo con 8, o encarar tu nivel con 10 — el mejor precio por sesión.
       </p>
     </div>
@@ -1974,7 +1910,7 @@ footer a:hover {
         </div>
         <div class="price">R$ 440<small>8 clases de 60 min · 1 a 1 online</small></div>
         <div class="pack-per">R$ 55 por sesión</div>
-        <span class="pack-save">ahorrás R$ 40 · −8 %</span>
+        <span class="pack-save">ahorras R$ 40 · −8 %</span>
         <ul class="pack-feat">
           <li>Material interactivo incluido</li>
           <li>Vigencia: 10 semanas</li>
@@ -1991,7 +1927,7 @@ footer a:hover {
         </div>
         <div class="price">R$ 500<small>10 clases de 60 min · 1 a 1 online</small></div>
         <div class="pack-per">R$ 50 por sesión</div>
-        <span class="pack-save">ahorrás R$ 100 · −17 %</span>
+        <span class="pack-save">ahorras R$ 100 · −17 %</span>
         <ul class="pack-feat">
           <li>El precio más bajo por clase</li>
           <li>Vigencia: 12 semanas</li>
@@ -2004,7 +1940,7 @@ footer a:hover {
     <div class="pack-advantage rv">
       <div>
         <h3>La ventaja del pack de 10</h3>
-        <p>Cada sesión sale <strong>R$ 50 en vez de R$ 60</strong>. Y si venís del pack de 8, las dos clases
+        <p>Cada sesión sale <strong>R$ 50 en vez de R$ 60</strong>. Y si vienes del pack de 8, las dos clases
            extra te cuestan apenas <strong>R$ 60</strong> — R$ 30 cada una, mitad de precio. Es el paquete
            pensado para quien quiere llegar lejos sin frenar cada mes.</p>
       </div>
@@ -2026,7 +1962,7 @@ footer a:hover {
   </div>
 </section>
 
-<!-- ================= ECONOMÍA / AHORRO (INICIO) ================= -->
+<!-- ================= AHORRO ================= -->
 <section id="ahorro">
   <div class="wrap">
     <div class="kicker rv" style="margin-bottom:28px"><span class="num">§ 02</span> Comparado con escuelas tradicionales</div>
@@ -2051,7 +1987,7 @@ footer a:hover {
     </div>
 
     <div class="savings-detail rv">
-      <p class="lead" id="savings-lead">En una escuela tradicional común, a la mensualidad se le suman matrícula, material, libros y tasa de mantenimiento — costos que aparecen <strong>después</strong> de comprometerte. Con Jonathan no: la tarifa de <strong>R$ 60 por sesión</strong> lo incluye todo. Esto es lo que <strong>no pagás</strong> — y con el pack de 10 sesiones, el mismo curso que cuesta R$ 1.200 en la escuela acá queda en <strong>R$ 500</strong>.</p>
+      <p class="lead" id="savings-lead">En una escuela tradicional común, a la mensualidad se le suman matrícula, material, libros y tasa de mantenimiento — costos que aparecen <strong>después</strong> de comprometerte. Con Jonathan no: la tarifa de <strong>R$ 60 por sesión</strong> lo incluye todo. Esto es lo que <strong>no pagas</strong> — y con el pack de 10 sesiones, el mismo curso que en la escuela cuesta R$ 1.200 aquí queda en <strong>R$ 500</strong>.</p>
       <div class="hidden-costs-grid">
         <div class="hidden-cost-item">
           <div class="hc-top">
@@ -2100,8 +2036,8 @@ footer a:hover {
         <h3 id="teacher-title">Jonathan Mendoza</h3>
         <p class="sub" id="teacher-sub">Especialista en Contenido Pedagógico Multimedia</p>
         <p>Aprender un idioma no tiene por qué ser aburrido ni basarse en listas infinitas de reglas. Mi metodología combina el rigor pedagógico con herramientas interactivas y recursos visuales diseñados a medida para que avances con claridad, ritmo y confianza.</p>
-        <p style="margin-top:12px">Acompaño a profesionales y estudiantes a perder el miedo a hablar, superar la interferencia del portugués y dominar el español de uso real.</p>
-        
+        <p style="margin-top:12px">Acompaño a profesionales y estudiantes a perder el miedo a hablar, corregir los errores que frenan tu avance y dominar el español de uso real.</p>
+
         <div class="teacher-social-group">
           <a class="btn-secondary" href="https://www.youtube.com/@idiomasweb" target="_blank" rel="noopener" style="padding:10px 18px;font-size:.65rem">
             ▶ Canal de YouTube: @idiomasweb
@@ -2111,7 +2047,7 @@ footer a:hover {
           </a>
         </div>
       </div>
-      
+
       <div class="col-right" style="align-items:center">
         <div class="teacher-media-container">
           <img src="foto-jonathan.jpg" alt="Jonathan Mendoza" class="teacher-photo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
@@ -2261,7 +2197,6 @@ footer a:hover {
   </div>
 </section>
 
-
 <!-- ================= CAMINO POR NIVELES ================= -->
 <section id="camino" class="alt">
   <div class="wrap">
@@ -2271,7 +2206,7 @@ footer a:hover {
       <h2>El camino de <em>A1 a C1</em>: cuánto tiempo y cuánto cuesta</h2>
       <p class="lead">
         Cada nivel es un bloque con <strong>sesiones, semanas e inversión definidas</strong> — nada de
-        mensualidades eternas. Avanzás a tu ritmo, comprando paquete por paquete, y siempre sabés
+        mensualidades eternas. Avanzas a tu ritmo, comprando paquete por paquete, y siempre sabes
         exactamente dónde estás y cuánto falta.
       </p>
     </div>
@@ -2282,7 +2217,7 @@ footer a:hover {
         <div class="camino-code">A1<span>Acceso · desde cero</span></div>
         <div class="camino-info">
           <h3>De cero a tu primera conversación</h3>
-          <p>Te presentás, hablás de tu rutina, gustos y profesión. Estructuras esenciales en presente (ser, estar, tener, gustar) y primeros diálogos reales desde la primera semana.</p>
+          <p>Te presentas, hablas de tu rutina, gustos y profesión. Estructuras esenciales en presente (ser, estar, tener, gustar) y primeros diálogos reales desde la primera semana.</p>
           <div class="camino-stats">
             <span><b>20</b> sesiones · 2 packs de 10</span>
             <span><b>16–24</b> semanas</span>
@@ -2300,7 +2235,7 @@ footer a:hover {
         <div class="camino-code">A2<span>Plataforma</span></div>
         <div class="camino-info">
           <h3>El español de la vida diaria, con pasado y futuro</h3>
-          <p>Contás experiencias con pretérito e imperfecto, hacés planes, describís tu entorno y resolvés situaciones cotidianas de viaje y de trabajo.</p>
+          <p>Cuentas experiencias con pretérito e imperfecto, haces planes, describes tu entorno y resuelves situaciones cotidianas de viaje y de trabajo.</p>
           <div class="camino-stats">
             <span><b>30</b> sesiones · 3 packs de 10</span>
             <span><b>24–36</b> semanas</span>
@@ -2317,8 +2252,8 @@ footer a:hover {
       <div class="camino-row" data-group="intermedio">
         <div class="camino-code">B1<span>Umbral</span></div>
         <div class="camino-info">
-          <h3>Del portuñol al español correcto</h3>
-          <p>Corrección dirigida de la interferencia portugués → español: falsos amigos, muy vs. mucho, preposiciones. Enlazás ideas, opinás con fundamentos y te desenvolvés en cualquier viaje.</p>
+          <h3>El salto al español correcto</h3>
+          <p>Corrección dirigida de tus errores más frecuentes: falsos amigos, calcos de tu idioma, preposiciones. Enlazas ideas, opinas con fundamentos y te desenvuelves con soltura en cualquier viaje.</p>
           <div class="camino-stats">
             <span><b>40</b> sesiones · 4 packs de 10</span>
             <span><b>32–48</b> semanas</span>
@@ -2336,7 +2271,7 @@ footer a:hover {
         <div class="camino-code">B2<span>Independiente</span></div>
         <div class="camino-info">
           <h3>Fluidez para el trabajo y para la vida</h3>
-          <p>Entendés textos complejos, hablás con naturalidad con nativos y defendés tus ideas con argumentos claros: español listo para reuniones, entrevistas y presentaciones.</p>
+          <p>Entiendes textos complejos, hablas con naturalidad con nativos y defiendes tus ideas con argumentos claros: español listo para reuniones, entrevistas y presentaciones.</p>
           <div class="camino-stats">
             <span><b>50</b> sesiones · 5 packs de 10</span>
             <span><b>40–56</b> semanas</span>
@@ -2370,10 +2305,11 @@ footer a:hover {
     </div>
 
     <div class="camino-note rv">
-      ⏱ <b>Tiempos calculados a 1 clase por semana</b> — con 2 clases por semana llegás en la mitad del tiempo.
+      ⏱ <b>Tiempos calculados a 1 clase por semana</b> — con 2 clases por semana llegas en la mitad del tiempo.
       Las estimaciones se basan en las horas guiadas por nivel del <b>Instituto Cervantes</b> y del <b>MCER</b>,
-      ajustadas por la ventaja del portugués (≈ 89 % de vocabulario compartido con el español) y por el formato
-      de clases individuales. Tu <b>diagnóstico inicial</b> define el plan exacto para vos.
+      ajustadas según tu idioma materno — los hablantes de portugués, por ejemplo, comparten
+      ≈ 89 % de vocabulario con el español y avanzan aún más rápido — y por el formato de
+      clases individuales. Tu <b>diagnóstico inicial</b> define el plan exacto para ti.
     </div>
 
     <div class="camino-total rv">
@@ -2388,7 +2324,6 @@ footer a:hover {
   </div>
 </section>
 
-
 <!-- ================= MÉTODO ================= -->
 <section id="metodo">
   <div class="wrap">
@@ -2398,8 +2333,8 @@ footer a:hover {
       <h2>Un método visual, <em>hecho a tu medida</em></h2>
       <p class="lead">
         <strong>El método.</strong> Nada de listas infinitas de reglas ni libros caros. Cada clase combina
-        rigor pedagógico con herramientas interactivas y recursos visuales propios, diseñados
-        especialmente para hablantes de portugués.
+        rigor pedagógico con herramientas interactivas y recursos visuales propios, adaptados
+        a tu idioma materno y a tu forma de aprender.
       </p>
     </div>
 
@@ -2443,11 +2378,11 @@ footer a:hover {
       <div class="col-right">
         <div class="card">
           <div class="card-top">
-            <span class="card-q">Corrección de la interferencia PT → ES…</span>
+            <span class="card-q">Corrección de tus errores recurrentes…</span>
             <span class="pills"><span class="pill">Foco</span><span class="pill">01</span></span>
           </div>
-          <div class="card-main">Eliminar falsos amigos, <span class="hl">muy vs. mucho</span> y errores de preposiciones.</div>
-          <div class="card-note">Corrección sistemática, pensada para hablantes de portugués.</div>
+          <div class="card-main">Eliminar falsos amigos, <span class="hl">calcos de tu idioma</span> y errores de preposiciones.</div>
+          <div class="card-note">Corrección sistemática, adaptada a tu idioma materno.</div>
         </div>
         <div class="card">
           <div class="card-top">
@@ -2477,7 +2412,7 @@ footer a:hover {
           <li data-n="01">Clases individuales 1 a 1 de 60 minutos por videollamada.</li>
           <li data-n="02">Guías e infografías interactivas adaptadas a tu ritmo de aprendizaje.</li>
           <li data-n="03">Ejercicios prácticos entre clases con revisión por WhatsApp.</li>
-          <li data-n="04">Diagnóstico de nivel y de interferencias portugués → español.</li>
+          <li data-n="04">Diagnóstico de nivel y de tus errores más frecuentes.</li>
           <li data-n="05">Feedback con puntos clave al cierre de cada sesión.</li>
         </ul>
       </div>
@@ -2496,7 +2431,7 @@ footer a:hover {
   </div>
 </section>
 
-<!-- ================= PROGRAMA 04 ================= -->
+<!-- ================= DIAGNÓSTICO ================= -->
 <section id="p4" class="alt">
   <div class="wrap">
     <div class="sec-head rv">
@@ -2539,7 +2474,7 @@ footer a:hover {
             <li><span class="k" id="p4-pay-apply-lbl">Abonable a cualquier paquete</span><span class="v" id="p4-pay-apply-val">7 días</span></li>
           </ul>
           <div class="card-note" id="p4-note" style="border-color:rgba(255,255,255,.18);color:rgba(255,255,255,.72)">
-            Monto 100 % reembolsable o abonable si comprás cualquier paquete dentro de los siguientes 7 días.
+            Monto 100 % reembolsable o abonable si compras cualquier paquete dentro de los siguientes 7 días.
           </div>
           <div class="savings-stamp">
             <span class="ss-val" id="p4-save-val">R$ 700</span>
@@ -2604,7 +2539,7 @@ footer a:hover {
       <div class="kicker"><span class="num">§ 07</span> Comparativa</div>
       <h2>Precios, <em>de un vistazo</em></h2>
       <p class="lead">Todos los paquetes incluyen la misma clase: 60 minutos, individual, online y con
-        material propio. La diferencia está en cuántas sesiones llevás por delante — y cuánto ahorrás.</p>
+        material propio. La diferencia está en cuántas sesiones llevas por delante — y cuánto ahorras.</p>
     </div>
     <div class="table-x rv">
       <table>
@@ -2665,7 +2600,7 @@ footer a:hover {
       <div class="card">
         <div class="n">03</div>
         <h4>Reserva de cupo</h4>
-        <p>El cupo en la agenda se confirma una vez abonado <b>el paquete elegido</b> — o su primera parte, si lo dividís en dos pagos.</p>
+        <p>El cupo en la agenda se confirma una vez abonado <b>el paquete elegido</b> — o su primera parte, si lo divides en dos pagos.</p>
       </div>
     </div>
   </div>
@@ -2674,7 +2609,7 @@ footer a:hover {
 <!-- ================= CIERRE ================= -->
 <div class="closing wrap">
   <div class="kicker" style="justify-content:center"><span class="num">§ 09</span> Siguiente paso</div>
-  <h2 id="close-title">Elegí tu paquete <em>y empezamos esta misma semana.</em></h2>
+  <h2 id="close-title">Elige tu paquete <em>y empezamos esta misma semana.</em></h2>
   <a class="btn" href="https://wa.me/553299092071?text=Hola%20Jonathan,%20quiero%20reservar%20mi%20cupo%20para%20empezar%20esta%20semana" target="_blank" rel="noopener">Reservar mi cupo por WhatsApp →</a>
   <footer>
     <span>Jonathan Mendoza · Lic. en Educación</span>
@@ -2696,9 +2631,9 @@ window.addEventListener('scroll', () => {
   const scrollTop = h.scrollTop;
   const scrollHeight = h.scrollHeight;
   const clientHeight = h.clientHeight;
-  
+
   bar.style.width = (scrollTop / (scrollHeight - clientHeight) * 100) + '%';
-  
+
   let cur = null;
   secs.forEach(s => {
     if (scrollTop >= s.offsetTop - 140) {
@@ -2724,4 +2659,4 @@ const io = new IntersectionObserver(entries => {
 document.querySelectorAll('.rv').forEach(el => io.observe(el));
 </script>
 
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a34dbe469f905e5b',t:'MTc4ODM2NDk5MA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a34e0a389ddcf2b6',t:'MTc4ODM2ODEwMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
